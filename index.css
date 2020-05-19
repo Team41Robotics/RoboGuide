@@ -1,12 +1,23 @@
+a {
+	color: #ffc107 !important; /* This is the bootstrap warning color */
+}
+
 .nav-pills > a {
-	background-color: #2d3338 !important;
+	background-color: rgba(0,0,0,0.075) !important;
 }
 .nav-pills > a:hover {
-	background-color: #2b3135 !important;
+	background-color: rgba(0,0,0,0.15) !important;
 }
 .nav-pills > .active {
-	background-color: #272b2e !important;
+	background-color: rgba(0,0,0,0.25) !important;
 }
 .nav-pills > .active:hover {
-	background-color: #272b2e !important;
+	background-color: rgba(0,0,0,0.25) !important;
+}
+
+.code {
+	font-family: monospace;
+	padding: 2px 8px 2px 8px;
+	background-color: #222;
+	color: rgb(206, 29, 29);
 }
