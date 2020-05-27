@@ -33,6 +33,9 @@
 					<h1 class="text-center">Beginner Resources</h1>
 					<ul style="font-size: larger;">
 						<li>
+							If you want an overview of Java syntax, I have created a guide below
+						</li>
+						<li>
 							If you want a thorough, interactive Java guide, I recommend using <a href="https://www.codecademy.com/learn/learn-java">Codecademy</a>.
 							It's great for people who are just beginning.
 						</li>
@@ -62,12 +65,12 @@
 					<br><br>
 					Before we go too far though, let's take a step back and start with some of the fundamentals of programming languages.
 					<br><br><br>
-					<h2>Comments</h2>
-						Before we start going over code, knowing what a <a href="https://en.wikipedia.org/wiki/Comment_(computer_programming)">comment</a> is will be helpful.
+					<h2><a href="https://en.wikipedia.org/wiki/Comment_(computer_programming)">Comments</a></h2>
+						Before we start going over code, knowing what a comment is will be helpful.
 						<script src="https://gist.github.com/JamesNarayanan/aada7a81ccd9220bf791cffd3916a0d5.js"></script>
 					<br><br>
-					<h2>Variables</h2>
-						One of the most important parts of any programming language is the use of <a href="https://en.wikipedia.org/wiki/Variable_(computer_science)">variables</a>.
+					<h2><a href="https://en.wikipedia.org/wiki/Variable_(computer_science)">Variables</a></h2>
+						One of the most important parts of any programming language is the use of variables.
 						These are named values stored in the computer's RAM.
 						In Java, the primitive <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">variable types</a> include the following:
 						<ul>
@@ -78,8 +81,8 @@
 							<li><span class="code">int</span> Stores whole number values from -2,147,483,648 to 2,147,483,647 (32-bit).
 								If one tries to store a number with a decimal point in an int (or any other data type that cannot store floating point values), the compiler will throw an error.</li>
 							<li><span class="code">long</span> Stores whole number values from -9,223,372,036,854,775,808‬ to 9,223,372,036,854,775,807 (64-bit).</li>
-							<li><span class="code">float</span> Stores 32-bit <a href="https://floating-point-gui.de/formats/fp/">floating point</a> values </li>
-							<li><span class="code">double</span> Stores 64-bit floating point values</li>
+							<li><span class="code">float</span> Stores 32-bit <a href="https://floating-point-gui.de/formats/fp/">floating point</a> values (can have a decimal point)</li>
+							<li><span class="code">double</span> Stores 64-bit floating point values (can have a decimal point)</li>
 						</ul>
 						Another very commonly used data type in Java is a <span class="code">String</span>.
 						This type of variable is used to represent a <i>String</i> of character connected together.
@@ -87,14 +90,58 @@
 						<br><br>
 						<h4>Initialization</h4>
 							<script src="https://gist.github.com/JamesNarayanan/d7a7b687169ade46d50bd0509dd7b498.js"></script>
+						<h4>Arrays</h4>
+							<script src="https://gist.github.com/JamesNarayanan/b1b7b7a6b70946dcd0190cffcce053e3.js"></script>
 						
 					<br><br>
-					<h2><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html">Operators</a></h2>
+					<h2><a href="https://en.wikipedia.org/wiki/Operator_(computer_programming)">Operators</a></h2>
 						<h4>Mathematical Operators</h4>
 							<script src="https://gist.github.com/JamesNarayanan/6f591354bda4a06b6a86e1bcdbf698fa.js"></script>
 						<h4>Variable Reassignment</h4>
 							<script src="https://gist.github.com/JamesNarayanan/ca98ccfdd39aaf8e84a27c9824239d91.js"></script>
+						<h4>Logical/Relational Operators</h4>
+							<script src="https://gist.github.com/JamesNarayanan/2987063d0479ef6b3710cff34012f3a8.js"></script>
+
+					<br><br>
+					<h2><a href="https://en.wikipedia.org/wiki/Control_flow">Control Flow</a></h2>
+						<h4>If/Else Statements</h4>
+							<script src="https://gist.github.com/JamesNarayanan/ed62220dcb364557382ab1b80533719f.js"></script>
+						<h4>Loops</h4>
+							<script src="https://gist.github.com/JamesNarayanan/d004dbcdd325026d1855ebd2b9e02d51.js"></script>
 					
+					<br><br>
+					<h2><a href="https://en.wikipedia.org/wiki/Subroutine">Functions</a></h2>
+						The use of functions allows a programmer to organize their code effectively as well as reduce repition.
+						Functions are sometimes also referred to as <a href="https://en.wikipedia.org/wiki/Method_(computer_programming)">methods</a>.
+						Just like in mathematics, a function in Java has inputs (paramaters) and returns a value
+						based on those inputs. In math you've probably seen a function written like this:
+						<img src="images/mathFunction.png" class="d-block mx-auto my-1 p-2 rounded monokai" style="height: 50px;">
+						This same function could be written in Java as:
+						<img src="images/functionEx1.svg" class="d-block mx-auto my-1">
+						A function in java has a few main components that make it up:
+						<ul>
+							<li>Return Type - This includes all the primitive types talked about above,
+								as well as any type of Object, or void (does not return anything)</li>
+							<li>Name - Typically written in <a href="https://en.wikipedia.org/wiki/Camel_case">camel case</a>, like variables</li>
+							<li><a href="https://en.wikipedia.org/wiki/Parameter_(computer_programming)">Parameters</a> - These are the inputs for the function. Each one must have its type specified.
+								Functions can also be constructed without any parameters</li>
+							<li>Curly Braces - Not optional</li>
+							<li>Code to Execute - If the function has a return type (not void), then it MUST have a return statement in it.</li>
+						</ul>
+						Here is a function that I made when I created a TicTacToe game in Java:
+						<img src="images/functionEx2.svg" class="d-block mx-auto my-1">
+						This function checks if the TicTacToe board is full by iterating through each row and column.
+						This is useful because now I can use this elsewhere in the code. When somebody reads my code, they will see:
+						<img src="images/functionEx2Call.svg" class="d-block mx-auto my-1">
+						They will quickly be able to understand what I'm trying to do (and the function annotation will clear up any questions).
+						Functions go a long way towards making code neater.
+
+						<br><br>
+						<h4>Scope</h4>
+							Functions must placed inside a class. There are two main scopes that functions are declared with: public and private.
+							Public functions can be accessed by any instance of the function's respective class object.
+							Private functions can only be accessed within the specific class. This is useful for when a function is only used for some internal computation in the class.
+
 				</div>
 			</div>
 			<div class="tab-pane fade" id="io" role="tabpanel" aria-labelledby="nav-io-tab">
