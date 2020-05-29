@@ -77,7 +77,7 @@
 							<li><span class="code">boolean</span> true or false (1 <a href="https://en.wikipedia.org/wiki/Bit">bit</a>)</li>
 							<li><span class="code">byte</span> Stores whole number values from -128 to 127 (8-bit)</li>
 							<li><span class="code">short</span> Stores whole number values from −32,768 to 32,767 (16-bit)</li>
-							<li><span class="code">char</span> Stores character values from '\u0000' (0) to '\uffff' (65535) (16-bit). This is a way to store a single <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> character.</li>
+							<li><span class="code">char</span> Stores character values from '\u0000' (0) to '\uffff' (65535) (16-bit). This is a way to store a <u>single</u> <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> character.</li>
 							<li><span class="code">int</span> Stores whole number values from -2,147,483,648 to 2,147,483,647 (32-bit).
 								If one tries to store a number with a decimal point in an int (or any other data type that cannot store floating point values), the compiler will throw an error.</li>
 							<li><span class="code">long</span> Stores whole number values from -9,223,372,036,854,775,808‬ to 9,223,372,036,854,775,807 (64-bit).</li>
@@ -87,6 +87,8 @@
 						Another very commonly used data type in Java is a <span class="code">String</span>.
 						This type of variable is used to represent a <i>String</i> of character connected together.
 						We use it to represent any collection of characters, including single characters, words, or sentences.
+						<br>
+						Also, it is a Java convention to declare variables using <a href="https://en.wikipedia.org/wiki/Camel_case">camel case</a>.
 						<br><br>
 						<h4>Initialization</h4>
 							<script src="https://gist.github.com/JamesNarayanan/d7a7b687169ade46d50bd0509dd7b498.js"></script>
@@ -141,6 +143,14 @@
 							Functions must placed inside a class. There are two main scopes that functions are declared with: public and private.
 							Public functions can be accessed by any instance of the function's respective class object.
 							Private functions can only be accessed within the specific class. This is useful for when a function is only used for some internal computation in the class.
+							This will be shown further in the next section about classes.
+					
+					<br><br><br>
+					<h2><a href="https://en.wikipedia.org/wiki/Class_(computer_programming)">Classes</a></h2>
+						Classes are essential components of programs in object oriented languages.
+						An object in Java is created as a class. As mentioned in the beginning of the guide,
+						a class can have multiple variables and methods associated with it.
+						<script src="https://gist.github.com/JamesNarayanan/d8c18b949b938ff515d3d8564f436bb7.js"></script>
 
 				</div>
 			</div>
