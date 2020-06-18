@@ -16,7 +16,7 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>	
 	</head>
 	<body class="p-3" style="background-color: #272822;">
-		<nav class="mb-3">
+		<nav class="mb-3" id="top">
 			<div class="nav nav-pills nav-fill justify-content-center" id="nav-tab" role="tablist">
 				<a class="nav-item nav-link text-white active" id="nav-home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="nav-home" aria-selected="true">Programming Guide</a>
 				<a class="nav-item nav-link text-white" id="nav-sm-tab" data-toggle="tab" href="#sm" role="tab" aria-controls="nav-sm" aria-selected="false">Sensors & Motors</a>
@@ -29,199 +29,234 @@
 					<img src="images/blur.jpg" class="img-fluid rounded mb-5">
 				</div>
 
-				<div class="jumbotron col-12 col-md-10 col-lg-8 mx-auto p-3" style="background-color: rgba(255,255,255, 0.1);">
-					<h1 class="text-center">Beginner Resources</h1>
-					<ul style="font-size: larger;">
-						<li>
-							If you want an overview of Java syntax, I have created a guide below
-						</li>
-						<li>
-							If you want a thorough, interactive Java guide, I recommend using <a href="https://www.codecademy.com/learn/learn-java">Codecademy</a>.
-							It's great for people who are just beginning.
-						</li>
-						<li>
-							If you are already familiar with basic Java syntax and want to practice, I recommend trying <a href="https://codingbat.com/java">Coding Bat</a>.
-							You can make an account to save your progress for this site. I recommend the warmup, AP CS, logic, and array problems.
-							String manipulation, recursion, maps, and functional mapping are not as useful in the robotics programming that we do.
-						</li>
-					</ul>
-				</div>
+				<div class="row">
+					<div class="col-12 col-md-10 col-lg-8 mx-auto">
+						<div class="jumbotron p-3" id="beginner-resources" style="background-color: rgba(255,255,255, 0.1);">
+							<h1 class="text-center">Beginner Resources</h1>
+							<ul style="font-size: larger;">
+								<li>
+									If you want an overview of Java syntax, I have created a guide below
+								</li>
+								<li>
+									If you want a thorough, interactive Java guide, I recommend using <a href="https://www.codecademy.com/learn/learn-java">Codecademy</a>.
+									It's great for people who are just beginning.
+								</li>
+								<li>
+									If you are already familiar with basic Java syntax and want to practice, I recommend trying <a href="https://codingbat.com/java">Coding Bat</a>.
+									You can make an account to save your progress for this site. I recommend the warmup, AP CS, logic, and array problems.
+									String manipulation, recursion, maps, and functional mapping are not as useful in the robotics programming that we do.
+								</li>
+							</ul>
+						</div>
 
-				<div class="jumbotron col-12 col-md-10 col-lg-8 mx-auto p-3" style="background-color: rgba(255,255,255, 0.1);">
-					<h1 class="text-center">Java Basics</h1>
-					On team 41 we use <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>, an <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming language</a>.
-					What this means is that our programs are based around the creation and use of <a href="https://en.wikipedia.org/wiki/Object_(computer_science)">objects</a>.
-					These objects have properties which are associated with them.
-					This allows us easily reference our data.
-					For example, take a look at this simple Bird class:
-					<script src="https://gist.github.com/JamesNarayanan/6f49b41bc5e75cc5071ffdd418e8d45e.js"></script>
-					In Java, a class is an object that can be manipulated.
-					In this case, the Bird object has attrributes that store its color, name, and position.
-					It also has built in functions that manipulate its properties or return values about it.
-					One advantage to creating an object such as this is that other users can use it without knowing exactly how it works.
-					This principle is called <a href="https://en.wikipedia.org/wiki/Abstraction_(computer_science)">abstraction</a> and is very useful when writing programs.
-					It allows people to easily build off pre-existing <a href="https://en.wikipedia.org/wiki/Library_(computing)">libraries</a> (collections of programs).
-					<br><br>
-					Before we go too far though, let's take a step back and start with some of the fundamentals of programming languages.
-					<br><br><br>
-					<h2><a href="https://en.wikipedia.org/wiki/Comment_(computer_programming)">Comments</a></h2>
-						Before we start going over code, knowing what a comment is will be helpful.
-						<script src="https://gist.github.com/JamesNarayanan/aada7a81ccd9220bf791cffd3916a0d5.js"></script>
-					<br><br>
-					<h2><a href="https://en.wikipedia.org/wiki/Variable_(computer_science)">Variables</a></h2>
-						One of the most important parts of any programming language is the use of variables.
-						These are named values stored in the computer's RAM.
-						In Java, the primitive <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">variable types</a> include the following:
-						<ul>
-							<li><span class="code">boolean</span> true or false (1 <a href="https://en.wikipedia.org/wiki/Bit">bit</a>)</li>
-							<li><span class="code">byte</span> Stores whole number values from -128 to 127 (8-bit)</li>
-							<li><span class="code">short</span> Stores whole number values from −32,768 to 32,767 (16-bit)</li>
-							<li><span class="code">char</span> Stores character values from '\u0000' (0) to '\uffff' (65535) (16-bit). This is a way to store a <u>single</u> <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> character.</li>
-							<li><span class="code">int</span> Stores whole number values from -2,147,483,648 to 2,147,483,647 (32-bit).
-								If one tries to store a number with a decimal point in an int (or any other data type that cannot store floating point values), the compiler will throw an error.</li>
-							<li><span class="code">long</span> Stores whole number values from -9,223,372,036,854,775,808‬ to 9,223,372,036,854,775,807 (64-bit).</li>
-							<li><span class="code">float</span> Stores 32-bit <a href="https://floating-point-gui.de/formats/fp/">floating point</a> values (can have a decimal point)</li>
-							<li><span class="code">double</span> Stores 64-bit floating point values (can have a decimal point)</li>
+						<div class="jumbotron p-3" id="java-basics" style="background-color: rgba(255,255,255, 0.1);">
+							<h1 class="text-center">Java Basics</h1>
+							On team 41 we use <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>, an <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming language</a>.
+							What this means is that our programs are based around the creation and use of <a href="https://en.wikipedia.org/wiki/Object_(computer_science)">objects</a>.
+							These objects have properties which are associated with them.
+							This allows us easily reference our data.
+							For example, take a look at this simple Bird class:
+							<script src="https://gist.github.com/JamesNarayanan/6f49b41bc5e75cc5071ffdd418e8d45e.js"></script>
+							In Java, a class is an object that can be manipulated.
+							In this case, the Bird object has attrributes that store its color, name, and position.
+							It also has built in functions that manipulate its properties or return values about it.
+							One advantage to creating an object such as this is that other users can use it without knowing exactly how it works.
+							This principle is called <a href="https://en.wikipedia.org/wiki/Abstraction_(computer_science)">abstraction</a> and is very useful when writing programs.
+							It allows people to easily build off pre-existing <a href="https://en.wikipedia.org/wiki/Library_(computing)">libraries</a> (collections of programs).
+							<br><br>
+							Before we go too far though, let's take a step back and start with some of the fundamentals of programming languages.
+							<br><br><br>
+							<h2 id="comments"><a href="https://en.wikipedia.org/wiki/Comment_(computer_programming)">Comments</a></h2>
+								Before we start going over code, knowing what a comment is will be helpful.
+								<script src="https://gist.github.com/JamesNarayanan/aada7a81ccd9220bf791cffd3916a0d5.js"></script>
+							<br><br>
+							<h2 id="variables"><a href="https://en.wikipedia.org/wiki/Variable_(computer_science)">Variables</a></h2>
+								One of the most important parts of any programming language is the use of variables.
+								These are named values stored in the computer's RAM.
+								In Java, the primitive <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">variable types</a> include the following:
+								<ul>
+									<li><span class="code">boolean</span> true or false (1 <a href="https://en.wikipedia.org/wiki/Bit">bit</a>)</li>
+									<li><span class="code">byte</span> Stores whole number values from -128 to 127 (8-bit)</li>
+									<li><span class="code">short</span> Stores whole number values from −32,768 to 32,767 (16-bit)</li>
+									<li><span class="code">char</span> Stores character values from '\u0000' (0) to '\uffff' (65535) (16-bit). This is a way to store a <u>single</u> <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> character.</li>
+									<li><span class="code">int</span> Stores whole number values from -2,147,483,648 to 2,147,483,647 (32-bit).
+										If one tries to store a number with a decimal point in an int (or any other data type that cannot store floating point values), the compiler will throw an error.</li>
+									<li><span class="code">long</span> Stores whole number values from -9,223,372,036,854,775,808‬ to 9,223,372,036,854,775,807 (64-bit).</li>
+									<li><span class="code">float</span> Stores 32-bit <a href="https://floating-point-gui.de/formats/fp/">floating point</a> values (can have a decimal point)</li>
+									<li><span class="code">double</span> Stores 64-bit floating point values (can have a decimal point)</li>
+								</ul>
+								Another very commonly used data type in Java is a <span class="code">String</span>.
+								This type of variable is used to represent a <i>String</i> of character connected together.
+								We use it to represent any collection of characters, including single characters, words, or sentences.
+								<br>
+								Also, it is a Java convention to declare variables using <a href="https://en.wikipedia.org/wiki/Camel_case">camel case</a>.
+								<br><br>
+								<h4>Initialization</h4>
+									<script src="https://gist.github.com/JamesNarayanan/d7a7b687169ade46d50bd0509dd7b498.js"></script>
+								<h4>Arrays</h4>
+									<script src="https://gist.github.com/JamesNarayanan/b1b7b7a6b70946dcd0190cffcce053e3.js"></script>
+								
+							<br><br>
+							<h2 id="operators"><a href="https://en.wikipedia.org/wiki/Operator_(computer_programming)">Operators</a></h2>
+								<h4>Mathematical Operators</h4>
+									<script src="https://gist.github.com/JamesNarayanan/6f591354bda4a06b6a86e1bcdbf698fa.js"></script>
+								<h4>Variable Reassignment</h4>
+									<script src="https://gist.github.com/JamesNarayanan/ca98ccfdd39aaf8e84a27c9824239d91.js"></script>
+								<h4>Logical/Relational Operators</h4>
+									<script src="https://gist.github.com/JamesNarayanan/2987063d0479ef6b3710cff34012f3a8.js"></script>
+
+							<br><br>
+							<h2 id="control-flow"><a href="https://en.wikipedia.org/wiki/Control_flow">Control Flow</a></h2>
+								<h4>If/Else Statements</h4>
+									<script src="https://gist.github.com/JamesNarayanan/ed62220dcb364557382ab1b80533719f.js"></script>
+								<h4>Loops</h4>
+									<script src="https://gist.github.com/JamesNarayanan/d004dbcdd325026d1855ebd2b9e02d51.js"></script>
+							
+							<br><br>
+							<h2 id="functions"><a href="https://en.wikipedia.org/wiki/Subroutine">Functions</a></h2>
+								The use of functions allows a programmer to organize their code effectively as well as reduce repition.
+								Functions are sometimes also referred to as <a href="https://en.wikipedia.org/wiki/Method_(computer_programming)">methods</a>.
+								Just like in mathematics, a function in Java has inputs (paramaters) and returns a value
+								based on those inputs. In math you've probably seen a function written like this:
+								<img src="images/mathFunction.png" class="d-block mx-auto my-1 p-2 rounded monokai" style="height: 50px;">
+								This same function could be written in Java as:
+								<img src="images/functionEx1.svg" class="d-block mx-auto my-1">
+								A function in java has a few main components that make it up:
+								<ul>
+									<li>Return Type - This includes all the primitive types talked about above,
+										as well as any type of Object, or void (does not return anything)</li>
+									<li>Name - Typically written in <a href="https://en.wikipedia.org/wiki/Camel_case">camel case</a>, like variables</li>
+									<li><a href="https://en.wikipedia.org/wiki/Parameter_(computer_programming)">Parameters</a> - These are the inputs for the function. Each one must have its type specified.
+										Functions can also be constructed without any parameters</li>
+									<li>Curly Braces - Not optional</li>
+									<li>Code to Execute - If the function has a return type (not void), then it MUST have a return statement in it.</li>
+								</ul>
+								Here is a function that I made when I created a TicTacToe game in Java:
+								<img src="images/functionEx2.svg" class="d-block mx-auto my-1">
+								This function checks if the TicTacToe board is full by iterating through each row and column.
+								This is useful because now I can use this elsewhere in the code. When somebody reads my code, they will see:
+								<img src="images/functionEx2Call.svg" class="d-block mx-auto my-1">
+								They will quickly be able to understand what I'm trying to do (and the function annotation will clear up any questions).
+								Functions go a long way towards making code neater.
+
+								<br><br>
+								<h4>Scope</h4>
+									Functions must placed inside a class. There are two main scopes that functions are declared with: public and private.
+									Public functions can be accessed by any instance of the function's respective class object.
+									Private functions can only be accessed within the specific class. This is useful for when a function is only used for some internal computation in the class.
+									This will be shown further in the next section about classes.
+							
+							<br><br><br>
+							<h2 id="classes"><a href="https://en.wikipedia.org/wiki/Class_(computer_programming)">Classes</a></h2>
+								Classes are essential components of programs in object oriented languages.
+								An object in Java is created as a class. As mentioned in the beginning of the guide,
+								a class can have multiple variables and methods associated with it.
+								<script src="https://gist.github.com/JamesNarayanan/d8c18b949b938ff515d3d8564f436bb7.js"></script>
+						</div>
+
+						<div class="jumbotron p-3" id="software-setup" style="background-color: rgba(255,255,255, 0.1);">
+							<h1 class="text-center">Software Setup</h1>
+							<h2><a href="https://www.java.com/en/">Install Java</a></h2>
+								Press download to go to the downloads page for your respectice operating system.
+								There may be multiple versions. You should use the version that is recommended.
+							<br><br>
+							<h2><a href="https://docs.wpilib.org/en/stable/docs/getting-started/getting-started-frc-control-system/wpilib-setup.html">Install WPILib & VS Code</a></h2>
+								Since the 2018-2019 season, we write our programming using Visual Studio Code.
+								It is an IDE (Integrated Development Environment) that uses a plugin called WPILib.
+								WPILib contains tons of classes that are the foundation of any FRC robot project.
+								If you want detailed documentation about WPILib classes, go <a href="https://first.wpi.edu/FRC/roborio/release/docs/java/index.html">here</a>.
+							<br><br>
+							<h2><a href="https://docs.wpilib.org/en/stable/docs/getting-started/getting-started-frc-control-system/frc-game-tools.html">Install FRC Game Tools</a></h2>
+								The part of the game tools that we use most often is the <a href="https://docs.wpilib.org/en/stable/docs/software/driverstation/driver-station.html">driver station</a>.
+								We use it to run our code as well as other things including checking the comms status, checking the battery voltage, and finding game controller ports.
+								When installing the game tools, you may be asked for some identification. Ask your captain about that.
+							<hr class="bg-white w-75">
+							All done! Now you can finally get programming. To make your first project, open VS Code,
+							click the WPILib icon in the top right, and click "Create New Project".
+							If you want to start fresh, choose template -> java -> Timed Robot.
+							If you want to get a feel for program layout, you can choose to see an example project instead.
+							(I recommend choosing the "Tank Drive" example. We've used Tank Drive to control the robot the past few years.)
+						</div>
+
+						<div class="jumbotron p-3" id="frc-programming-basics" style="background-color: rgba(255,255,255, 0.1);">
+							<h1 class="text-center">FRC Programming Basics</h1>
+							<h2 id="file-structure">File Structure</h2>
+								So now you've created a new Java project using the WPILib Timed Robot template. Where do you go to write your code?
+								During this guide I am going to reference the <a href="https://github.com/Team41Robotics/2020-Robot-Code/tree/master/02_FinalRobot">final code</a> for the 2020 robot a lot.
+								You should open that up in another tab to follow along.
+								In the <i>02_FinalRobot</i> folder, you can navigate to <i>src/main/java/frc/robot</i>.
+								In that folder you'll see a bunch of <i>*.java</i> files, two of which your template project already has: <i>Main.java</i> and <i>Robot.java</i>.
+								The <i>Main.java</i> file is just there to start your program off (it's where you're main method is). You don't have to modify this at all.
+								Where you can start to write some code is the <i>Robot.java</i> file.
+								Also, when you create any additional classes they should be placed in the same parent folder as <i>Main.java</i> and <i>Robot.java</i>.
+								The only other folder that you need to know something about is the <i>vendordeps</i> folder.
+								It contains json files which allow you to import dependencies that are not part of WPILib (needed for SparkMax and TalonSRX/FX motor controllers).
+							<br><br>
+							<h2 id="basic-robot-code">Basic Robot Code</h2>
+								In <i>Robot.java</i> you'll find multiple methods including two that we use very often: <span class="code">robotInit()</span> and <span class="code">teleopPeriodic()</span>.
+								We use <span class="code">robotInit()</span> to initialize all of our variables when the program first runs.
+								To control the robot, we use <span class="code">teleopPeriodic()</span>.
+								This method runs periodically (every 20ms) and executes whatever is inside of it.
+								Because of that, loops are (usually) not required to make the robot move or sense the environment repeatedly.
+								I'm sure you've been wondering how to actually make a robot move. It is now time to do that!
+								To do so, we are going to use two different classes:
+									<a href="https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/Joystick.html" class="code">Joystick</a> and 
+									<a href="https://www.revrobotics.com/content/sw/max/sw-docs/java/com/revrobotics/CANSparkMax.html" class="code">CANSparkMax</a>.
+								To initialize your Joystick object, find the port number of your controller in the Driver Station. The USB devices tab should look something like this:
+								<img src="images/DriverStationUSB.png" alt="Driver Station USB Menu" class="d-block mx-auto my-1">
+								Your <span class="code">Joystick</span> object should be created at the top of your program inside the Robot class but outside of any method.
+								The method you will use to get data from your Joystick is <span class="code"><i>JoystickName</i>.getRawAxis(<i>Axis #</i>)</span>.
+								You can find the axis numbers in the same page of the Driver Station.
+								You will then feed the readings from your Joystick axes into your spark max's.
+								The method you will use to set the speed is ... shocker ... <span class="code"><i>SparkName</i>.set(<i>speed</i>)</span>.
+								If you feed two Joystick axes into at least two different sparks you should be able to make a robot move anywhere you want with tank drive!
+								Here's an example of what your program might look like:
+								<script src="https://gist.github.com/JamesNarayanan/8a86b81bb2c478c8d90353540cd03e72.js"></script>
+								Now you've created your first robot program! From here you can do so much more!
+								<ul>
+									<li>You can check out some more examples <a href="https://github.com/wpilibsuite/allwpilib/tree/master/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples">here</a></li>
+									<li>You can read up on the documentation <a href="https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/package-summary.html">here</a></li>
+									<li>You can check out all of Team 41's code <a href="https://github.com/Team41Robotics">here</a></li>
+								</ul>
+							<br>
+							<h2 id="advanced-robot-code">Advanced Robot Code</h2>
+								In the large projects that we use for the final game code, we don't put all of our code in the <i>Robot.java</i> class.
+								Instead, we seperate our code into seperate classes. This makes it easier to understand and work with.
+								You can see the final code from 2020 <a href="https://github.com/Team41Robotics/2020-Robot-Code/tree/master/02_FinalRobot/src/main/java/frc/robot">here</a>.
+								Many of the classes that you see there are self-explanatory. One very important one is <i>Ports.java</i>.
+								We use that class to organize all our port numbers for motor controllers, servos, and sensors as well as all button numbers.
+								Classes are a great tool which you will use in the future as you build bigger and better projects.
+						</div>
+					</div> <!-- End content column -->
+					<div class="d-none d-xl-block col-xl-2 bd-toc">
+						<ul class="section-nav">
+							<li class="toc-entry toc-h2"><a target="_self" href="#top">Top</a></li>
+							<li class="toc-entry toc-h2"><a target="_self" href="#beginner-resources">Beginner Resources</a></li>
+							<li class="toc-entry toc-h2"><a target="_self" href="#java-basics">Java Basics</a>
+								<ul>
+									<li class="toc-entry toc-h3"><a target="_self" href="#comments">Comments</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#variables">Variables</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#operators">Operators</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#control-flow">Control Flow</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#functions">Functions</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#classes">Classes</a></li>
+								</ul>
+							</li>
+							<li class="toc-entry toc-h2"><a target="_self" href="#software-setup">Software Setup</a></li>
+							<li class="toc-entry toc-h2"><a target="_self" href="#frc-programming-basics">FRC Programming Basics</a>
+								<ul>
+									<li class="toc-entry toc-h3"><a target="_self" href="#file-structure">File Structure</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#basic-robot-code">Basic Robot Code</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#advanced-robot-code">Advanced Robot Code</a></li>
+								</ul>
+							</li>
 						</ul>
-						Another very commonly used data type in Java is a <span class="code">String</span>.
-						This type of variable is used to represent a <i>String</i> of character connected together.
-						We use it to represent any collection of characters, including single characters, words, or sentences.
-						<br>
-						Also, it is a Java convention to declare variables using <a href="https://en.wikipedia.org/wiki/Camel_case">camel case</a>.
-						<br><br>
-						<h4>Initialization</h4>
-							<script src="https://gist.github.com/JamesNarayanan/d7a7b687169ade46d50bd0509dd7b498.js"></script>
-						<h4>Arrays</h4>
-							<script src="https://gist.github.com/JamesNarayanan/b1b7b7a6b70946dcd0190cffcce053e3.js"></script>
-						
-					<br><br>
-					<h2><a href="https://en.wikipedia.org/wiki/Operator_(computer_programming)">Operators</a></h2>
-						<h4>Mathematical Operators</h4>
-							<script src="https://gist.github.com/JamesNarayanan/6f591354bda4a06b6a86e1bcdbf698fa.js"></script>
-						<h4>Variable Reassignment</h4>
-							<script src="https://gist.github.com/JamesNarayanan/ca98ccfdd39aaf8e84a27c9824239d91.js"></script>
-						<h4>Logical/Relational Operators</h4>
-							<script src="https://gist.github.com/JamesNarayanan/2987063d0479ef6b3710cff34012f3a8.js"></script>
-
-					<br><br>
-					<h2><a href="https://en.wikipedia.org/wiki/Control_flow">Control Flow</a></h2>
-						<h4>If/Else Statements</h4>
-							<script src="https://gist.github.com/JamesNarayanan/ed62220dcb364557382ab1b80533719f.js"></script>
-						<h4>Loops</h4>
-							<script src="https://gist.github.com/JamesNarayanan/d004dbcdd325026d1855ebd2b9e02d51.js"></script>
-					
-					<br><br>
-					<h2><a href="https://en.wikipedia.org/wiki/Subroutine">Functions</a></h2>
-						The use of functions allows a programmer to organize their code effectively as well as reduce repition.
-						Functions are sometimes also referred to as <a href="https://en.wikipedia.org/wiki/Method_(computer_programming)">methods</a>.
-						Just like in mathematics, a function in Java has inputs (paramaters) and returns a value
-						based on those inputs. In math you've probably seen a function written like this:
-						<img src="images/mathFunction.png" class="d-block mx-auto my-1 p-2 rounded monokai" style="height: 50px;">
-						This same function could be written in Java as:
-						<img src="images/functionEx1.svg" class="d-block mx-auto my-1">
-						A function in java has a few main components that make it up:
-						<ul>
-							<li>Return Type - This includes all the primitive types talked about above,
-								as well as any type of Object, or void (does not return anything)</li>
-							<li>Name - Typically written in <a href="https://en.wikipedia.org/wiki/Camel_case">camel case</a>, like variables</li>
-							<li><a href="https://en.wikipedia.org/wiki/Parameter_(computer_programming)">Parameters</a> - These are the inputs for the function. Each one must have its type specified.
-								Functions can also be constructed without any parameters</li>
-							<li>Curly Braces - Not optional</li>
-							<li>Code to Execute - If the function has a return type (not void), then it MUST have a return statement in it.</li>
-						</ul>
-						Here is a function that I made when I created a TicTacToe game in Java:
-						<img src="images/functionEx2.svg" class="d-block mx-auto my-1">
-						This function checks if the TicTacToe board is full by iterating through each row and column.
-						This is useful because now I can use this elsewhere in the code. When somebody reads my code, they will see:
-						<img src="images/functionEx2Call.svg" class="d-block mx-auto my-1">
-						They will quickly be able to understand what I'm trying to do (and the function annotation will clear up any questions).
-						Functions go a long way towards making code neater.
-
-						<br><br>
-						<h4>Scope</h4>
-							Functions must placed inside a class. There are two main scopes that functions are declared with: public and private.
-							Public functions can be accessed by any instance of the function's respective class object.
-							Private functions can only be accessed within the specific class. This is useful for when a function is only used for some internal computation in the class.
-							This will be shown further in the next section about classes.
-					
-					<br><br><br>
-					<h2><a href="https://en.wikipedia.org/wiki/Class_(computer_programming)">Classes</a></h2>
-						Classes are essential components of programs in object oriented languages.
-						An object in Java is created as a class. As mentioned in the beginning of the guide,
-						a class can have multiple variables and methods associated with it.
-						<script src="https://gist.github.com/JamesNarayanan/d8c18b949b938ff515d3d8564f436bb7.js"></script>
-				</div>
-
-				<div class="jumbotron col-12 col-md-10 col-lg-8 mx-auto p-3" style="background-color: rgba(255,255,255, 0.1);">
-					<h1 class="text-center">Software Setup</h1>
-					<h2><a href="https://www.java.com/en/">Install Java</a></h2>
-						Press download to go to the downloads page for your respectice operating system.
-						There may be multiple versions. You should use the version that is recommended.
-					<br><br>
-					<h2><a href="https://docs.wpilib.org/en/stable/docs/getting-started/getting-started-frc-control-system/wpilib-setup.html">Install WPILib & VS Code</a></h2>
-						Since the 2018-2019 season, we write our programming using Visual Studio Code.
-						It is an IDE (Integrated Development Environment) that uses a plugin called WPILib.
-						WPILib contains tons of classes that are the foundation of any FRC robot project.
-						If you want detailed documentation about WPILib classes, go <a href="https://first.wpi.edu/FRC/roborio/release/docs/java/index.html">here</a>.
-					<br><br>
-					<h2><a href="https://docs.wpilib.org/en/stable/docs/getting-started/getting-started-frc-control-system/frc-game-tools.html">Install FRC Game Tools</a></h2>
-						The part of the game tools that we use most often is the <a href="https://docs.wpilib.org/en/stable/docs/software/driverstation/driver-station.html">driver station</a>.
-						We use it to run our code as well as other things including checking the comms status, checking the battery voltage, and finding game controller ports.
-						When installing the game tools, you may be asked for some identification. Ask your captain about that.
-					<hr class="bg-white w-75">
-					All done! Now you can finally get programming. To make your first project, open VS Code,
-					click the WPILib icon in the top right, and click "Create New Project".
-					If you want to start fresh, choose template -> java -> Timed Robot.
-					If you want to get a feel for program layout, you can choose to see an example project instead.
-					(I recommend choosing the "Tank Drive" example. We've used Tank Drive to control the robot the past few years.)
-				</div>
-
-				<div class="jumbotron col-12 col-md-10 col-lg-8 mx-auto p-3" style="background-color: rgba(255,255,255, 0.1);">
-					<h1 class="text-center">FRC Programming Basics</h1>
-					<h2>File Structure</h2>
-						So now you've created a new Java project using the WPILib Timed Robot template. Where do you go to write your code?
-						During this guide I am going to reference the <a href="https://github.com/Team41Robotics/2020-Robot-Code/tree/master/02_FinalRobot">final code</a> for the 2020 robot a lot.
-						You should open that up in another tab to follow along.
-						In the <i>02_FinalRobot</i> folder, you can navigate to <i>src/main/java/frc/robot</i>.
-						In that folder you'll see a bunch of <i>*.java</i> files, two of which your template project already has: <i>Main.java</i> and <i>Robot.java</i>.
-						The <i>Main.java</i> file is just there to start your program off (it's where you're main method is). You don't have to modify this at all.
-						Where you can start to write some code is the <i>Robot.java</i> file.
-						Also, when you create any additional classes they should be placed in the same parent folder as <i>Main.java</i> and <i>Robot.java</i>.
-						The only other folder that you need to know something about is the <i>vendordeps</i> folder.
-						It contains json files which allow you to import dependencies that are not part of WPILib (needed for SparkMax and TalonSRX/FX motor controllers).
-					<br><br>
-					<h2>Basic Robot Code</h2>
-						In <i>Robot.java</i> you'll find multiple methods including two that we use very often: <span class="code">robotInit()</span> and <span class="code">teleopPeriodic()</span>.
-						We use <span class="code">robotInit()</span> to initialize all of our variables when the program first runs.
-						To control the robot, we use <span class="code">teleopPeriodic()</span>.
-						This method runs periodically (every 20ms) and executes whatever is inside of it.
-						Because of that, loops are (usually) not required to make the robot move or sense the environment repeatedly.
-						I'm sure you've been wondering how to actually make a robot move. It is now time to do that!
-						To do so, we are going to use two different classes:
-							<a href="https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/Joystick.html" class="code">Joystick</a> and 
-							<a href="https://www.revrobotics.com/content/sw/max/sw-docs/java/com/revrobotics/CANSparkMax.html" class="code">CANSparkMax</a>.
-						To initialize your Joystick object, find the port number of your controller in the Driver Station. The USB devices tab should look something like this:
-						<img src="images/DriverStationUSB.png" alt="Driver Station USB Menu" class="d-block mx-auto my-1">
-						Your <span class="code">Joystick</span> object should be created at the top of your program inside the Robot class but outside of any method.
-						The method you will use to get data from your Joystick is <span class="code"><i>JoystickName</i>.getRawAxis(<i>Axis #</i>)</span>.
-						You can find the axis numbers in the same page of the Driver Station.
-						You will then feed the readings from your Joystick axes into your spark max's.
-						The method you will use to set the speed is ... shocker ... <span class="code"><i>SparkName</i>.set(<i>speed</i>)</span>.
-						If you feed two Joystick axes into at least two different sparks you should be able to make a robot move anywhere you want with tank drive!
-						Here's an example of what your program might look like:
-						<script src="https://gist.github.com/JamesNarayanan/8a86b81bb2c478c8d90353540cd03e72.js"></script>
-						Now you've created your first robot program! From here you can do so much more!
-						<ul>
-							<li>You can check out some more examples <a href="https://github.com/wpilibsuite/allwpilib/tree/master/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples">here</a></li>
-							<li>You can read up on the documentation <a href="https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/package-summary.html">here</a></li>
-							<li>You can check out all of Team 41's code <a href="https://github.com/Team41Robotics">here</a></li>
-						</ul>
-
-				</div>
-			</div>
+					</div> <!-- End table of contents -->
+				</div> <!-- End row -->
+			</div> <!-- End programming guide tab -->
 			<div class="tab-pane fade" id="sm" role="tabpanel" aria-labelledby="nav-sm-tab">
 				<h1 class="text-center">Sensors & Motors</h1>
-			</div>
+			</div> <!-- End sensors and motors tab content -->
 		</div>
 	</body>
 </html>
