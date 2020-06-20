@@ -40,3 +40,8 @@ function slideAndFade() {
 		});
 	}
 }
+
+// To make popovers work:
+$(function () {
+	$('[data-toggle="popover"]').popover({ trigger: "hover" });
+});

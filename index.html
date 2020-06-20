@@ -29,7 +29,7 @@
 		<nav class="mb-3">
 			<div class="nav nav-pills nav-fill justify-content-center" id="nav-tab" role="tablist">
 				<a class="nav-item nav-link text-white active" id="nav-home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="nav-home" aria-selected="true">Programming Guide</a>
-				<a class="nav-item nav-link text-white" id="nav-sm-tab" data-toggle="tab" href="#sm" role="tab" aria-controls="nav-sm" aria-selected="false">Sensors & Motors</a>
+				<a class="nav-item nav-link text-white" id="nav-hardware-tab" data-toggle="tab" href="#hardware" role="tab" aria-controls="nav-hardware" aria-selected="false">Hardware</a>
 			</div>
 		</nav>
 		<div class="tab-content text-white" id="nav-tabContent">
@@ -275,8 +275,139 @@
 					</div> <!-- End table of contents -->
 				</div> <!-- End row -->
 			</div> <!-- End programming guide tab -->
-			<div class="tab-pane fade" id="sm" role="tabpanel" aria-labelledby="nav-sm-tab">
-				<h1 class="text-center">Sensors & Motors</h1>
+			<div class="tab-pane fade" id="hardware" role="tabpanel" aria-labelledby="nav-hardware-tab">
+				<h1 class="text-center">Hardware</h1>
+				<div class="row">
+					<div class="col-12 col-md-10 col-xl-8 mx-auto">
+						<h1 class="text-center" id="motor-controllers">Motor Controllers</h1>
+						<div class="jumbotron p-3" id="talon-srx" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center"><a href="https://www.ctr-electronics.com/talon-srx.html">Talon SRX</a></h2>
+							<div class="row">
+								<div class="col-12 col-md-3  mb-2 mb-md-0 pr-0 text-center">
+									<img src="images/talonSRX.jpg" alt="talon srx image" class="img-fluid">
+								</div>
+								<div class="col-12 col-md-9 pl-0 text-break">
+									<ul>
+										<li>The Talon SRX is a motorcontroller for use with brushed motors</li>
+										<li>Documentation: <a href="http://www.ctr-electronics.com/downloads/api/java/html/classcom_1_1ctre_1_1phoenix_1_1motorcontrol_1_1can_1_1_talon_s_r_x.html">http://www.ctr-electronics.com/downloads/api/java/html/classcom_1_1ctre_1_1phoenix_1_1motorcontrol_1_1can_1_1_talon_s_r_x.html</a></li>
+										<li>Specs: <a href="https://www.ctr-electronics.com/talon-srx.html#product_tabs_tech_specs">https://www.ctr-electronics.com/talon-srx.html#product_tabs_tech_specs</a></li>
+										<li>Firmware: <a href="https://www.ctr-electronics.com/talon-srx.html#product_tabs_technical_resources">https://www.ctr-electronics.com/talon-srx.html#product_tabs_technical_resources</a></li>
+										<li>
+											Setup: Phoenix Tuner
+											<ul><li>Wireless: Yes</li></ul>
+										</li>
+										<br>
+										<li>Example from code: The shooterIntakeTalon in the <a href="https://github.com/Team41Robotics/2020-Robot-Code/blob/master/02_FinalRobot/src/main/java/frc/robot/Intake.java">Intake class</a> from 2020</li>
+										<li>How to instantiate: <span class="code">TalonSRX exampleTalon = new TalonSRX(<span data-toggle="popover" data-content="Found in Phoenix Tuner" data-placement="top">PORT</span>)</span></li>
+										<li>How to import: <span class="code">import com.ctre.phoenix.motorcontrol.can.TalonSRX</span></li>
+										<li>
+											Example uses:
+											<ul>
+												<li>Go forward (half speed): <span class="code">exampleTalon.set(ControlMode.PercentOutput, 0.5)</span></li>
+												<li>Stop: <span class="code">exampleTalon.set(ControlMode.PercentOutput, 0)</span></li>
+												<li>Go backward (full speed): <span class="code">exampleTalon.set(ControlMode.PercentOutput, -1)</span></li>
+											</ul>
+										</li>
+										<li>
+											Other Notes:
+											<ul>
+												<li>You also have to import the <a href="http://www.ctr-electronics.com/downloads/api/java/html/enumcom_1_1ctre_1_1phoenix_1_1motorcontrol_1_1_control_mode.html">ControlMode</a> class: <span class="code">import com.ctre.phoenix.motorcontrol.ControlMode</span></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> <!-- End Talon SRX -->
+						<div class="jumbotron p-3" id="talon-fx" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center"><a href="https://www.ctr-electronics.com/talon-fx.html">Talon FX</a></h2>
+							<div class="row">
+								<div class="col-12 col-md-3  mb-2 mb-md-0 pr-0 text-center">
+									<img src="images/talonFX.png" alt="talon fx image" class="img-fluid">
+								</div>
+								<div class="col-12 col-md-9 pl-0 text-break">
+									<ul>
+										<li>The Talon FX is a motorcontroller for use with brushless motors. It is integrated into the Falcon 500 motor.</li>
+										<li>Documentation: <a href="http://www.ctr-electronics.com/downloads/api/java/html/classcom_1_1ctre_1_1phoenix_1_1motorcontrol_1_1can_1_1_talon_f_x.html">http://www.ctr-electronics.com/downloads/api/java/html/classcom_1_1ctre_1_1phoenix_1_1motorcontrol_1_1can_1_1_talon_f_x.html</a></li>
+										<li>Specs: <a href="https://www.ctr-electronics.com/talon-fx.html#product_tabs_tech_specs">https://www.ctr-electronics.com/talon-fx.html#product_tabs_tech_specs</a></li>
+										<li>Firmware: <a href="https://www.ctr-electronics.com/talon-fx.html#product_tabs_technical_resources">https://www.ctr-electronics.com/talon-fx.html#product_tabs_technical_resources</a></li>
+										<li>
+											Setup: Phoenix Tuner
+											<ul><li>Wireless: Yes</li></ul>
+										</li>
+										<br>
+										<li>Example from code: The falconTalon in the <a href="https://github.com/Team41Robotics/2020-Robot-Code/blob/master/02_FinalRobot/src/main/java/frc/robot/Turret.java">Turret class</a> from 2020</li>
+										<li>How to instantiate: <span class="code">TalonFX exampleTalon = new TalonFX(<span data-toggle="popover" data-content="Found in Phoenix Tuner" data-placement="top">PORT</span>)</span></li>
+										<li>How to import: <span class="code">import com.ctre.phoenix.motorcontrol.can.TalonFX</span></li>
+										<li>
+											Example uses:
+											<ul>
+												<li>Go forward (half speed): <span class="code">exampleTalon.set(ControlMode.PercentOutput, 0.5)</span></li>
+												<li>Stop: <span class="code">exampleTalon.set(ControlMode.PercentOutput, 0)</span></li>
+												<li>Go backward (full speed): <span class="code">exampleTalon.set(ControlMode.PercentOutput, -1)</span></li>
+											</ul>
+										</li>
+										<li>
+											Other Notes:
+											<ul>
+												<li>You also have to import the <a href="http://www.ctr-electronics.com/downloads/api/java/html/enumcom_1_1ctre_1_1phoenix_1_1motorcontrol_1_1_control_mode.html">ControlMode</a> class: <span class="code">import com.ctre.phoenix.motorcontrol.ControlMode</span></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> <!-- End Talon FX -->
+						<div class="jumbotron p-3" id="spark-max" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center"><a href="https://www.revrobotics.com/rev-11-2158/">Spark Max</a></h2>
+							<div class="row">
+								<div class="col-12 col-md-3  mb-2 mb-md-0 pr-0 text-center">
+									<img src="images/sparkMax.png" alt="spark max image" class="img-fluid">
+								</div>
+								<div class="col-12 col-md-9 pl-0 text-break">
+									<ul>
+										<li>The Spark Max is a motorcontroller for use with brushless motors</li>
+										<li>Documentation: <a href="https://www.revrobotics.com/content/sw/max/sw-docs/java/com/revrobotics/SparkMax.html">https://www.revrobotics.com/content/sw/max/sw-docs/java/com/revrobotics/SparkMax.html</a></li>
+										<li>Specs: In product description</li>
+										<li>Firmware: <a href="https://www.revrobotics.com/sparkmax-software/#spark-max-firmware-updates">https://www.revrobotics.com/sparkmax-software/#spark-max-firmware-updates</a></li>
+										<li>
+											Setup: <a href="https://www.revrobotics.com/sparkmax-software/#spark-max-client-application">Spark Max Client</a>
+											<ul><li>Wireless: No. Must plug into usb-c port on the spark. (Can configure multiple sparks at once while they are connected via the CAN bus. Requires client version ≥ 2.0)</li></ul>
+										</li>
+										<br>
+										<li>Example from code: The sparks in the <a href="https://github.com/Team41Robotics/2020-Robot-Code/blob/master/02_FinalRobot/src/main/java/frc/robot/Driving.java">Driving class</a> from 2020</li>
+										<li>How to instantiate: <span class="code">SparkMax exampleSpark = new CANSparkMax(<span data-toggle="popover" data-content="Found in Spark Max Client" data-placement="top">PORT</span>, MotorType.kBrushless);</span></li>
+										<li>How to import: <span class="code">import com.revrobotics.CANSparkMax</span></li>
+										<li>
+											Example uses:
+											<ul>
+												<li>Go forward (half speed): <span class="code">exampleSpark.set(0.5)</span></li>
+												<li>Stop: <span class="code">exampleSpark.set(0)</span></li>
+												<li>Go backward (full speed): <span class="code">exampleSpark.set(-1)</span></li>
+											</ul>
+										</li>
+										<li>
+											Other Notes:
+											<ul>
+												<li>You also have to import the <a href="https://www.revrobotics.com/content/sw/max/sw-docs/java/com/revrobotics/CANSparkMaxLowLevel.MotorType.html">MotorType</a> class: <span class="code">import com.revrobotics.CANSparkMaxLowLevel.MotorType</span></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> <!-- End Spark Max -->
+					</div> <!-- End content column -->
+					<div class="d-none d-xl-block col-xl-2 bd-toc">
+						<ul class="section-nav">
+							<li class="toc-entry toc-h2"><a target="_self" href="#">Home</a></li>
+							<li class="toc-entry toc-h2"><a target="_self" href="#motor-controllers">Motor Controllers</a>
+								<ul>
+									<li class="toc-entry toc-h3"><a target="_self" href="#talon-srx">Talon SRX</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#talon-fx">Talon FX</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#spark-max">Spark Max</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div> <!-- End row -->
 			</div> <!-- End sensors and motors tab content -->
 		</div>
 	</body>
