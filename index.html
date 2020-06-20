@@ -17,6 +17,15 @@
 		<script src="./index.js"></script>
 	</head>
 	<body class="p-3" style="background-color: #272822;">
+		<!-- 
+			- Scroll Spy
+			✓ System.out.println
+			- SmartDashboard
+			- Separate Java & FRC programming
+			- Sensors & Motors
+				- How to instantiate each
+				- Important functions for each thing
+		 -->
 		<nav class="mb-3">
 			<div class="nav nav-pills nav-fill justify-content-center" id="nav-tab" role="tablist">
 				<a class="nav-item nav-link text-white active" id="nav-home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="nav-home" aria-selected="true">Programming Guide</a>
@@ -70,6 +79,16 @@
 							<h2 id="comments"><a href="https://en.wikipedia.org/wiki/Comment_(computer_programming)">Comments</a></h2>
 								Before we start going over code, knowing what a comment is will be helpful.
 								<script src="https://gist.github.com/JamesNarayanan/aada7a81ccd9220bf791cffd3916a0d5.js"></script>
+
+							<br><br>
+							<h2 id="debugging"><a href="">Debugging</a></h2>
+								Additionally, before we go on, it will be helpful to know the basics of debugging.
+								Often errors occur when writing a program. Learning good debugging practices can save you a lot of time otherwise spent staring at code.
+								Two very useful tools for this are the <a href="https://en.wikipedia.org/wiki/System_console">console</a> and <a href="https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/smartdashboard/smartdashboard-intro.html">SmartDashboard</a> (an information display for FRC).
+								An easy way to output to the console is by using the following command:
+								<img src="images/print.svg" class="d-block mx-auto my-1">
+								If you're deploying your code to a RoboRIO, you can view these print statements in the RIOLog.
+
 							<br><br>
 							<h2 id="variables"><a href="https://en.wikipedia.org/wiki/Variable_(computer_science)">Variables</a></h2>
 								One of the most important parts of any programming language is the use of variables.
@@ -236,6 +255,7 @@
 							<li class="toc-entry toc-h2"><a target="_self" href="#java-basics">Java Basics</a>
 								<ul>
 									<li class="toc-entry toc-h3"><a target="_self" href="#comments">Comments</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#debugging">Debugging</a></li>
 									<li class="toc-entry toc-h3"><a target="_self" href="#variables">Variables</a></li>
 									<li class="toc-entry toc-h3"><a target="_self" href="#operators">Operators</a></li>
 									<li class="toc-entry toc-h3"><a target="_self" href="#control-flow">Control Flow</a></li>
