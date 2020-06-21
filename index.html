@@ -21,10 +21,17 @@
 			- Scroll Spy
 			✓ System.out.println
 			- SmartDashboard
-			- Separate Java & FRC programming
-			- Sensors & Motors
-				- How to instantiate each
-				- Important functions for each thing
+			✓ Separate Java & FRC programming
+			- Hardware
+				✓ Motor controllers
+					✓ Talon (SRX & FX)
+					✓ Spark
+				✓ Joystick
+				- Servo
+				- Limit Switch
+				- Pneumatics
+					- PCM
+					- Solenoid
 		 -->
 		<nav class="mb-3">
 			<div class="nav nav-pills nav-fill justify-content-center" id="nav-tab" role="tablist">
@@ -356,6 +363,7 @@
 											Other Notes:
 											<ul>
 												<li>You also have to import the <a href="http://www.ctr-electronics.com/downloads/api/java/html/enumcom_1_1ctre_1_1phoenix_1_1motorcontrol_1_1_control_mode.html">ControlMode</a> class: <span class="code">import com.ctre.phoenix.motorcontrol.ControlMode</span></li>
+												<li>Port numbers are found in the "CAN Devices" tab of Phoenix Tuner</li>
 											</ul>
 										</li>
 									</ul>
@@ -394,6 +402,7 @@
 											Other Notes:
 											<ul>
 												<li>You also have to import the <a href="http://www.ctr-electronics.com/downloads/api/java/html/enumcom_1_1ctre_1_1phoenix_1_1motorcontrol_1_1_control_mode.html">ControlMode</a> class: <span class="code">import com.ctre.phoenix.motorcontrol.ControlMode</span></li>
+												<li>Port numbers are found in the "CAN Devices" tab of Phoenix Tuner</li>
 											</ul>
 										</li>
 									</ul>
@@ -414,11 +423,11 @@
 										<li>Firmware: <a href="https://www.revrobotics.com/sparkmax-software/#spark-max-firmware-updates">https://www.revrobotics.com/sparkmax-software/#spark-max-firmware-updates</a></li>
 										<li>
 											Setup: <a href="https://www.revrobotics.com/sparkmax-software/#spark-max-client-application">Spark Max Client</a>
-											<ul><li>Wireless: No. Must plug into usb-c port on the spark. (Can configure multiple sparks at once while they are connected via the CAN bus. Requires client version ≥ 2.0)</li></ul>
+											<ul><li>Wireless: No. Must plug into USB-C port on the spark. (Can configure multiple sparks at once while they are connected via the CAN bus. Requires client version ≥ 2.0)</li></ul>
 										</li>
 										<br>
 										<li>Example from code: The sparks in the <a href="https://github.com/Team41Robotics/2020-Robot-Code/blob/master/02_FinalRobot/src/main/java/frc/robot/Driving.java">Driving class</a> from 2020</li>
-										<li>How to instantiate: <span class="code">SparkMax exampleSpark = new CANSparkMax(<span data-toggle="popover" data-content="Found in Spark Max Client" data-placement="top">PORT</span>, MotorType.kBrushless);</span></li>
+										<li>How to instantiate: <span class="code">SparkMax exampleSpark = new CANSparkMax(<span data-toggle="popover" data-content="Found in Spark Max Client" data-placement="top">PORT</span>, MotorType.kBrushless)</span></li>
 										<li>How to import: <span class="code">import com.revrobotics.CANSparkMax</span></li>
 										<li>
 											Example uses:
@@ -432,12 +441,103 @@
 											Other Notes:
 											<ul>
 												<li>You also have to import the <a href="https://www.revrobotics.com/content/sw/max/sw-docs/java/com/revrobotics/CANSparkMaxLowLevel.MotorType.html">MotorType</a> class: <span class="code">import com.revrobotics.CANSparkMaxLowLevel.MotorType</span></li>
+												<li>Port numbers are found in the main page of the Spark Max client while connected over USB</li>
 											</ul>
 										</li>
 									</ul>
 								</div>
 							</div>
 						</div> <!-- End Spark Max -->
+
+						<h1 class="text-center" id="other-hardware">Other Hardware</h1>
+						<div class="jumbotron p-3" id="servo" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center"><a href="https://en.wikipedia.org/wiki/Servomotor">Servo</a></h2>
+							<div class="row">
+								<div class="col-12 col-md-3  mb-2 mb-md-0 pr-md-0 text-center">
+									<img src="images/servo.jpg" alt="servo image" class="img-fluid">
+								</div>
+								<div class="col-12 col-md-9 pl-0 text-break">
+									<ul>
+										<li>A servo is a small motor that utilizes <a href="https://en.wikipedia.org/wiki/Pulse-width_modulation">PWM</a></li>
+										<li>Documentation: <a href="https://first.wpi.edu/FRC/roborio/beta/docs/java/edu/wpi/first/wpilibj/Servo.html">https://first.wpi.edu/FRC/roborio/beta/docs/java/edu/wpi/first/wpilibj/Servo.html</a></li>
+										<li>
+											Setup: Plug into PWM port on RoboRIO</a>
+										</li>
+										<br>
+										<li>Example from code: The hoodServo in the <a href="https://github.com/Team41Robotics/2020-Robot-Code/blob/master/02_FinalRobot/src/main/java/frc/robot/Hood.java">Hood class</a> from 2020</li>
+										<li>How to instantiate: <span class="code">Servo exampleServo = new Servo(<span data-toggle="popover" data-content="Where it's plugged into the RIO" data-placement="top">PORT</span>)</span></li>
+										<li>How to import: <span class="code">import edu.wpi.first.wpilibj.Servo</span></li>
+										<li>
+											Example uses:
+											<ul>
+												<li>Set the servo to the position all the way to the left: <span class="code">exampleServo.set(0)</span></li>
+												<li>Set the servo to the position halfway between its max left and right values: <span class="code">exampleServo.set(0.5)</span></li>
+												<li>Set angle of rotation to 20&#176;: <span class="code">exampleServo.setAngle(20)</span></li>
+												<li>Set angle of rotation to &pi;/4 rad: <span class="code">exampleServo.setAngle(Math.toDegrees(Math.PI / 4))</span></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> <!-- End Spark Max -->
+
+						<div class="jumbotron p-3" id="joystick" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center">Joystick</h2>
+							<div class="row">
+								<div class="col-12 col-md-3  mb-2 mb-md-0 pr-md-0 text-center">
+									<img src="images/joystick.jpg" alt="joystick image" class="img-fluid">
+								</div>
+								<div class="col-12 col-md-9 pl-0 text-break">
+									<ul>
+										<li>The Joystick class is used to access usb game controllers</li>
+										<li>Documentation: <a href="https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/Joystick.html">https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/Joystick.html</a></li>
+										<br>
+										<li>Example from code: The joysticks in the <a href="https://github.com/Team41Robotics/2020-Robot-Code/blob/master/02_FinalRobot/src/main/java/frc/robot/Driving.java">Driving class</a> from 2020</li>
+										<li>How to instantiate: <span class="code">Joystick exampleJoy = new Joystick(<span data-toggle="popover" data-content="Found in FRC Driverstation USB devices tab" data-placement="top">PORT</span>)</span></li>
+										<li>How to import: <span class="code">import edu.wpi.first.wpilibj.Joystick;</span></li>
+										<li>
+											Example uses:
+											<ul>
+												<li>Check if button <i>n</i> is currently pressed: <span class="code">exampleJoy.getRawButton(n)</span></li>
+												<li>Check if button <i>n</i> has been pressed since the last time you checked: <span class="code">exampleJoy.getRawButtonPressed(n)</span></li>
+												<li>Get the value of axis <i>n</i> (from -1 to 1): <span class="code">exampleJoy.getRawAxis(n)</span></li>
+												<li>Get the value of the <a href="https://en.wikipedia.org/wiki/Joystick#Hat_switch">POV hat</a> (aka D-Pad): <span class="code">exampleJoy.getPOV()</span></li>
+											</ul>
+										</li>
+										<li>
+											Other Notes:
+											<ul>
+												<li>
+													To find the port of the Joystick, go into the USB devices tab of the driverstation.
+													You can drag the joysticks to the number you want.
+													You can also double click on them to lock them there so they will have the same port number even if they're unplugged and replugged.
+												</li>
+												<li>
+													To find button numbers for a Joystick, do the following:
+													<ol>
+														<li>Open control panel</li>
+														<li>Go to "Hardware and sound" &#8594; "View devices and printers"</li>
+														<li>Right click a joystick</li>
+														<li>Click "Game controller settings"</li>
+														<li>Select your game controller</li>
+														<li>Click "Properties"</li>
+														<li>Go to "Test" tab</li>
+														<li>View button numbers</li>
+													</ol>
+												</li>
+												<li>
+													To find axis numbers for Joystick, either:
+													<ul>
+														<li>Follow the same procedure as the buttons</li>
+														<li>Or go into the USB devices tab of the driverstation</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> <!-- End Joystick -->
 					</div> <!-- End content column -->
 					<div class="d-none d-xl-block col-xl-2 bd-toc">
 						<ul class="section-nav">
@@ -449,6 +549,8 @@
 									<li class="toc-entry toc-h3"><a target="_self" href="#spark-max">Spark Max</a></li>
 								</ul>
 							</li>
+							<li class="toc-entry toc-h2"><a target="_self" href="#servo">Servo</a></li>
+							<li class="toc-entry toc-h2"><a target="_self" href="#joystick">Joystick</a></li>
 						</ul>
 					</div>
 				</div> <!-- End row -->
