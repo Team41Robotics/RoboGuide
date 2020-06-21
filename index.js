@@ -1,47 +1,71 @@
-var toc, contentCol, colCenter;
+var tocs = {}, contentCols = {}, colCenters = {};
 
-$(document).ready(event => {
-	toc = $("#toc"); // Table of contents
+$(function () {
 	let opac = window.scrollY <= 500 ? window.scrollY / 500 : 100;
-	toc.css({
-		opacity: opac
-	});
+	let keys = ["java", "frc"];
+	keys.forEach(key => {
+		tocs[key] = $(`#toc-${key}`); // Table of contents
+		contentCols[key] = $(`#content-col-${key}`);
+		tocs[key].css({
+			opacity: opac,
+			visibility: opac == 0 ? "hidden" : "visible"
+		});
 
-	contentCol = $("#content-col");
-	colCenter = contentCol.offset().left + contentCol.outerWidth()/2; // Length from left side of screen to center of col
-	slideAndFade();
+		// Fixes weird adjustment that happens while java tab isn't active
+		$(`#nav-${key}-tab`).on('shown.bs.tab', function (e) {
+			colCenters = getColCenters();
+			slide();
+		});
+	});
+	colCenters = getColCenters();
+	slide();
+
+	// Necessary to make popovers work
+	$('[data-toggle="popover"]').popover({ trigger: "hover" });
 });
 
 $(window).resize(event => {
-	colCenter = contentCol.offset().left + contentCol.outerWidth()/2; // Length from left side of screen to center of col
-	slideAndFade();
+	colCenters = getColCenters();
+	slide();
 });
 
 $(document).scroll(event => {
 	let opac = window.scrollY <= 500 ? window.scrollY / 500 : 100;
-	toc.css({
-		opacity: opac
-	});
+	for(let key in tocs) {
+		tocs[key].css({
+			opacity: opac,
+			visibility: opac == 0 ? "hidden" : "visible"
+		});
+	}
 
-	slideAndFade();
+	slide();
 });
 
-function slideAndFade() {
-	if(window.innerWidth >= 1200) {
-		let diff = window.innerWidth/2 - colCenter;
-		let shift = diff - window.scrollY/2 > 0 ? diff - window.scrollY/2 : 0;
-		contentCol.css({
-			left: shift
-		});
+/** Gets length from left side of screen to center of cols */ 
+function getColCenters() {
+	let centers = {};
+	for(let key in tocs) {
+		centers[key] = parseFloat(contentCols[key].css("margin-left"), 10) + contentCols[key].outerWidth()/2;
 	}
-	else {
-		contentCol.css({
-			left: 0
-		});
-	}
+	return centers;
 }
 
-// To make popovers work:
-$(function () {
-	$('[data-toggle="popover"]').popover({ trigger: "hover" });
-});
+/** Slides content col over to make room for toc */
+function slide() {
+	if(window.innerWidth >= 1200) {
+		for(let key in tocs) {
+			let diff = window.innerWidth/2 - colCenters[key];
+			let shift = diff - window.scrollY/2 > 0 ? diff - window.scrollY/2 : 0;
+			contentCols[key].css({
+				left: shift
+			});
+		}
+	}
+	else {
+		for(let key in tocs) {
+			contentCols[key].css({
+				left: 0
+			});
+		}
+	}
+}

@@ -28,19 +28,20 @@
 		 -->
 		<nav class="mb-3">
 			<div class="nav nav-pills nav-fill justify-content-center" id="nav-tab" role="tablist">
-				<a class="nav-item nav-link text-white active" id="nav-home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="nav-home" aria-selected="true">Programming Guide</a>
+				<a class="nav-item nav-link text-white active" id="nav-java-tab" data-toggle="tab" href="#java" role="tab" aria-controls="nav-java" aria-selected="true">Java Guide</a>
+				<a class="nav-item nav-link text-white" id="nav-frc-tab" data-toggle="tab" href="#frc" role="tab" aria-controls="nav-frc" aria-selected="false">FRC Guide</a>
 				<a class="nav-item nav-link text-white" id="nav-hardware-tab" data-toggle="tab" href="#hardware" role="tab" aria-controls="nav-hardware" aria-selected="false">Hardware</a>
 			</div>
 		</nav>
 		<div class="tab-content text-white" id="nav-tabContent">
-			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="nav-home-tab">
+			<div class="tab-pane fade show active" id="java" role="tabpanel" aria-labelledby="nav-java-tab">
 				<div class="text-center">
-					<h1>Intro to FRC Robotics Programming with Java</h1>
-					<img src="images/blur.jpg" class="img-fluid rounded mb-5">
+					<h1>Intro to Java Programming</h1>
+					<img src="images/javaLogo.png" class="img-fluid rounded w-50 mb-5">
 				</div>
 
 				<div class="row">
-					<div class="col-12 col-md-10 col-lg-8 mx-auto" id="content-col">
+					<div class="col-12 col-md-10 col-lg-8 mx-auto" id="content-col-java">
 						<div class="jumbotron p-3" id="beginner-resources" style="background-color: rgba(255,255,255, 0.1);">
 							<h1 class="text-center">Beginner Resources</h1>
 							<ul style="font-size: larger;">
@@ -60,7 +61,7 @@
 						</div>
 
 						<div class="jumbotron p-3" id="java-basics" style="background-color: rgba(255,255,255, 0.1);">
-							<h1 class="text-center">Java Basics</h1>
+							<h2 class="text-center">Java Basics</h2>
 							On team 41 we use <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>, an <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming language</a>.
 							What this means is that our programs are based around the creation and use of <a href="https://en.wikipedia.org/wiki/Object_(computer_science)">objects</a>.
 							These objects have properties which are associated with them.
@@ -75,22 +76,26 @@
 							It allows people to easily build off pre-existing <a href="https://en.wikipedia.org/wiki/Library_(computing)">libraries</a> (collections of programs).
 							<br><br>
 							Before we go too far though, let's take a step back and start with some of the fundamentals of programming languages.
-							<br><br><br>
-							<h2 id="comments"><a href="https://en.wikipedia.org/wiki/Comment_(computer_programming)">Comments</a></h2>
+						</div>
+
+						<div class="jumbotron p-3" id="comments" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center"><a href="https://en.wikipedia.org/wiki/Comment_(computer_programming)">Comments</a></h2>
 								Before we start going over code, knowing what a comment is will be helpful.
 								<script src="https://gist.github.com/JamesNarayanan/aada7a81ccd9220bf791cffd3916a0d5.js"></script>
+						</div>
 
-							<br><br>
-							<h2 id="debugging"><a href="">Debugging</a></h2>
+						<div class="jumbotron p-3" id="debugging" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center"><a href="https://en.wikipedia.org/wiki/Debugging">Debugging</a></h2>
 								Additionally, before we go on, it will be helpful to know the basics of debugging.
 								Often errors occur when writing a program. Learning good debugging practices can save you a lot of time otherwise spent staring at code.
 								Two very useful tools for this are the <a href="https://en.wikipedia.org/wiki/System_console">console</a> and <a href="https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/smartdashboard/smartdashboard-intro.html">SmartDashboard</a> (an information display for FRC).
 								An easy way to output to the console is by using the following command:
 								<img src="images/print.svg" class="d-block mx-auto my-1">
 								If you're deploying your code to a RoboRIO, you can view these print statements in the RIOLog.
-
-							<br><br>
-							<h2 id="variables"><a href="https://en.wikipedia.org/wiki/Variable_(computer_science)">Variables</a></h2>
+						</div>
+						
+						<div class="jumbotron p-3" id="variables" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center"><a href="https://en.wikipedia.org/wiki/Variable_(computer_science)">Variables</a></h2>
 								One of the most important parts of any programming language is the use of variables.
 								These are named values stored in the computer's RAM.
 								In Java, the primitive <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">variable types</a> include the following:
@@ -111,29 +116,32 @@
 								<br>
 								Also, it is a Java convention to declare variables using <a href="https://en.wikipedia.org/wiki/Camel_case">camel case</a>.
 								<br><br>
-								<h4>Initialization</h4>
+								<h4 id="variable-initialization">Initialization</h4>
 									<script src="https://gist.github.com/JamesNarayanan/d7a7b687169ade46d50bd0509dd7b498.js"></script>
-								<h4>Arrays</h4>
+								<h4 id="variable-arrays">Arrays</h4>
 									<script src="https://gist.github.com/JamesNarayanan/b1b7b7a6b70946dcd0190cffcce053e3.js"></script>
-								
-							<br><br>
-							<h2 id="operators"><a href="https://en.wikipedia.org/wiki/Operator_(computer_programming)">Operators</a></h2>
-								<h4>Mathematical Operators</h4>
-									<script src="https://gist.github.com/JamesNarayanan/6f591354bda4a06b6a86e1bcdbf698fa.js"></script>
-								<h4>Variable Reassignment</h4>
-									<script src="https://gist.github.com/JamesNarayanan/ca98ccfdd39aaf8e84a27c9824239d91.js"></script>
-								<h4>Logical/Relational Operators</h4>
-									<script src="https://gist.github.com/JamesNarayanan/2987063d0479ef6b3710cff34012f3a8.js"></script>
+						</div>
 
-							<br><br>
-							<h2 id="control-flow"><a href="https://en.wikipedia.org/wiki/Control_flow">Control Flow</a></h2>
-								<h4>If/Else Statements</h4>
+						<div class="jumbotron p-3" id="operators" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center"><a href="https://en.wikipedia.org/wiki/Operator_(computer_programming)">Operators</a></h2>
+								<h4 id="operators-math">Mathematical Operators</h4>
+									<script src="https://gist.github.com/JamesNarayanan/6f591354bda4a06b6a86e1bcdbf698fa.js"></script>
+								<h4 id="operators-variable-reassignment">Variable Reassignment</h4>
+									<script src="https://gist.github.com/JamesNarayanan/ca98ccfdd39aaf8e84a27c9824239d91.js"></script>
+								<h4 id="operators-logical">Logical/Relational Operators</h4>
+									<script src="https://gist.github.com/JamesNarayanan/2987063d0479ef6b3710cff34012f3a8.js"></script>
+						</div>
+
+						<div class="jumbotron p-3" id="control-flow" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center"><a href="https://en.wikipedia.org/wiki/Control_flow">Control Flow</a></h2>
+								<h4 id="control-flow-if-else">If/Else Statements</h4>
 									<script src="https://gist.github.com/JamesNarayanan/ed62220dcb364557382ab1b80533719f.js"></script>
-								<h4>Loops</h4>
+								<h4 id="control-flow-loops">Loops</h4>
 									<script src="https://gist.github.com/JamesNarayanan/d004dbcdd325026d1855ebd2b9e02d51.js"></script>
-							
-							<br><br>
-							<h2 id="functions"><a href="https://en.wikipedia.org/wiki/Subroutine">Functions</a></h2>
+						</div>
+
+						<div class="jumbotron p-3" id="functions" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center"><a href="https://en.wikipedia.org/wiki/Subroutine">Functions</a></h2>
 								The use of functions allows a programmer to organize their code effectively as well as reduce repition.
 								Functions are sometimes also referred to as <a href="https://en.wikipedia.org/wiki/Method_(computer_programming)">methods</a>.
 								Just like in mathematics, a function in Java has inputs (paramaters) and returns a value
@@ -160,20 +168,69 @@
 								Functions go a long way towards making code neater.
 
 								<br><br>
-								<h4>Scope</h4>
+								<h4 id="functions-scope">Scope</h4>
 									Functions must placed inside a class. There are two main scopes that functions are declared with: public and private.
 									Public functions can be accessed by any instance of the function's respective class object.
 									Private functions can only be accessed within the specific class. This is useful for when a function is only used for some internal computation in the class.
 									This will be shown further in the next section about classes.
-							
-							<br><br><br>
-							<h2 id="classes"><a href="https://en.wikipedia.org/wiki/Class_(computer_programming)">Classes</a></h2>
+						</div>
+
+						<div class="jumbotron p-3" id="classes" style="background-color: rgba(255,255,255, 0.1);">
+							<h2 class="text-center"><a href="https://en.wikipedia.org/wiki/Class_(computer_programming)">Classes</a></h2>
 								Classes are essential components of programs in object oriented languages.
 								An object in Java is created as a class. As mentioned in the beginning of the guide,
 								a class can have multiple variables and methods associated with it.
 								<script src="https://gist.github.com/JamesNarayanan/d8c18b949b938ff515d3d8564f436bb7.js"></script>
 						</div>
-
+					</div> <!-- End content column -->
+					<div class="d-none d-xl-block col-xl-2 bd-toc" id="toc-java" style="opacity: 0;">
+						<ul class="section-nav">
+							<li class="toc-entry toc-h2"><a target="_self" href="#">Home</a></li>
+							<li class="toc-entry toc-h2"><a target="_self" href="#beginner-resources">Beginner Resources</a></li>
+							<li class="toc-entry toc-h2"><a target="_self" href="#java-basics">Java Basics</a>
+								<ul>
+									
+								</ul>
+							</li>
+							<li class="toc-entry toc-h3"><a target="_self" href="#comments">Comments</a></li>
+							<li class="toc-entry toc-h3"><a target="_self" href="#debugging">Debugging</a></li>
+							<li class="toc-entry toc-h3"><a target="_self" href="#variables">Variables</a>
+								<ul>
+									<li class="toc-entry toc-h3"><a target="_self" href="#variable-initialization">Initialization</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#variable-arrays">Arrays</a></li>
+								</ul>
+							</li>
+							<li class="toc-entry toc-h3"><a target="_self" href="#operators">Operators</a>
+								<ul>
+									<li class="toc-entry toc-h3"><a target="_self" href="#operators-math">Math</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#operators-variable-reassignment">Variable Reassignment</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#operators-logical">Logical</a></li>
+								</ul>
+							</li>
+							<li class="toc-entry toc-h3"><a target="_self" href="#control-flow">Control Flow</a>
+								<ul>
+									<li class="toc-entry toc-h3"><a target="_self" href="#control-flow-if-else">If/Else</a></li>
+									<li class="toc-entry toc-h3"><a target="_self" href="#control-flow-loops">Loops</a></li>
+								</ul>
+							</li>
+							<li class="toc-entry toc-h3"><a target="_self" href="#functions">Functions</a>
+								<ul>
+									<li class="toc-entry toc-h3"><a target="_self" href="#functions-scope">Scope</a></li>
+								</ul>
+							</li>
+							<li class="toc-entry toc-h3"><a target="_self" href="#classes">Classes</a></li>
+						</ul>
+					</div> <!-- End table of contents -->
+				</div> <!-- End row -->
+			</div> <!-- End java guide tab -->
+			<div class="tab-pane fade show" id="frc" role="tabpanel" aria-labelledby="nav-frc-tab">
+				<div class="text-center">
+					<h1>Intro to FRC Robotics Programming with Java</h1>
+					<img src="images/blur.jpg" class="img-fluid rounded mb-5">
+				</div>
+				
+				<div class="row">
+					<div class="col-12 col-md-10 col-lg-8 mx-auto" id="content-col-frc">
 						<div class="jumbotron p-3" id="software-setup" style="background-color: rgba(255,255,255, 0.1);">
 							<h1 class="text-center">Software Setup</h1>
 							<h2><a href="https://www.java.com/en/">Install Java</a></h2>
@@ -197,7 +254,6 @@
 							If you want to get a feel for program layout, you can choose to see an example project instead.
 							(I recommend choosing the "Tank Drive" example. We've used Tank Drive to control the robot the past few years.)
 						</div>
-
 						<div class="jumbotron p-3" id="frc-programming-basics" style="background-color: rgba(255,255,255, 0.1);">
 							<h1 class="text-center">FRC Programming Basics</h1>
 							<h2 id="file-structure">File Structure</h2>
@@ -248,21 +304,9 @@
 								Classes are a great tool which you will use in the future as you build bigger and better projects.
 						</div>
 					</div> <!-- End content column -->
-					<div class="d-none d-xl-block col-xl-2 bd-toc" id="toc" style="opacity: 0;">
+					<div class="d-none d-xl-block col-xl-2 bd-toc" id="toc-frc" style="opacity: 0;">
 						<ul class="section-nav">
 							<li class="toc-entry toc-h2"><a target="_self" href="#">Home</a></li>
-							<li class="toc-entry toc-h2"><a target="_self" href="#beginner-resources">Beginner Resources</a></li>
-							<li class="toc-entry toc-h2"><a target="_self" href="#java-basics">Java Basics</a>
-								<ul>
-									<li class="toc-entry toc-h3"><a target="_self" href="#comments">Comments</a></li>
-									<li class="toc-entry toc-h3"><a target="_self" href="#debugging">Debugging</a></li>
-									<li class="toc-entry toc-h3"><a target="_self" href="#variables">Variables</a></li>
-									<li class="toc-entry toc-h3"><a target="_self" href="#operators">Operators</a></li>
-									<li class="toc-entry toc-h3"><a target="_self" href="#control-flow">Control Flow</a></li>
-									<li class="toc-entry toc-h3"><a target="_self" href="#functions">Functions</a></li>
-									<li class="toc-entry toc-h3"><a target="_self" href="#classes">Classes</a></li>
-								</ul>
-							</li>
 							<li class="toc-entry toc-h2"><a target="_self" href="#software-setup">Software Setup</a></li>
 							<li class="toc-entry toc-h2"><a target="_self" href="#frc-programming-basics">FRC Programming Basics</a>
 								<ul>
@@ -274,7 +318,7 @@
 						</ul>
 					</div> <!-- End table of contents -->
 				</div> <!-- End row -->
-			</div> <!-- End programming guide tab -->
+			</div> <!-- End frc guide tab -->
 			<div class="tab-pane fade" id="hardware" role="tabpanel" aria-labelledby="nav-hardware-tab">
 				<h1 class="text-center">Hardware</h1>
 				<div class="row">
@@ -283,7 +327,7 @@
 						<div class="jumbotron p-3" id="talon-srx" style="background-color: rgba(255,255,255, 0.1);">
 							<h2 class="text-center"><a href="https://www.ctr-electronics.com/talon-srx.html">Talon SRX</a></h2>
 							<div class="row">
-								<div class="col-12 col-md-3  mb-2 mb-md-0 pr-0 text-center">
+								<div class="col-12 col-md-3  mb-2 mb-md-0 pr-md-0 text-center">
 									<img src="images/talonSRX.jpg" alt="talon srx image" class="img-fluid">
 								</div>
 								<div class="col-12 col-md-9 pl-0 text-break">
@@ -321,7 +365,7 @@
 						<div class="jumbotron p-3" id="talon-fx" style="background-color: rgba(255,255,255, 0.1);">
 							<h2 class="text-center"><a href="https://www.ctr-electronics.com/talon-fx.html">Talon FX</a></h2>
 							<div class="row">
-								<div class="col-12 col-md-3  mb-2 mb-md-0 pr-0 text-center">
+								<div class="col-12 col-md-3  mb-2 mb-md-0 pr-md-0 text-center">
 									<img src="images/talonFX.png" alt="talon fx image" class="img-fluid">
 								</div>
 								<div class="col-12 col-md-9 pl-0 text-break">
@@ -359,7 +403,7 @@
 						<div class="jumbotron p-3" id="spark-max" style="background-color: rgba(255,255,255, 0.1);">
 							<h2 class="text-center"><a href="https://www.revrobotics.com/rev-11-2158/">Spark Max</a></h2>
 							<div class="row">
-								<div class="col-12 col-md-3  mb-2 mb-md-0 pr-0 text-center">
+								<div class="col-12 col-md-3  mb-2 mb-md-0 pr-md-0 text-center">
 									<img src="images/sparkMax.png" alt="spark max image" class="img-fluid">
 								</div>
 								<div class="col-12 col-md-9 pl-0 text-break">
