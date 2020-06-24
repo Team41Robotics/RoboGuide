@@ -1,5 +1,6 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "./css/App.css";
 
 import NavBar from "./components/NavBar";
@@ -9,23 +10,33 @@ import JavaGuide from "./pages/JavaGuide";
 import FRCGuide from "./pages/FRCGuide";
 import HardwareGuide from "./pages/HardwareGuide";
 
-function App() {
+function App({ location }) {
   return (
     <div className="App">
       <NavBar />
       <div className="Page">
-        <Switch>
-          <Route exact path="/" component={Home} />
+        <TransitionGroup>
+          <CSSTransition
+            key={location.key}
+            timeout={{ enter: 1000, exit: 1000 }}
+            classNames={"fade"}
+          >
+            <section className="route-section">
+              <Switch location={location}>
+                <Route exact path="/" component={Home} />
 
-          <Route exact path="/java" component={JavaGuide} />
-          <Route exact path="/frc" component={FRCGuide} />
-          <Route exact path="/hardware" component={HardwareGuide} />
+                <Route exact path="/java" component={JavaGuide} />
+                <Route exact path="/frc" component={FRCGuide} />
+                <Route exact path="/hardware" component={HardwareGuide} />
 
-          <Route component={NotFound} />
-        </Switch>
+                <Route component={NotFound} />
+              </Switch>
+            </section>
+          </CSSTransition>
+        </TransitionGroup>
       </div>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);
