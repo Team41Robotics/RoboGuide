@@ -17,7 +17,7 @@ export default function(props) {
 	const activePath = loc.pathname + (loc.pathname.endsWith("/") ? "" : "/");
 
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark" id="navbar">
+		<nav className="navbar navbar-expand-lg navbar-dark mt-n3 mx-n3" id="navbar">
 			<Link className="navbar-brand" to="/">
 				<img
 					src={logo}
