@@ -87,13 +87,13 @@ export default function(props) {
                 <span className="code">Serial</span> without any suffixes. The
                 first step in serial communication is to initialize the serial
                 ports with{" "}
-                <span className="code">Serial.begin(&ltrate&gt)</span>. The rate
+                <span className="code">Serial.begin({"<"}rate{">"})</span>. The rate
                 is just how fast the data is sent, and the default for Arduino
                 is 9600. There are many ways to send data using the serial
                 ports, with either bytes or strings. We use bytes to represent
                 all of the data, because it is much easier to parse on the other
                 end than a string. To send a byte via serial, just run{" "}
-                <span className="code">Serial.write(&ltvalue&gt)</span>, where
+                <span className="code">Serial.write({"<"}value{">"})</span>, where
                 the value is any byte. To read it on the other end,{" "}
                 <span className="code">Serial.read()</span> is used.
                 <br />
@@ -109,29 +109,29 @@ export default function(props) {
                 digital pins need to be set to either input or output in the{" "}
                 <span className="code">setup()</span> function, using{" "}
                 <span className="code">
-                  pinMode(&ltPIN_NUMBER&gt, &ltMODE&gt)
+                  pinMode({"<"}PIN_NUMBER{">"}, {"<"}MODE{">"})
                 </span>
                 . Arduino come with many constants that can be used in programs,
                 such as INPUT and OUTPUT for setting the mode of the digital
                 pins. To read a digital pin, the function{" "}
-                <span className="code">digitalRead(&ltPIN_NUMBER&gt)</span> is
+                <span className="code">digitalRead({"<"}PIN_NUMBER{">"})</span> is
                 used, and it returns either a 1 or a 0, depending on whether or
                 not the pin is receiving voltage. To write to a pin, the
                 function{" "}
                 <span className="code">
-                  digitalWrite(&ltPIN_NUMBER&gt, &ltVALUE&gt)
+                  digitalWrite({"<"}PIN_NUMBER{">"}, {"<"}VALUE{">"})
                 </span>{" "}
                 is used, where VALUE is either a 1 or a 0. To write with a PWM
                 signal, use{" "}
                 <span className="code">
-                  analogWrite(&ltPIN_NUMBER&gt, &ltVALUE&gt)
+                  analogWrite({"<"}PIN_NUMBER{">"}, {"<"}VALUE{">"})
                 </span>
                 , where VALUE is any number from 0-255. Note that even though we
                 are using an analog function for this pin, its mode still needs
                 to be set with
                 <span className="code">pinMode</span>. To read from any of our
                 analog pins, use the function{" "}
-                <span className="code">analogRead(&ltPIN_NUMBER&gt)</span>.
+                <span className="code">analogRead({"<"}PIN_NUMBER{">"})</span>.
                 Here, PIN_NUMBER is the analog pin, beginning with the letter A.
                 Arduino will recognize this identifier as one of its built-in
                 constants and read from the correct pin. <br />
@@ -171,7 +171,7 @@ export default function(props) {
                 store all of the value. To set the value of a button, change the
                 value of
                 <span className="code">
-                  Joystick.state.&ltgroup&gt.&ltbutton/axis&gt
+                  Joystick.state.{"<"}group{">"}.{"<"}button/axis{">"}
                 </span>
                 . To find all of the groups and buttons/axes, look at{" "}
                 <a href="https://github.com/LordNuke/ArduinoLibs/tree/master/Joystick/src">
@@ -253,7 +253,7 @@ export default function(props) {
                 a Tkinter function. We used it to tell Tkinter to quit every
                 time the escape key was pressed (
                 <span className="code">
-                  root.bind("&ltEscape&gt" ,lambda e: root.quit())
+                  root.bind("{"<"}Escape{">"}" ,lambda e: root.quit())
                 </span>
                 . Finally, <span className="code">focus_set</span> makes sure
                 that the window is on top and nothing is covering it.
@@ -275,8 +275,8 @@ export default function(props) {
                 canvas is where everything is drawn on the screen, and where
                 most of the code is. To create a canvas, use{" "}
                 <span className="code">
-                  Canvas(&ltname of Tk() variable&gt, width=&ltwidth&gt,
-                  height=&ltheight&gt, background=&ltbg color&gt
+                  Canvas({"<"}name of Tk() variable{">"}, width={"<"}width{">"},
+                  height={"<"}height{">"}, background={"<"}bg color{">"}
                 </span>
                 . I recommend setting height and width as variables, because
                 they will be used again. Additionally, set the Canvas as a
@@ -290,7 +290,7 @@ export default function(props) {
                 actually draws everything on the screen.
                 <br />
                 To create text, use{" "}
-                <span className="code">ctx.create_text(&ltx&gt, &lty&gt)</span>,
+                <span className="code">ctx.create_text({"<"}x{">"}, {"<"}y{">"})</span>,
                 where x and y is the position of the button. There are also
                 several optional arguments, all of which can be viewed{" "}
                 <a href="https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/create_text.html">
@@ -302,7 +302,7 @@ export default function(props) {
                 rectangle on the driver station, and it is the most simple. To
                 make a rectangle, call
                 <span className="code">
-                  ctx.creat_rect(&ltx0&gt, &lty0&gt, &ltx1&gt, &lty1&gt)
+                  ctx.creat_rect({"<"}x0{">"}, {"<"}y0{">"}, {"<"}x1{">"}, {"<"}y1{">"})
                 </span>
                 . Here x0 and y0 represent the top left corner, and x1 and y1
                 represent the bottom right corner. Just like with text, there
@@ -317,13 +317,13 @@ export default function(props) {
                 interface with custom images. To create an image on the canvas,
                 use{" "}
                 <span className="code">
-                  ctx.create_image(&ltx&gt, &lty&gt, image=&ltimage_var&gt)
+                  ctx.create_image({"<"}x{">"}, {"<"}y{">"}, image={"<"}image_var{">"})
                 </span>
                 . Here, image_var is an ImageTk object. Importing an image is
                 somewhat simple. To do so, import Image and ImageTk from the PIL
                 module. Then create a variable with{" "}
                 <span className="code">
-                  Image.open(&ltfull_path_to_image&gt)
+                  Image.open({"<"}full_path_to_image{">"})
                 </span>
                 . We'll call this variable <span className="code">bg</span>.
                 Then, set that variable to{" "}
@@ -337,7 +337,7 @@ export default function(props) {
                 <span className="code">root.bind()</span> to call a function
                 every time the left mouse button is pressed (
                 <span className="code">
-                  ctx.bind("&ltButton-1&gt", handle_click)
+                  ctx.bind("{"<"}Button-1{">"}", handle_click)
                 </span>
                 ). Tkinter passed that function an object that has the x and y
                 position of the click. Since the buttons are squares, we can
@@ -356,7 +356,7 @@ export default function(props) {
                 Pyserial. This is what communicates with the Due to send the
                 inputs from Tkinter. To initialize the serial device, we use{" "}
                 <span className="code">
-                  ser = serial.Serial(&ltport&gt, &ltrate&gt)
+                  ser = serial.Serial({"<"}port{">"}, {"<"}rate{">"})
                 </span>
                 . The port is different depending on the device, but on the
                 Raspberry Pi it is <span className="code">"/dev/ttyAMA0"</span>.
@@ -364,7 +364,7 @@ export default function(props) {
                 programmed. Pyserial is a complicated module, but for our
                 purposes it only has one more function that we care about. To
                 send data over the serial port we can say
-                <span className="code">ser.write(&lt;val&gt;)</span> where val
+                <span className="code">ser.write({"<"};val{">"};)</span> where val
                 is any byte. A sample program for pyserial may look like this:
                 <ReactEmbedGist
                   titleClass="d-none"
