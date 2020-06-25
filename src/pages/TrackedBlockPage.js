@@ -29,6 +29,7 @@ export default function(props) {
 		visibility: "hidden"
 	});
 	const [left, setLeft] = useState(0);
+	const [lastScrollY, setLastScrollY] = useState(0);
 
 	useLayoutEffect(() => {
 		setLeft(getLeftShift(0, id));
@@ -36,6 +37,7 @@ export default function(props) {
 
 	useScrollPosition(({ prevPos, currPos }) => {
 		const scrollY = -currPos.y;
+		setLastScrollY(scrollY);
 		// Make smooth fade in on scroll
 		const opac = scrollY <= 500 ? scrollY / 500 : 1;
 		setTocStyle({
@@ -47,7 +49,7 @@ export default function(props) {
 
 	useEffect(() => {
 		const handleResize = function() {
-			if (window.innerWidth < 1200) setLeft(0);
+			setLeft(getLeftShift(lastScrollY, id));
 		};
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
