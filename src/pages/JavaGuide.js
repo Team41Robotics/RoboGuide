@@ -14,7 +14,7 @@ export default function(props) {
   return (
     <>
       <Helmet>
-        <title>Java Guide</title>
+        <title>Java Guide | RoboGuide</title>
       </Helmet>
       <TrackedBlockPage
         id="java"

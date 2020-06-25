@@ -10,17 +10,17 @@ export default function(props) {
   return (
     <>
       <Helmet>
-        <title>FRC Guide</title>
+        <title>Robot Code | RoboGuide</title>
       </Helmet>
       <TrackedBlockPage
-        id="frc"
+        id="robot-code"
         header={
           <>
-            <h1>Intro to FRC Robotics Programming with Java</h1>
+            <h1>Robot Code</h1>
             <img
               src={programmingImg}
               className="img-fluid rounded mb-5"
-              alt="FRC Programming"
+              alt="Robot Code"
             />
           </>
         }

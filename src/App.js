@@ -7,8 +7,9 @@ import NavBar from "./components/NavBar";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import JavaGuide from "./pages/JavaGuide";
-import FRCGuide from "./pages/FRCGuide";
-import HardwareGuide from "./pages/HardwareGuide";
+import RobotCode from "./pages/RobotCode";
+import RobotHardware from "./pages/RobotHardware";
+import DriverStation from "./pages/DriverStation";
 
 function App({ location }) {
   return (
@@ -26,8 +27,9 @@ function App({ location }) {
                 <Route exact path="/" component={Home} />
 
                 <Route exact path="/java" component={JavaGuide} />
-                <Route exact path="/frc" component={FRCGuide} />
-                <Route exact path="/hardware" component={HardwareGuide} />
+                <Route exact path="/robot-code" component={RobotCode} />
+                <Route exact path="/robot-hardware" component={RobotHardware} />
+                <Route exact path="/driver-station" component={DriverStation} />
 
                 <Route component={NotFound} />
               </Switch>

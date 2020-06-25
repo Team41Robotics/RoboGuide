@@ -7,8 +7,9 @@ import "../css/NavBar.css";
 
 const navPages = [
   { title: "Java Guide", path: "/java/" },
-  { title: "FRC Guide", path: "/frc/" },
-  { title: "Hardware", path: "/hardware/" }
+  { title: "Robot Code", path: "/robot-code/" },
+  { title: "Robot Hardware", path: "/robot-hardware/" },
+  { title: "Driver Station", path: "/driver-station/" }
 ];
 
 export default function(props) {

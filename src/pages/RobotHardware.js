@@ -13,13 +13,13 @@ export default function(props) {
   return (
     <>
       <Helmet>
-        <title>Hardware Guide</title>
+        <title>Robot Hardware | RoboGuide</title>
       </Helmet>
       <TrackedBlockPage
         id="hardware"
         header={
           <>
-            <h1>Hardware</h1>
+            <h1>Robot Hardware</h1>
             <img
               src={robotImg}
               className="img-fluid rounded mb-5"
