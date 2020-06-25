@@ -4,12 +4,15 @@ html {
 
 body {
   background-color: #272822;
-  padding: 1rem !important;
+  /* padding: 1rem !important; */
+  padding: 0;
+  margin: 0;
   color: #fff !important;
 }
 
-a {
-  color: #ffc107 !important; /* This is the bootstrap warning color */
+a,
+a:hover {
+  color: #ffc107; /* This is the bootstrap warning color */
 }
 
 .code {
