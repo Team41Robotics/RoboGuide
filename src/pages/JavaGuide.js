@@ -356,7 +356,7 @@ export default function(props) {
 								in Java:
 								<img
 									src={functionEx2Img}
-									className="d-block mx-auto my-1"
+									className="d-block mx-auto my-1 img-fluid"
 									alt="Function example 2"
 								/>
 								This function checks if the TicTacToe board is full by iterating
