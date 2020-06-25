@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import $ from "jquery";
 import TrackedBlock from "../components/TrackedBlock";
@@ -43,6 +43,14 @@ export default function(props) {
       visibility: opac === 0 ? "hidden" : "visible"
     });
     setLeft(getLeftShift(scrollY, id));
+  });
+
+  useEffect(() => {
+    const handleResize = function() {
+      if (window.innerWidth < 1200) setLeft(0);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   });
 
   return (
