@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "39150474cbc800c2fd1841bd06ae66bf",
+    "revision": "49b8eaffb3d0f137821587901bfa242a",
     "url": "/Team41Robotics/RoboGuide/index.html"
   },
   {
-    "revision": "b04b4574104df9fc732f",
+    "revision": "b7ffafbcc2202509fc63",
     "url": "/Team41Robotics/RoboGuide/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "b972493834f5d54a5c43",
-    "url": "/Team41Robotics/RoboGuide/static/css/main.e0552eee.chunk.css"
+    "revision": "b165cadc5ea07d2c9c6e",
+    "url": "/Team41Robotics/RoboGuide/static/css/main.21f6fac8.chunk.css"
   },
   {
-    "revision": "b04b4574104df9fc732f",
-    "url": "/Team41Robotics/RoboGuide/static/js/2.0f75b5f7.chunk.js"
+    "revision": "b7ffafbcc2202509fc63",
+    "url": "/Team41Robotics/RoboGuide/static/js/2.7a10e745.chunk.js"
   },
   {
     "revision": "6f5cd516e72ccce36acd07f8745d4216",
-    "url": "/Team41Robotics/RoboGuide/static/js/2.0f75b5f7.chunk.js.LICENSE.txt"
+    "url": "/Team41Robotics/RoboGuide/static/js/2.7a10e745.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b972493834f5d54a5c43",
-    "url": "/Team41Robotics/RoboGuide/static/js/main.13a2b619.chunk.js"
+    "revision": "b165cadc5ea07d2c9c6e",
+    "url": "/Team41Robotics/RoboGuide/static/js/main.31c8bace.chunk.js"
   },
   {
     "revision": "c72f7b022c3ea5087a09",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7c4765afd4705952a795e3209699a670",
     "url": "/Team41Robotics/RoboGuide/static/media/blur.7c4765af.jpg"
+  },
+  {
+    "revision": "ae0ec440ede9f7f99e8847910954a93c",
+    "url": "/Team41Robotics/RoboGuide/static/media/frc_programming.ae0ec440.jpg"
   },
   {
     "revision": "f1f9060b6bc8ec371ab3e325d74f5e7f",
@@ -54,6 +58,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "559ef113ab06995b5ef6d17506878321",
     "url": "/Team41Robotics/RoboGuide/static/media/joystick.559ef113.jpg"
+  },
+  {
+    "revision": "38ee63894ab7556bdd4db8006fa82f31",
+    "url": "/Team41Robotics/RoboGuide/static/media/logo.38ee6389.png"
   },
   {
     "revision": "6506525947ebbf4ca0a12d443a31511b",
