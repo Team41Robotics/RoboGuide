@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import ReactEmbedGist from "react-embed-gist";
 import TrackedBlockPage from "./TrackedBlockPage";
 
-import robotImg from "../img/blur.jpg";
+import programmingImg from "../img/frc_programming.jpg";
 import driverStationUSB from "../img/DriverStationUSB.png";
 
 export default function(props) {
@@ -18,9 +18,9 @@ export default function(props) {
           <>
             <h1>Intro to FRC Robotics Programming with Java</h1>
             <img
-              src={robotImg}
+              src={programmingImg}
               className="img-fluid rounded mb-5"
-              alt="Robot"
+              alt="FRC Programming"
             />
           </>
         }

@@ -7,6 +7,7 @@ import talonFX from "../img/talonFX.png";
 import sparkMax from "../img/sparkMax.png";
 import servoImg from "../img/servo.jpg";
 import joystickImg from "../img/joystick.jpg";
+import robotImg from "../img/blur.jpg";
 
 export default function(props) {
   return (
@@ -16,7 +17,16 @@ export default function(props) {
       </Helmet>
       <TrackedBlockPage
         id="hardware"
-        header={<h1>Hardware</h1>}
+        header={
+          <>
+            <h1>Hardware</h1>
+            <img
+              src={robotImg}
+              className="img-fluid rounded mb-5"
+              alt="Robot"
+            />
+          </>
+        }
         blocks={[
           {
             id: "talon-srx",

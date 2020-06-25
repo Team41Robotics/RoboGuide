@@ -13,4 +13,4 @@ There are two important scripts you can use during development.
 
 ## Contributing
 
-My personal suggestion is to use the [Atom](https://atom.io/) IDE. If so, install the packages `prettier-atom`, `linter`, `linter-ui-default`, and `linter-eslint`. It'll make your code pretty.
+My personal suggestion (as [the Peter Linder](https://github.com/peterapps)) is to use the [Atom](https://atom.io/) IDE. If so, install the packages `prettier-atom`, `linter`, `linter-ui-default`, and `linter-eslint`. It'll make your code pretty. I believe [the James Narayanan](https://github.com/JamesNarayanan) is more partial to [VS Code](https://code.visualstudio.com/), which also has a Prettier extension.
