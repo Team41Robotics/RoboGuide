@@ -25,3 +25,5 @@ yarn-error.log*
 .env
 
 carbon-config-monokai.json
+.idea/
+.idea/.gitignore
