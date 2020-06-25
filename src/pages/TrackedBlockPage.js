@@ -105,7 +105,7 @@ export default function(props) {
 					<ul className="section-nav">
 						<li className="toc-entry toc-h2">
 							<a target="_self" href="#">
-								Home
+								Back to Top
 							</a>
 						</li>
 						{blocks.map(block => TocLink(block))}
