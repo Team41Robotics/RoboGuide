@@ -1,26 +1,26 @@
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  background-color: #272822;
-  padding: 1rem !important;
-  margin: 0;
-  color: #fff !important;
+	background-color: #272822;
+	padding: 1rem !important;
+	margin: 0;
+	color: #fff !important;
 }
 
 a,
 a:hover {
-  color: #ffc107; /* This is the bootstrap warning color */
+	color: #ffc107; /* This is the bootstrap warning color */
 }
 
 .code {
-  font-family: monospace;
-  padding: 2px 8px 2px 8px;
-  background-color: #222;
-  color: rgb(248, 19, 19);
+	font-family: monospace;
+	padding: 2px 8px 2px 8px;
+	background-color: #222;
+	color: rgb(248, 19, 19);
 }
 
 .monokai {
-  background-color: #272822;
+	background-color: #272822;
 }

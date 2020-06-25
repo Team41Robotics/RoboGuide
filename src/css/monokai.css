@@ -2,43 +2,43 @@
    Made a few additions to it, mostly the same */
 
 body .gist {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 body .gist .gist-meta {
-    color: rgb(223, 223, 223);
-    background-color: #33332e;
+	color: rgb(223, 223, 223);
+	background-color: #33332e;
 }
 body .gist .highlight {
-    background: #272822;
+	background: #272822;
 }
 body .gist .blob-num,
 body .gist .blob-code-inner,
 body .gist .pl-s2,
 body .gist .pl-stj {
-    color: #f8f8f2;
+	color: #f8f8f2;
 }
 body .gist .pl-c1 {
-    color: #ae81ff;
+	color: #ae81ff;
 }
 body .gist .pl-enti {
-    color: #a6e22e;
-    font-weight: 700;
+	color: #a6e22e;
+	font-weight: 700;
 }
 body .gist .pl-st {
-    color: #66d9ef;
+	color: #66d9ef;
 }
 body .gist .pl-mdr {
-    color: #66d9ef;
-    font-weight: 400;
+	color: #66d9ef;
+	font-weight: 400;
 }
 body .gist .pl-ms1 {
-    background: #fd971f;
+	background: #fd971f;
 }
 body .gist .pl-c,
 body .gist .pl-c span,
 body .gist .pl-pdc {
-    color: #75715e;
-    font-style: italic;
+	color: #75715e;
+	font-style: italic;
 }
 body .gist .pl-cce,
 body .gist .pl-cn,
@@ -64,7 +64,7 @@ body .gist .pl-vpf,
 body .gist .pl-mri,
 body .gist .pl-va,
 body .gist .pl-vpu {
-    color: #66d9ef;
+	color: #66d9ef;
 }
 body .gist .pl-cos,
 body .gist .pl-ml,
@@ -72,7 +72,7 @@ body .gist .pl-pds,
 body .gist .pl-s,
 body .gist .pl-s1,
 body .gist .pl-sol {
-    color: #e6db74;
+	color: #e6db74;
 }
 body .gist .pl-e,
 body .gist .pl-ef,
@@ -90,7 +90,7 @@ body .gist .pl-pdv,
 body .gist .pl-som,
 body .gist .pl-sr,
 body .gist .pl-vo {
-    color: #a6e22e;
+	color: #a6e22e;
 }
 body .gist .pl-ent,
 body .gist .pl-eoa,
@@ -109,47 +109,47 @@ body .gist .pl-sok,
 body .gist .pl-sra,
 body .gist .pl-src,
 body .gist .pl-sre {
-    color: #f92672;
+	color: #f92672;
 }
 body .gist .pl-mb,
 body .gist .pl-pdb {
-    color: #e6db74;
-    font-weight: 700;
+	color: #e6db74;
+	font-weight: 700;
 }
 body .gist .pl-mi,
 body .gist .pl-pdi {
-    color: #f92672;
-    font-style: italic;
+	color: #f92672;
+	font-style: italic;
 }
 body .gist .pl-pdc1,
 body .gist .pl-scp {
-    color: #ae81ff;
+	color: #ae81ff;
 }
 body .gist .pl-sc,
 body .gist .pl-sf,
 body .gist .pl-mo,
 body .gist .pl-entl {
-    color: #fd971f;
+	color: #fd971f;
 }
 body .gist .pl-mi1,
 body .gist .pl-mdht {
-    color: #a6e22e;
-    background: rgba(0, 64, 0, .5);
+	color: #a6e22e;
+	background: rgba(0, 64, 0, 0.5);
 }
 body .gist .pl-md,
 body .gist .pl-mdhf {
-    color: #f92672;
-    background: rgba(64, 0, 0, .5);
+	color: #f92672;
+	background: rgba(64, 0, 0, 0.5);
 }
 body .gist .pl-mdh,
 body .gist .pl-mdi {
-    color: #a6e22e;
-    font-weight: 400;
+	color: #a6e22e;
+	font-weight: 400;
 }
 body .gist .pl-ib,
 body .gist .pl-id,
 body .gist .pl-ii,
 body .gist .pl-iu {
-    background: #a6e22e;
-    color: #272822;
+	background: #a6e22e;
+	color: #272822;
 }

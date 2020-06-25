@@ -1,38 +1,38 @@
 .nav-pills > a {
-  background-color: rgba(0, 0, 0, 0.075) !important;
+	background-color: rgba(0, 0, 0, 0.075) !important;
 }
 .nav-pills > a:hover {
-  background-color: rgba(0, 0, 0, 0.15) !important;
+	background-color: rgba(0, 0, 0, 0.15) !important;
 }
 .nav-pills > .active {
-  background-color: rgba(0, 0, 0, 0.25) !important;
+	background-color: rgba(0, 0, 0, 0.25) !important;
 }
 .nav-pills > .active:hover {
-  background-color: rgba(0, 0, 0, 0.25) !important;
+	background-color: rgba(0, 0, 0, 0.25) !important;
 }
 
 #navbar {
-  background-color: #1d1e1a;
-  padding-top: 10px;
-  margin-top: -1rem;
-  margin-left: -1rem;
-  margin-right: -1rem;
+	background-color: #1d1e1a;
+	padding-top: 10px;
+	margin-top: -1rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
 }
 
 #navbar .nav-item:active {
-  outline: none;
-  box-shadow: none;
+	outline: none;
+	box-shadow: none;
 }
 
 #navbar .nav-item a.nav-link {
-  color: white;
-  transition: color 0.5s ease;
+	color: white;
+	transition: color 0.5s ease;
 }
 
 #navbar .nav-item a.nav-link:hover {
-  color: #ffdd76;
+	color: #ffdd76;
 }
 
 #navbar .nav-item.active a.nav-link {
-  color: #ffc107;
+	color: #ffc107;
 }
