@@ -31,6 +31,26 @@ export default function(props) {
 	const [left, setLeft] = useState(0);
 	const [lastScrollY, setLastScrollY] = useState(0);
 
+	const findScrollHeight = block => {
+		const top = $("#" + block.id).offset().top;
+		let scrollHeights = [];
+		scrollHeights.push({ id: block.id, top: top });
+		if (block.children) {
+			block.children.forEach(subblock => {
+				scrollHeights = scrollHeights.concat(...findScrollHeight(subblock));
+			});
+		}
+		return scrollHeights;
+	};
+
+	const getScrollHeights = () => {
+		let scrollHeights = [];
+		blocks.forEach(block => {
+			scrollHeights = [...scrollHeights, ...findScrollHeight(block)];
+		});
+		return scrollHeights;
+	};
+
 	useLayoutEffect(() => {
 		setLeft(getLeftShift(0, id));
 	}, [id]);
@@ -45,6 +65,13 @@ export default function(props) {
 			visibility: opac === 0 ? "hidden" : "visible"
 		});
 		setLeft(getLeftShift(scrollY, id));
+		// Scroll spy - inefficient for now
+		const scrollHeights = getScrollHeights().reverse();
+		const currentId = scrollHeights.find(x => x.top - 80 <= scrollY);
+		$("li.toc-entry > a").removeClass("active");
+		if (currentId) {
+			$('li.toc-entry > a[href="#' + currentId.id + '"]').addClass("active");
+		}
 	});
 
 	useEffect(() => {
