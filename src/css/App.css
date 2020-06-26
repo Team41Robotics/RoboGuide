@@ -1,17 +1,17 @@
-.fade-enter {
+.fade-enter:not(.home-section) {
 	opacity: 0.01;
 }
 
-.fade-enter.fade-enter-active {
+.fade-enter.fade-enter-active:not(.home-section) {
 	opacity: 1;
 	transition: opacity 300ms ease-in;
 }
 
-.fade-exit {
+.fade-exit:not(.home-section) {
 	opacity: 1;
 }
 
-.fade-exit.fade-exit-active {
+.fade-exit.fade-exit-active:not(.home-section) {
 	opacity: 0.01;
 	transition: opacity 300ms ease-in;
 }

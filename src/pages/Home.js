@@ -45,19 +45,19 @@ export default function(props) {
 						</Card>
 						<Card
 							bannerImg={hardwareBanner}
-							title="Driverstation Guide"
-							footerText="Go Now!"
-							footerLink="/robot-code"
-						>
-							Learn about how to create and program the controls for the robot!
-						</Card>
-						<Card
-							bannerImg={hardwareBanner}
 							title="Hardware Guide"
 							footerText="Go Now!"
 							footerLink="/robot-hardware"
 						>
 							Learn about the sensors and actuators that make the robot work!
+						</Card>
+						<Card
+							bannerImg={hardwareBanner}
+							title="Driver Station Guide"
+							footerText="Go Now!"
+							footerLink="/robot-code"
+						>
+							Learn about how to create and program the controls for the robot!
 						</Card>
 					</div>
 				</div>
