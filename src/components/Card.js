@@ -20,7 +20,7 @@ export default function Card(props) {
 	return (
 		<div className="card">
 			{bannerImg && (
-				<img src={bannerImg} alt={bannerImgAlt} className="card-img-top" />
+				<img src={bannerImg} alt={bannerImgAlt} className="card-img-top" style={{borderTopLeftRadius: "8px", borderTopRightRadius: "8px"}} />
 			)}
 			<div className="card-body">
 				{title && <h4 className="card-title">{title}</h4>}
