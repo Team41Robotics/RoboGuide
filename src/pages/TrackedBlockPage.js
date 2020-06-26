@@ -51,6 +51,24 @@ export default function(props) {
 		return scrollHeights;
 	};
 
+	// const findBlockId = block => {
+	// 	let arr = [block.id];
+	// 	if (block.children){
+	// 		block.children.forEach(subblock => {
+	// 			arr = arr.concat(...findBlockId(subblock));
+	// 		});
+	// 	}
+	// 	return arr;
+	// }
+	//
+	// const getBlockIds = () => {
+	// 	let arr = [];
+	// 	blocks.forEach(block => {
+	// 		arr = [...arr, ...findBlockId(block)];
+	// 	});
+	// 	return arr;
+	// }
+
 	useLayoutEffect(() => {
 		setLeft(getLeftShift(0, id));
 	}, [id]);
@@ -104,9 +122,12 @@ export default function(props) {
 				>
 					<ul className="section-nav">
 						<li className="toc-entry toc-h2">
-							<a target="_self" href="#">
-								Back to Top
-							</a>
+							{
+								// eslint-disable-next-line
+								<a target="_self" href="#" className="toc-link">
+									Back to Top
+								</a>
+							}
 						</li>
 						{blocks.map(block => TocLink(block))}
 					</ul>
@@ -119,7 +140,7 @@ export default function(props) {
 function TocLink(block) {
 	return (
 		<li key={block.id} className="toc-entry toc-h3">
-			<a target="_self" href={"#" + block.id}>
+			<a target="_self" href={"#" + block.id} className="toc-link">
 				{block.title}
 			</a>
 			{block.children && (
