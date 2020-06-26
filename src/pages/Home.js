@@ -25,7 +25,7 @@ export default function(props) {
 						<h1>Programming</h1>
 						<img src={laptop} className="img-fluid" alt="laptop" />
 					</div>
-					<div className="col-12 col-lg-9 card-group">
+					<div className="col-12 col-lg-9 card-deck">
 						<Card
 							bannerImg={javaBanner}
 							title="Java Guide"

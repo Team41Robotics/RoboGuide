@@ -4,14 +4,19 @@
 
 #home-content .row {
 	background-color: #1d1e1a;
+	padding-bottom: 1px !important;
 }
 
 #home-content .card {
 	background-color: #272822;
-	margin: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
 	border-radius: 8px;
 	transition: all 0.3s ease;
 	min-width: 160px;
+}
+#home-content .card-img-top {
+	border-radius: 8px 8px 0 0;
 }
 #home-content .card-body {
 	padding: 0.75rem;
@@ -20,4 +25,13 @@
 #home-content .card:hover {
 	background-color: #383933;
 	box-shadow: 0 0 5px 6px #383933;
+}
+
+@media (min-width: 576px) {
+	#home-content .row {
+		padding-bottom: 6px !important;
+	}
+	#home-content .card {
+		margin-bottom: 10px;
+	}
 }
