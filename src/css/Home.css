@@ -1,0 +1,14 @@
+#home-title {
+	font-size: 8vw;
+}
+
+#home-content .row {
+	background-color: #1d1e1a;
+}
+
+#home-content .card {
+	background-color: #272822;
+}
+#home-content .card-body {
+	padding: 0.75rem;
+}

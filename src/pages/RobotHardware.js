@@ -7,7 +7,7 @@ import talonFX from "../img/talonFX.png";
 import sparkMax from "../img/sparkMax.png";
 import servoImg from "../img/servo.jpg";
 import joystickImg from "../img/joystick.jpg";
-import robotImg from "../img/blur.jpg";
+import robotImg from "../img/banners/hardwareBanner.jpg";
 
 export default function(props) {
 	return (

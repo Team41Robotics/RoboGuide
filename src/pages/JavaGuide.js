@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import ReactEmbedGist from "react-embed-gist";
 import TrackedBlockPage from "./TrackedBlockPage";
 
-import javaLogo from "../img/javaLogo.png";
+import javaLogo from "../img/banners/javaBanner.png";
 import printImg from "../img/print.svg";
 import mathFunctionImg from "../img/mathFunction.png";
 import functionEx1Img from "../img/functionEx1.svg";

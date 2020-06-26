@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import ReactEmbedGist from "react-embed-gist";
 import TrackedBlockPage from "./TrackedBlockPage";
 
-import robotImg from "../img/blur.jpg";
+import robotImg from "../img/banners/hardwareBanner.jpg";
 
 export default function(props) {
 	return (

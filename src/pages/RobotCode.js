@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import ReactEmbedGist from "react-embed-gist";
 import TrackedBlockPage from "./TrackedBlockPage";
 
-import programmingImg from "../img/frc_programming.jpg";
+import programmingImg from "../img/banners/robotCodeBanner.jpg";
 import driverStationUSB from "../img/DriverStationUSB.png";
 
 export default function(props) {
