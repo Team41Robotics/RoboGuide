@@ -29,7 +29,7 @@ export default function(props) {
 				width: ref.current.offsetWidth,
 				height: ref.current.offsetHeight
 		  }
-		: { left: 0, top: 0, width: 1, height: 1 };
+		: { left: null, top: null, width: null, height: null };
 
 	const mouse = useMousePosition();
 
@@ -77,7 +77,9 @@ export default function(props) {
 					alt="Sad Prateek"
 					style={imgStyle}
 				/>
-				<h1 style={footerStyle}>You've made Prateek sad :(</h1>
+				<h3 style={footerStyle}>
+					Go <Link to="/">home</Link>.
+				</h3>
 			</div>
 		</>
 	);
