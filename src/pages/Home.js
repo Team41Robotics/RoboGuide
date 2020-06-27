@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import Card from "../components/Card.js";
 
 import laptop from "../img/laptop.png";
-import javaBanner from "../img/banners/javaBanner.png";
+import javaBanner from "../img/banners/javaBanner.svg";
 import robotCodeBanner from "../img/banners/robotCodeBanner.jpg";
 import hardwareBanner from "../img/banners/hardwareBanner.jpg";
 

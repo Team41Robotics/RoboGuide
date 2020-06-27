@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import Prism from "prismjs";
 import TrackedBlockPage from "./TrackedBlockPage";
 
-import javaLogo from "../img/banners/javaBanner.png";
+import javaLogo from "../img/banners/javaBanner.svg";
 import mathFunctionImg from "../img/mathFunction.png";
 
 export default function(props) {
