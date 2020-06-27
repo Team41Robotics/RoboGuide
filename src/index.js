@@ -5,10 +5,20 @@ import App from "./App";
 import ScrollToTop from "./components/ScrollToTop";
 import * as serviceWorker from "./serviceWorker";
 
+// Syntax highlighter
+import "prismjs";
+import "prismjs/plugins/line-numbers/prism-line-numbers";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-c";
+import "prismjs/components/prism-cpp";
+import "prismjs/components/prism-arduino";
+import "prismjs/components/prism-java";
+import "prismjs/components/prism-python";
+import "./css/prism.css";
+
 // CSS imports
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/index.css";
-import "./css/monokai.css";
 
 // JS library imports
 import "jquery";

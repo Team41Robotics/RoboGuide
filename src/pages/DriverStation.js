@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import ReactEmbedGist from "react-embed-gist";
 import TrackedBlockPage from "./TrackedBlockPage";
 
 import robotImg from "../img/banners/hardwareBanner.jpg";
@@ -146,10 +145,10 @@ export default function(props) {
 								<br />
 								This is the basics of any Arduino program, and a beginner
 								program using all of these features might look like this:
-								<ReactEmbedGist
-									titleClass="d-none"
-									gist="MasonDiGi/ed39902da3b955e012dfdf12010bbb7c"
-								/>
+								<pre
+									className="line-numbers language-arduino"
+									data-src="/files/driver-station/ArduinoExample.ino"
+								></pre>
 								<br />
 								Just like in Java, sometimes we can import libraries into
 								Arduino to give us more functionality. For the driver station,
@@ -185,7 +184,7 @@ export default function(props) {
 								<a href="https://github.com/LordNuke/ArduinoLibs/tree/master/Joystick/src">
 									these files from the source code
 								</a>
-								, or just look at
+								, or just look at{" "}
 								<a href="https://github.com/Team41Robotics/Driver-Station-2020/blob/master/Arduino_Due/JoystickSim/Functions.ino">
 									the <span className="code">sendjoyStates()</span>
 									function
@@ -196,10 +195,10 @@ export default function(props) {
 								<span className="code">Joystick.sendState()</span>. An example
 								of a relatively small virtual joystick could look something like
 								this:
-								<ReactEmbedGist
-									titleClass="d-none"
-									gist="MasonDiGi/ac3976c203b6c61cb2fb14035438557a"
-								/>
+								<pre
+									className="line-numbers language-arduino"
+									data-src="/files/driver-station/JoystickExample.ino"
+								></pre>
 								That's it for the basics of programming the Arduinos on the
 								driver station. Howerver, there is still more to learn.
 								<ul>
@@ -317,7 +316,7 @@ export default function(props) {
 								</span>
 								. Here x0 and y0 represent the top left corner, and x1 and y1
 								represent the bottom right corner. Just like with text, there
-								are several optional arguments that can be seen
+								are several optional arguments that can be seen{" "}
 								<a href="https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/create_rectangle.html">
 									here
 								</a>
@@ -359,10 +358,10 @@ export default function(props) {
 								<br />
 								That is everything for Tkinter, and a basic program that does
 								everything I talked about would look something like this:
-								<ReactEmbedGist
-									titleClass="d-none"
-									gist="MasonDiGi/389e465ccb900c75c1b4a455ac84865d"
-								/>
+								<pre
+									className="line-numbers"
+									data-src="/files/driver-station/tkinter_ex.py"
+								></pre>
 								<br />
 								The second main module we use in the driver station code is
 								Pyserial. This is what communicates with the Due to send the
@@ -381,10 +380,10 @@ export default function(props) {
 								</span>{" "}
 								where val is any byte. A sample program for pyserial may look
 								like this:
-								<ReactEmbedGist
-									titleClass="d-none"
-									gist="MasonDiGi/10846aab3c61599789daaf51ec679b62"
-								/>
+								<pre
+									className="line-numbers"
+									data-src="/files/driver-station/pyserial_ex.py"
+								></pre>
 							</>
 						)
 					}

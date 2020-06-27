@@ -1,14 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import ReactEmbedGist from "react-embed-gist";
 import TrackedBlockPage from "./TrackedBlockPage";
 
 import javaLogo from "../img/banners/javaBanner.png";
-import printImg from "../img/print.svg";
 import mathFunctionImg from "../img/mathFunction.png";
-import functionEx1Img from "../img/functionEx1.svg";
-import functionEx2Img from "../img/functionEx2.svg";
-import functionEx2CallImg from "../img/functionEx2Call.svg";
 
 export default function(props) {
 	return (
@@ -83,7 +78,10 @@ export default function(props) {
 								. These objects have properties which are associated with them.
 								This allows us easily reference our data. For example, take a
 								look at this simple Bird class:
-								<ReactEmbedGist gist="JamesNarayanan/6f49b41bc5e75cc5071ffdd418e8d45e" />
+								<pre
+									className="line-numbers"
+									data-src="/files/java/Bird.java"
+								></pre>
 								In Java, a class is an object that can be manipulated. In this
 								case, the Bird object has attrributes that store its color,
 								name, and position. It also has built in functions that
@@ -119,7 +117,10 @@ export default function(props) {
 								</h2>
 								Before we start going over code, knowing what a comment is will
 								be helpful.
-								<ReactEmbedGist gist="JamesNarayanan/aada7a81ccd9220bf791cffd3916a0d5" />
+								<pre
+									className="line-numbers"
+									data-src="/files/java/Comments.java"
+								></pre>
 							</>
 						)
 					},
@@ -147,11 +148,9 @@ export default function(props) {
 								</a>{" "}
 								(an information display for FRC). An easy way to output to the
 								console is by using the following command:
-								<img
-									src={printImg}
-									className="d-block mx-auto my-1"
-									alt="Printing"
-								/>
+								<pre className="language-java">
+									<code>System.out.println(variable)</code>
+								</pre>
 								If you're deploying your code to a RoboRIO, you can view these
 								print statements in the RIOLog.
 							</>
@@ -236,9 +235,15 @@ export default function(props) {
 								<br />
 								<br />
 								<h4 id="variable-initialization">Initialization</h4>
-								<ReactEmbedGist gist="JamesNarayanan/d7a7b687169ade46d50bd0509dd7b498" />
+								<pre
+									className="line-numbers"
+									data-src="/files/java/Initialization.java"
+								></pre>
 								<h4 id="variable-arrays">Arrays</h4>
-								<ReactEmbedGist gist="JamesNarayanan/b1b7b7a6b70946dcd0190cffcce053e3" />
+								<pre
+									className="line-numbers"
+									data-src="/files/java/Arrays.java"
+								></pre>
 							</>
 						)
 					},
@@ -261,13 +266,22 @@ export default function(props) {
 									</a>
 								</h2>
 								<h4 id="operators-math">Mathematical Operators</h4>
-								<ReactEmbedGist gist="JamesNarayanan/6f591354bda4a06b6a86e1bcdbf698fa" />
+								<pre
+									className="line-numbers"
+									data-src="/files/java/MathOperators.java"
+								></pre>
 								<h4 id="operators-variable-reassignment">
 									Variable Reassignment
 								</h4>
-								<ReactEmbedGist gist="JamesNarayanan/ca98ccfdd39aaf8e84a27c9824239d91" />
+								<pre
+									className="line-numbers"
+									data-src="/files/java/Reassignment.java"
+								></pre>
 								<h4 id="operators-logical">Logical/Relational Operators</h4>
-								<ReactEmbedGist gist="JamesNarayanan/2987063d0479ef6b3710cff34012f3a8" />
+								<pre
+									className="line-numbers"
+									data-src="/files/java/LogicalRelationalOperators.java"
+								></pre>
 							</>
 						)
 					},
@@ -286,9 +300,15 @@ export default function(props) {
 									</a>
 								</h2>
 								<h4 id="control-flow-if-else">If/Else Statements</h4>
-								<ReactEmbedGist gist="JamesNarayanan/ed62220dcb364557382ab1b80533719f" />
+								<pre
+									className="line-numbers"
+									data-src="/files/java/IfElse.java"
+								></pre>
 								<h4 id="control-flow-loops">Loops</h4>
-								<ReactEmbedGist gist="JamesNarayanan/d004dbcdd325026d1855ebd2b9e02d51" />
+								<pre
+									className="line-numbers"
+									data-src="/files/java/Loops.java"
+								></pre>
 							</>
 						)
 					},
@@ -319,11 +339,10 @@ export default function(props) {
 									alt="Math function"
 								/>
 								This same function could be written in Java as:
-								<img
-									src={functionEx1Img}
-									className="d-block mx-auto my-1"
-									alt="Function example 1"
-								/>
+								<pre
+									className="line-numbers"
+									data-src="/files/java/SquareFunction.java"
+								></pre>
 								A function in java has a few main components that make it up:
 								<ul>
 									<li>
@@ -354,20 +373,17 @@ export default function(props) {
 								</ul>
 								Here is a function that I made when I created a TicTacToe game
 								in Java:
-								<img
-									src={functionEx2Img}
-									className="d-block mx-auto my-1 img-fluid"
-									alt="Function example 2"
-								/>
+								<pre
+									className="line-numbers"
+									data-src="/files/java/TicTacToe.java"
+								></pre>
 								This function checks if the TicTacToe board is full by iterating
 								through each row and column. This is useful because now I can
 								use this elsewhere in the code. When somebody reads my code,
 								they will see:
-								<img
-									src={functionEx2CallImg}
-									className="d-block mx-auto my-1"
-									alt="Function call example"
-								/>
+								<pre className="language-java">
+									<code>isFull();</code>
+								</pre>
 								They will quickly be able to understand what I'm trying to do
 								(and the function annotation will clear up any questions).
 								Functions go a long way towards making code neater.
@@ -398,7 +414,10 @@ export default function(props) {
 								languages. An object in Java is created as a class. As mentioned
 								in the beginning of the guide, a class can have multiple
 								variables and methods associated with it.
-								<ReactEmbedGist gist="JamesNarayanan/d8c18b949b938ff515d3d8564f436bb7" />
+								<pre
+									className="line-numbers"
+									data-src="/files/java/ClassExample.java"
+								></pre>
 							</>
 						)
 					}

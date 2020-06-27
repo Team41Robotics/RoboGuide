@@ -169,7 +169,10 @@ export default function(props) {
 								sparks you should be able to make a robot move anywhere you want
 								with tank drive! Here's an example of what your program might
 								look like:
-								<ReactEmbedGist gist="JamesNarayanan/8a86b81bb2c478c8d90353540cd03e72" />
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/TankDriveExample.java"
+								></pre>
 								Now you've created your first robot program! From here you can
 								do so much more!
 								<ul>
