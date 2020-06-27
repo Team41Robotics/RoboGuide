@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import Prism from "prismjs";
 import TrackedBlockPage from "./TrackedBlockPage";
 
 import talonSRX from "../img/talonSRX.jpg";
@@ -10,6 +11,10 @@ import joystickImg from "../img/joystick.jpg";
 import robotImg from "../img/banners/hardwareBanner.jpg";
 
 export default function(props) {
+	useEffect(() => {
+		Prism.highlightAll();
+	});
+
 	return (
 		<>
 			<Helmet>
@@ -82,44 +87,43 @@ export default function(props) {
 											</li>
 											<li>
 												How to instantiate:{" "}
-												<span className="code">
-													TalonSRX exampleTalon = new TalonSRX(
-													<span
-														data-toggle="popover"
-														data-content="Found in Phoenix Tuner"
-														data-placement="top"
-													>
-														PORT
-													</span>
-													)
-												</span>
+												<code className="inline language-java">
+													TalonSRX exampleTalon = new TalonSRX(PORT)
+												</code>
 											</li>
+											<ul>
+												<li>
+													The value for{" "}
+													<code className="inline language-java">PORT</code> can
+													be found in Phoenix Tuner
+												</li>
+											</ul>
 											<li>
 												How to import:{" "}
-												<span className="code">
+												<code className="inline language-java">
 													import com.ctre.phoenix.motorcontrol.can.TalonSRX
-												</span>
+												</code>
 											</li>
 											<li>
 												Example uses:
 												<ul>
 													<li>
 														Go forward (half speed):{" "}
-														<span className="code">
+														<code className="inline language-java">
 															exampleTalon.set(ControlMode.PercentOutput, 0.5)
-														</span>
+														</code>
 													</li>
 													<li>
 														Stop:{" "}
-														<span className="code">
+														<code className="inline language-java">
 															exampleTalon.set(ControlMode.PercentOutput, 0)
-														</span>
+														</code>
 													</li>
 													<li>
 														Go backward (full speed):{" "}
-														<span className="code">
+														<code className="inline language-java">
 															exampleTalon.set(ControlMode.PercentOutput, -1)
-														</span>
+														</code>
 													</li>
 												</ul>
 											</li>
@@ -132,9 +136,9 @@ export default function(props) {
 															ControlMode
 														</a>{" "}
 														class:{" "}
-														<span className="code">
+														<code className="inline language-java">
 															import com.ctre.phoenix.motorcontrol.ControlMode
-														</span>
+														</code>
 													</li>
 													<li>
 														Port numbers are found in the "CAN Devices" tab of
@@ -202,44 +206,43 @@ export default function(props) {
 											</li>
 											<li>
 												How to instantiate:{" "}
-												<span className="code">
-													TalonFX exampleTalon = new TalonFX(
-													<span
-														data-toggle="popover"
-														data-content="Found in Phoenix Tuner"
-														data-placement="top"
-													>
-														PORT
-													</span>
-													)
-												</span>
+												<code className="inline language-java">
+													TalonFX exampleTalon = new TalonFX(PORT)
+												</code>
 											</li>
+											<ul>
+												<li>
+													The value for{" "}
+													<code className="inline language-java">PORT</code> can
+													be found in Phoenix Tuner
+												</li>
+											</ul>
 											<li>
 												How to import:{" "}
-												<span className="code">
+												<code className="inline language-java">
 													import com.ctre.phoenix.motorcontrol.can.TalonFX
-												</span>
+												</code>
 											</li>
 											<li>
 												Example uses:
 												<ul>
 													<li>
 														Go forward (half speed):{" "}
-														<span className="code">
+														<code className="inline language-java">
 															exampleTalon.set(ControlMode.PercentOutput, 0.5)
-														</span>
+														</code>
 													</li>
 													<li>
 														Stop:{" "}
-														<span className="code">
+														<code className="inline language-java">
 															exampleTalon.set(ControlMode.PercentOutput, 0)
-														</span>
+														</code>
 													</li>
 													<li>
 														Go backward (full speed):{" "}
-														<span className="code">
+														<code className="inline language-java">
 															exampleTalon.set(ControlMode.PercentOutput, -1)
-														</span>
+														</code>
 													</li>
 												</ul>
 											</li>
@@ -252,9 +255,9 @@ export default function(props) {
 															ControlMode
 														</a>{" "}
 														class:{" "}
-														<span className="code">
+														<code className="inline language-java">
 															import com.ctre.phoenix.motorcontrol.ControlMode
-														</span>
+														</code>
 													</li>
 													<li>
 														Port numbers are found in the "CAN Devices" tab of
@@ -325,38 +328,44 @@ export default function(props) {
 											</li>
 											<li>
 												How to instantiate:{" "}
-												<span className="code">
-													SparkMax exampleSpark = new CANSparkMax(
-													<span
-														data-toggle="popover"
-														data-content="Found in Spark Max Client"
-														data-placement="top"
-													>
-														PORT
-													</span>
-													, MotorType.kBrushless)
-												</span>
+												<code className="inline language-java">
+													SparkMax exampleSpark = new CANSparkMax(PORT,
+													MotorType.kBrushless)
+												</code>
 											</li>
+											<ul>
+												<li>
+													The value for{" "}
+													<code className="inline language-java">PORT</code> can
+													be found in the Spark Max Client
+												</li>
+											</ul>
 											<li>
 												How to import:{" "}
-												<span className="code">
+												<code className="inline language-java">
 													import com.revrobotics.CANSparkMax
-												</span>
+												</code>
 											</li>
 											<li>
 												Example uses:
 												<ul>
 													<li>
 														Go forward (half speed):{" "}
-														<span className="code">exampleSpark.set(0.5)</span>
+														<code className="inline language-java">
+															exampleSpark.set(0.5)
+														</code>
 													</li>
 													<li>
 														Stop:{" "}
-														<span className="code">exampleSpark.set(0)</span>
+														<code className="inline language-java">
+															exampleSpark.set(0)
+														</code>
 													</li>
 													<li>
 														Go backward (full speed):{" "}
-														<span className="code">exampleSpark.set(-1)</span>
+														<code className="inline language-java">
+															exampleSpark.set(-1)
+														</code>
 													</li>
 												</ul>
 											</li>
@@ -369,10 +378,10 @@ export default function(props) {
 															MotorType
 														</a>{" "}
 														class:{" "}
-														<span className="code">
+														<code className="inline language-java">
 															import
 															com.revrobotics.CANSparkMaxLowLevel.MotorType
-														</span>
+														</code>
 													</li>
 													<li>
 														Port numbers are found in the main page of the Spark
@@ -423,23 +432,22 @@ export default function(props) {
 											</li>
 											<li>
 												How to instantiate:{" "}
-												<span className="code">
-													Servo exampleServo = new Servo(
-													<span
-														data-toggle="popover"
-														data-content="Where it's plugged into the RIO"
-														data-placement="top"
-													>
-														PORT
-													</span>
-													)
-												</span>
+												<code className="inline language-java">
+													Servo exampleServo = new Servo(PORT)
+												</code>
 											</li>
+											<ul>
+												<li>
+													The value for{" "}
+													<code className="inline language-java">PORT</code> is
+													where it's plugged into the RIO
+												</li>
+											</ul>
 											<li>
 												How to import:{" "}
-												<span className="code">
+												<code className="inline language-java">
 													import edu.wpi.first.wpilibj.Servo
-												</span>
+												</code>
 											</li>
 											<li>
 												Example uses:
@@ -447,24 +455,28 @@ export default function(props) {
 													<li>
 														Set the servo to the position all the way to the
 														left:{" "}
-														<span className="code">exampleServo.set(0)</span>
+														<code className="inline language-java">
+															exampleServo.set(0)
+														</code>
 													</li>
 													<li>
 														Set the servo to the position halfway between its
 														max left and right values:{" "}
-														<span className="code">exampleServo.set(0.5)</span>
+														<code className="inline language-java">
+															exampleServo.set(0.5)
+														</code>
 													</li>
 													<li>
 														Set angle of rotation to 20&#176;:{" "}
-														<span className="code">
+														<code className="inline language-java">
 															exampleServo.setAngle(20)
-														</span>
+														</code>
 													</li>
 													<li>
 														Set angle of rotation to &pi;/4 rad:{" "}
-														<span className="code">
+														<code className="inline language-java">
 															exampleServo.setAngle(Math.toDegrees(Math.PI / 4))
-														</span>
+														</code>
 													</li>
 												</ul>
 											</li>
@@ -510,45 +522,44 @@ export default function(props) {
 											</li>
 											<li>
 												How to instantiate:{" "}
-												<span className="code">
-													Joystick exampleJoy = new Joystick(
-													<span
-														data-toggle="popover"
-														data-content="Found in FRC Driverstation USB devices tab"
-														data-placement="top"
-													>
-														PORT
-													</span>
-													)
-												</span>
+												<code className="inline language-java">
+													Joystick exampleJoy = new Joystick(PORT)
+												</code>
 											</li>
+											<ul>
+												<li>
+													The value for{" "}
+													<code className="inline language-java">PORT</code> can
+													be found in the FRC Driverstation USB devices tab
+												</li>
+											</ul>
 											<li>
 												How to import:{" "}
-												<span className="code">
+												<code className="inline language-java">
 													import edu.wpi.first.wpilibj.Joystick;
-												</span>
+												</code>
 											</li>
 											<li>
 												Example uses:
 												<ul>
 													<li>
 														Check if button <i>n</i> is currently pressed:{" "}
-														<span className="code">
+														<code className="inline language-java">
 															exampleJoy.getRawButton(n)
-														</span>
+														</code>
 													</li>
 													<li>
 														Check if button <i>n</i> has been pressed since the
 														last time you checked:{" "}
-														<span className="code">
+														<code className="inline language-java">
 															exampleJoy.getRawButtonPressed(n)
-														</span>
+														</code>
 													</li>
 													<li>
 														Get the value of axis <i>n</i> (from -1 to 1):{" "}
-														<span className="code">
+														<code className="inline language-java">
 															exampleJoy.getRawAxis(n)
-														</span>
+														</code>
 													</li>
 													<li>
 														Get the value of the{" "}
@@ -556,7 +567,9 @@ export default function(props) {
 															POV hat
 														</a>{" "}
 														(aka D-Pad):{" "}
-														<span className="code">exampleJoy.getPOV()</span>
+														<code className="inline language-java">
+															exampleJoy.getPOV()
+														</code>
 													</li>
 												</ul>
 											</li>

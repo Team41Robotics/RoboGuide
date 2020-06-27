@@ -8,6 +8,7 @@ import robotImg from "../img/banners/hardwareBanner.jpg";
 export default function(props) {
 	useEffect(() => {
 		Prism.fileHighlight();
+		Prism.highlightAll();
 	});
 
 	return (
@@ -72,13 +73,17 @@ export default function(props) {
 								Arduino program is set up differently than either Java or
 								vanilla C++. It is actually more similar to the robot code, with
 								two main sections of code. First, there is a
-								<span className="code">setup()</span> function. Similar to the{" "}
-								<span className="code">robotInit()</span> function from the
-								robot code, this only runs once, at the start of the program.
-								There is also a <span className="code">loop()</span>
+								<code className="inline language-arduino">setup()</code>{" "}
+								function. Similar to the{" "}
+								<code className="inline language-arduino">robotInit()</code>{" "}
+								function from the robot code, this only runs once, at the start
+								of the program. There is also a{" "}
+								<code className="inline language-arduino">loop()</code>
 								function that keeps running until the program is shut down,
 								which is similar to the{" "}
-								<span className="code">teleopPeriodic()</span>
+								<code className="inline language-arduino">
+									teleopPeriodic()
+								</code>
 								function in the robot code. Additionally, it is common practice
 								to declare global constant the top of the file, and then
 								initialize them inside of the function. <br />
@@ -88,22 +93,24 @@ export default function(props) {
 								Arduino software. As many of the boards have several serial
 								ports, there is a variety of suffixes used differentiate them in
 								software. For the purposes of this website, I am going to use{" "}
-								<span className="code">Serial</span> without any suffixes. The
-								first step in serial communication is to initialize the serial
-								ports with{" "}
-								<span className="code">
-									Serial.begin({"<"}rate{">"})
-								</span>
-								. The rate is just how fast the data is sent, and the default
-								for Arduino is 9600. There are many ways to send data using the
-								serial ports, with either bytes or strings. We use bytes to
-								represent all of the data, because it is much easier to parse on
-								the other end than a string. To send a byte via serial, just run{" "}
-								<span className="code">
-									Serial.write({"<"}value{">"})
-								</span>
+								<code className="inline language-arduino">Serial</code> without
+								any suffixes. The first step in serial communication is to
+								initialize the serial ports with{" "}
+								<code className="inline language-arduino">
+									Serial.begin(9600)
+								</code>
+								. The number 9600 is the baudrate, or how fast the data is sent,
+								and the default for Arduino is 9600. There are many ways to send
+								data using the serial ports, with either bytes or strings. We
+								use bytes to represent all of the data, because it is much
+								easier to parse on the other end than a string. To send a byte
+								via serial, just run{" "}
+								<code className="inline language-arduino">
+									Serial.write(VALUE)
+								</code>
 								, where the value is any byte. To read it on the other end,{" "}
-								<span className="code">Serial.read()</span> is used.
+								<code className="inline language-arduino">Serial.read()</code>{" "}
+								is used.
 								<br />
 								<br />
 								To collect information from all of the inputs on the station and
@@ -115,38 +122,45 @@ export default function(props) {
 								pins can send a PWM signal, with a value ranging from 0-255,
 								allowing for more variable control over devices like LEDs. All
 								digital pins need to be set to either input or output in the{" "}
-								<span className="code">setup()</span> function, using{" "}
-								<span className="code">
-									pinMode({"<"}PIN_NUMBER{">"}, {"<"}MODE{">"})
-								</span>
+								<code className="inline language-arduino">setup()</code>{" "}
+								function, using{" "}
+								<code className="inline language-arduino">
+									pinMode(PIN_NUMBER, MODE)
+								</code>
 								. Arduino come with many constants that can be used in programs,
 								such as INPUT and OUTPUT for setting the mode of the digital
 								pins. To read a digital pin, the function{" "}
-								<span className="code">
-									digitalRead({"<"}PIN_NUMBER{">"})
-								</span>{" "}
+								<code className="inline language-arduino">
+									digitalRead(PIN_NUMBER)
+								</code>{" "}
 								is used, and it returns either a 1 or a 0, depending on whether
 								or not the pin is receiving voltage. To write to a pin, the
 								function{" "}
-								<span className="code">
-									digitalWrite({"<"}PIN_NUMBER{">"}, {"<"}VALUE{">"})
-								</span>{" "}
-								is used, where VALUE is either a 1 or a 0. To write with a PWM
-								signal, use{" "}
-								<span className="code">
-									analogWrite({"<"}PIN_NUMBER{">"}, {"<"}VALUE{">"})
-								</span>
-								, where VALUE is any number from 0-255. Note that even though we
-								are using an analog function for this pin, its mode still needs
-								to be set with
-								<span className="code">pinMode</span>. To read from any of our
-								analog pins, use the function{" "}
-								<span className="code">
-									analogRead({"<"}PIN_NUMBER{">"})
-								</span>
-								. Here, PIN_NUMBER is the analog pin, beginning with the letter
-								A. Arduino will recognize this identifier as one of its built-in
-								constants and read from the correct pin. <br />
+								<code className="inline language-arduino">
+									digitalWrite(PIN_NUMBER, VALUE)
+								</code>{" "}
+								is used, where{" "}
+								<code className="inline language-arduino">VALUE</code> is either
+								a 1 or a 0. To write with a PWM signal, use{" "}
+								<code className="inline language-arduino">
+									analogWrite(PIN_NUMBER, VALUE)
+								</code>
+								, where <code className="inline language-arduino">VALUE</code>{" "}
+								is any number from 0-255. Note that even though we are using an
+								analog function for this pin, its mode still needs to be set
+								with
+								<code className="inline language-arduino">pinMode</code>. To
+								read from any of our analog pins, use the function{" "}
+								<code className="inline language-arduino">
+									analogRead(PIN_NUMBER)
+								</code>
+								. Here,{" "}
+								<code className="inline language-arduino">PIN_NUMBER</code> is
+								the analog pin, beginning with the letter A. Arduino will
+								recognize this identifier as one of its built-in constants and
+								read from the correct pin. For example, you might write{" "}
+								<code className="inline language-arduino">analogRead(A0)</code>.
+								<br />
 								<br />
 								This is the basics of any Arduino program, and a beginner
 								program using all of these features might look like this:
@@ -170,36 +184,45 @@ export default function(props) {
 								Arduino one (it does not have enough virtual buttons for our
 								needs). Once the library is installed locally, we can import
 								into our code with{" "}
-								<span className="code">include "Joystick.h"</span>. To use this
-								library, a few things need to be done. First, we must clear any
-								existing data from the virtual Joystick with{" "}
-								<span className="code">Joystick.clearState()</span>. Next, we
-								add each button's value into the joystick state. What the flow
-								usually look like is{" "}
+								<code className="inline language-arduino">
+									include "Joystick.h"
+								</code>
+								. To use this library, a few things need to be done. First, we
+								must clear any existing data from the virtual Joystick with{" "}
+								<code className="inline language-arduino">
+									Joystick.clearState()
+								</code>
+								. Next, we add each button's value into the joystick state. What
+								the flow usually look like is{" "}
 								<code>clear state --> set state --> send state --> repeat</code>
 								. Since the code loops through, we can just set each button's
 								value as a variable and update that variable throughout the
 								program. Since we have alot of buttons, we use a few arrays to
 								store all of the value. To set the value of a button, change the
 								value of
-								<span className="code">
+								<code className="inline language-arduino">
 									Joystick.state.{"<"}group{">"}.{"<"}button/axis{">"}
-								</span>
+								</code>
 								. To find all of the groups and buttons/axes, look at{" "}
 								<a href="https://github.com/LordNuke/ArduinoLibs/tree/master/Joystick/src">
 									these files from the source code
 								</a>
 								, or just look at{" "}
 								<a href="https://github.com/Team41Robotics/Driver-Station-2020/blob/master/Arduino_Due/JoystickSim/Functions.ino">
-									the <span className="code">sendjoyStates()</span>
+									the{" "}
+									<code className="inline language-arduino">
+										sendjoyStates()
+									</code>{" "}
 									function
 								</a>{" "}
 								in the existing code, as it is probably easier to see what
 								everything does. Finally, to send the state to the computer,
-								call
-								<span className="code">Joystick.sendState()</span>. An example
-								of a relatively small virtual joystick could look something like
-								this:
+								call{" "}
+								<code className="inline language-arduino">
+									Joystick.sendState()
+								</code>
+								. An example of a relatively small virtual joystick could look
+								something like this:
 								<pre
 									className="line-numbers language-arduino"
 									data-src="/files/driver-station/JoystickExample.ino"
@@ -250,33 +273,39 @@ export default function(props) {
 								displaying graphics with Python. We only imported Tk, Canvas,
 								CENTER, RIGHT, LEFT, and N from the modules.To initialize
 								Tkinter, create a new variable with the value of{" "}
-								<span className="code">Tk()</span>. This variable represents the
-								entire Tkinter window, and various settings can be changed on
-								it, but I'm not going to cover all of them. The most important
-								methods are <span className="code">geometry</span>,{" "}
-								<span className="code">bind</span>, and{" "}
-								<span className="code">focus_set</span>. Geometry is used to set
-								the size and position of the window, and the exact argument to
-								enter is described in detail{" "}
+								<code className="inline language-python">Tk()</code>. This
+								variable represents the entire Tkinter window, and various
+								settings can be changed on it, but I'm not going to cover all of
+								them. The most important methods are{" "}
+								<code className="inline language-python">geometry</code>,{" "}
+								<code className="inline language-python">bind</code>, and{" "}
+								<code className="inline language-python">focus_set</code>.
+								Geometry is used to set the size and position of the window, and
+								the exact argument to enter is described in detail{" "}
 								<a href="https://www.geeksforgeeks.org/python-geometry-method-in-tkinter/">
 									here
 								</a>
-								. The <span className="code">bind()</span> method binds a key to
-								a Tkinter function. We used it to tell Tkinter to quit every
-								time the escape key was pressed (
-								<span className="code">
+								. The <code className="inline language-python">bind()</code>{" "}
+								method binds a key to a Tkinter function. We used it to tell
+								Tkinter to quit every time the escape key was pressed (
+								<code className="inline language-python">
 									root.bind("{"<"}Escape{">"}" ,lambda e: root.quit())
-								</span>
-								. Finally, <span className="code">focus_set</span> makes sure
-								that the window is on top and nothing is covering it.
+								</code>
+								. Finally,{" "}
+								<code className="inline language-python">focus_set</code> makes
+								sure that the window is on top and nothing is covering it.
 								<br />
 								<br />
 								To start Tkinter, put{" "}
-								<span className="code">root.mainloop()</span> at the end of your
-								file. This runs everything in a loop, so that everything can
-								update. What we also do its put{" "}
-								<span className="code">root.after(delay, publish)</span> right
-								before that line. Firstly, this sets the refresh rate, and
+								<code className="inline language-python">
+									root.mainloop()
+								</code>{" "}
+								at the end of your file. This runs everything in a loop, so that
+								everything can update. What we also do its put{" "}
+								<code className="inline language-python">
+									root.after(delay, publish)
+								</code>{" "}
+								right before that line. Firstly, this sets the refresh rate, and
 								secondly it runs a function every time it refreshes. In our
 								publish function, we check to see if any button have been
 								clicked, and if so we send that information to the Due (more on
@@ -286,27 +315,34 @@ export default function(props) {
 								The most important part of Tkinter, though, is the canvas. The
 								canvas is where everything is drawn on the screen, and where
 								most of the code is. To create a canvas, use{" "}
-								<span className="code">
-									Canvas({"<"}name of Tk() variable{">"}, width={"<"}width{">"},
-									height={"<"}height{">"}, background={"<"}bg color{">"}
-								</span>
-								. I recommend setting height and width as variables, because
-								they will be used again. Additionally, set the Canvas as a
-								variable, because it is needed to draw everything (here, it will
-								be represented as <span className="code">ctx</span>). On the
+								<code className="inline language-python">
+									Canvas(my_tk_root, width=WIDTH, height=HEIGHT,
+									background=BG_COLOR
+								</code>
+								, where you specify the values for{" "}
+								<code className="inline language-python">WIDTH</code>,{" "}
+								<code className="inline language-python">HEIGHT</code>, and{" "}
+								<code className="inline language-python">BG_COLOR</code>. I
+								recommend setting height and width as variables, because they
+								will be used again. Additionally, set the Canvas as a variable,
+								because it is needed to draw everything (here, it will be
+								represented as{" "}
+								<code className="inline language-python">ctx</code>). On the
 								canvas, you can do one of three things: create text, create a
 								shape, or show an image. Additionally,{" "}
-								<span className="code">ctx.pack()</span> needs to be somewhere
-								in your file before
-								<span className="code">root.mainloop()</span>. This is what
-								actually draws everything on the screen.
+								<code className="inline language-python">ctx.pack()</code> needs
+								to be somewhere in your file before
+								<code className="inline language-python">root.mainloop()</code>.
+								This is what actually draws everything on the screen.
 								<br />
 								To create text, use{" "}
-								<span className="code">
-									ctx.create_text({"<"}x{">"}, {"<"}y{">"})
-								</span>
-								, where x and y is the position of the button. There are also
-								several optional arguments, all of which can be viewed{" "}
+								<code className="inline language-python">
+									ctx.create_text(x, y)
+								</code>
+								, where <code className="inline language-python">x</code> and{" "}
+								<code className="inline language-python">y</code> is the
+								position of the button. There are also several optional
+								arguments, all of which can be viewed{" "}
 								<a href="https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/create_text.html">
 									here
 								</a>
@@ -315,11 +351,14 @@ export default function(props) {
 								Another use of the canvas is to create shapes. We only use the
 								rectangle on the driver station, and it is the most simple. To
 								make a rectangle, call
-								<span className="code">
-									ctx.creat_rect({"<"}x0{">"}, {"<"}y0{">"}, {"<"}x1{">"}, {"<"}
-									y1{">"})
-								</span>
-								. Here x0 and y0 represent the top left corner, and x1 and y1
+								<code className="inline language-python">
+									ctx.creat_rect(x0, y0, x1, y1)
+								</code>
+								. Here <code className="inline language-python">x0</code> and{" "}
+								<code className="inline language-python">y0</code> represent the
+								top left corner, and{" "}
+								<code className="inline language-python">x1</code> and{" "}
+								<code className="inline language-python">y1</code>
 								represent the bottom right corner. Just like with text, there
 								are several optional arguments that can be seen{" "}
 								<a href="https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/create_rectangle.html">
@@ -331,30 +370,35 @@ export default function(props) {
 								background, but with enough effort, we could make the whole
 								interface with custom images. To create an image on the canvas,
 								use{" "}
-								<span className="code">
-									ctx.create_image({"<"}x{">"}, {"<"}y{">"}, image={"<"}
-									image_var{">"})
-								</span>
-								. Here, image_var is an ImageTk object. Importing an image is
-								somewhat simple. To do so, import Image and ImageTk from the PIL
-								module. Then create a variable with{" "}
-								<span className="code">
-									Image.open({"<"}full_path_to_image{">"})
-								</span>
-								. We'll call this variable <span className="code">bg</span>.
-								Then, set that variable to{" "}
-								<span className="code">ImageTk.PhotoImage(bg)</span>. This just
-								replaces the Image object with an ImageTk object that we can use
-								on the canvas.
+								<code className="inline language-python">
+									ctx.create_image(x, y, image=image_var)
+								</code>
+								. Here,{" "}
+								<code className="inline language-python">image_var</code> is an
+								ImageTk object. Importing an image is somewhat simple. To do so,
+								import <code className="inline language-python">Image</code> and{" "}
+								<code className="inline language-python">ImageTk</code> from the
+								PIL module. Then create a variable with{" "}
+								<code className="inline language-python">
+									Image.open(full_path_to_image)
+								</code>
+								. We'll call this variable{" "}
+								<code className="inline language-python">bg</code>. Then, set
+								that variable to{" "}
+								<code className="inline language-python">
+									ImageTk.PhotoImage(bg)
+								</code>
+								. This just replaces the Image object with an ImageTk object
+								that we can use on the canvas.
 								<br />
 								Finally, we need to know if a button has been clicked. In the
 								code, I made a button class that handled everything for the
 								button, but basically, we can use
-								<span className="code">root.bind()</span> to call a function
-								every time the left mouse button is pressed (
-								<span className="code">
+								<code className="inline language-python">root.bind()</code> to
+								call a function every time the left mouse button is pressed (
+								<code className="inline language-python">
 									ctx.bind("{"<"}Button-1{">"}", handle_click)
-								</span>
+								</code>
 								). Tkinter passed that function an object that has the x and y
 								position of the click. Since the buttons are squares, we can
 								just check if the click was within both the x and y boundaries
@@ -371,20 +415,21 @@ export default function(props) {
 								The second main module we use in the driver station code is
 								Pyserial. This is what communicates with the Due to send the
 								inputs from Tkinter. To initialize the serial device, we use{" "}
-								<span className="code">
-									ser = serial.Serial({"<"}port{">"}, {"<"}rate{">"})
-								</span>
+								<code className="inline language-python">
+									ser = serial.Serial(port, rate)
+								</code>
 								. The port is different depending on the device, but on the
-								Raspberry Pi it is <span className="code">"/dev/ttyAMA0"</span>.
+								Raspberry Pi it is{" "}
+								<code className="inline language-python">"/dev/ttyAMA0"</code>.
 								The rate is the same rate that we set on the Due when that was
 								programmed. Pyserial is a complicated module, but for our
 								purposes it only has one more function that we care about. To
 								send data over the serial port we can say
-								<span className="code">
-									ser.write({"<"};val{">"};)
-								</span>{" "}
-								where val is any byte. A sample program for pyserial may look
-								like this:
+								<code className="inline language-python">
+									ser.write(val)
+								</code>{" "}
+								where <code className="inline language-python">val</code> is any
+								byte. A sample program for pyserial may look like this:
 								<pre
 									className="line-numbers"
 									data-src="/files/driver-station/pyserial_ex.py"

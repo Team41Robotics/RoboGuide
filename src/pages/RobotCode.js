@@ -9,6 +9,7 @@ import driverStationUSB from "../img/DriverStationUSB.png";
 export default function(props) {
 	useEffect(() => {
 		Prism.fileHighlight();
+		Prism.highlightAll();
 	});
 
 	return (
@@ -123,17 +124,18 @@ export default function(props) {
 								<h2 id="basic-robot-code">Basic Robot Code</h2>
 								In <i>Robot.java</i> you'll find multiple methods including two
 								that we use very often:{" "}
-								<span className="code">robotInit()</span> and{" "}
-								<span className="code">teleopPeriodic()</span>. We use{" "}
-								<span className="code">robotInit()</span> to initialize all of
-								our variables when the program first runs. To control the robot,
-								we use <span className="code">teleopPeriodic()</span>. This
-								method runs periodically (every 20ms) and executes whatever is
-								inside of it. Because of that, loops are (usually) not required
-								to make the robot move or sense the environment repeatedly. I'm
-								sure you've been wondering how to actually make a robot move. It
-								is now time to do that! To do so, we are going to use two
-								different classes:
+								<code className="inline language-java">robotInit()</code> and{" "}
+								<code className="inline language-java">teleopPeriodic()</code>.
+								We use <code className="inline language-java">robotInit()</code>{" "}
+								to initialize all of our variables when the program first runs.
+								To control the robot, we use{" "}
+								<code className="inline language-java">teleopPeriodic()</code>.
+								This method runs periodically (every 20ms) and executes whatever
+								is inside of it. Because of that, loops are (usually) not
+								required to make the robot move or sense the environment
+								repeatedly. I'm sure you've been wondering how to actually make
+								a robot move. It is now time to do that! To do so, we are going
+								to use two different classes:
 								<a
 									href="https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/Joystick.html"
 									className="code"
@@ -155,20 +157,18 @@ export default function(props) {
 									alt="Driver Station USB Menu"
 									className="d-block mx-auto my-1"
 								/>
-								Your <span className="code">Joystick</span> object should be
-								created at the top of your program inside the Robot class but
-								outside of any method. The method you will use to get data from
-								your Joystick is{" "}
-								<span className="code">
-									<i>JoystickName</i>.getRawAxis(<i>Axis #</i>)
-								</span>
+								Your <code className="inline language-java">Joystick</code>{" "}
+								object should be created at the top of your program inside the
+								Robot class but outside of any method. The method you will use
+								to get data from your Joystick is{" "}
+								<code className="inline language-java">
+									myJoystick.getRawAxis(AXIS_NUMBER)
+								</code>
 								. You can find the axis numbers in the same page of the Driver
 								Station. You will then feed the readings from your Joystick axes
 								into your spark max's. The method you will use to set the speed
 								is ... shocker ...{" "}
-								<span className="code">
-									<i>SparkName</i>.set(<i>speed</i>)
-								</span>
+								<code className="inline language-java">mySpark.set(SPEED)</code>
 								. If you feed two Joystick axes into at least two different
 								sparks you should be able to make a robot move anywhere you want
 								with tank drive! Here's an example of what your program might

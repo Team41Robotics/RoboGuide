@@ -9,6 +9,7 @@ import mathFunctionImg from "../img/mathFunction.png";
 export default function(props) {
 	useEffect(() => {
 		Prism.fileHighlight();
+		Prism.highlightAll();
 	});
 
 	return (
@@ -184,53 +185,55 @@ export default function(props) {
 								include the following:
 								<ul>
 									<li>
-										<span className="code">boolean</span> true or false (1{" "}
+										<code className="inline language-java">boolean</code> true
+										or false (1{" "}
 										<a href="https://en.wikipedia.org/wiki/Bit">bit</a>)
 									</li>
 									<li>
-										<span className="code">byte</span> Stores whole number
-										values from -128 to 127 (8-bit)
+										<code className="inline language-java">byte</code> Stores
+										whole number values from -128 to 127 (8-bit)
 									</li>
 									<li>
-										<span className="code">short</span> Stores whole number
-										values from −32,768 to 32,767 (16-bit)
+										<code className="inline language-java">short</code> Stores
+										whole number values from −32,768 to 32,767 (16-bit)
 									</li>
 									<li>
-										<span className="code">char</span> Stores character values
-										from '\u0000' (0) to '\uffff' (65535) (16-bit). This is a
-										way to store a <u>single</u>{" "}
+										<code className="inline language-java">char</code> Stores
+										character values from '\u0000' (0) to '\uffff' (65535)
+										(16-bit). This is a way to store a <u>single</u>{" "}
 										<a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a>{" "}
 										character.
 									</li>
 									<li>
-										<span className="code">int</span> Stores whole number values
-										from -2,147,483,648 to 2,147,483,647 (32-bit). If one tries
-										to store a number with a decimal point in an int (or any
-										other data type that cannot store floating point values),
-										the compiler will throw an error.
+										<code className="inline language-java">int</code> Stores
+										whole number values from -2,147,483,648 to 2,147,483,647
+										(32-bit). If one tries to store a number with a decimal
+										point in an int (or any other data type that cannot store
+										floating point values), the compiler will throw an error.
 									</li>
 									<li>
-										<span className="code">long</span> Stores whole number
-										values from -9,223,372,036,854,775,808‬ to
+										<code className="inline language-java">long</code> Stores
+										whole number values from -9,223,372,036,854,775,808‬ to
 										9,223,372,036,854,775,807 (64-bit).
 									</li>
 									<li>
-										<span className="code">float</span> Stores 32-bit{" "}
+										<code className="inline language-java">float</code> Stores
+										32-bit{" "}
 										<a href="https://floating-point-gui.de/formats/fp/">
 											floating point
 										</a>{" "}
 										values (can have a decimal point)
 									</li>
 									<li>
-										<span className="code">double</span> Stores 64-bit floating
-										point values (can have a decimal point)
+										<code className="inline language-java">double</code> Stores
+										64-bit floating point values (can have a decimal point)
 									</li>
 								</ul>
 								Another very commonly used data type in Java is a{" "}
-								<span className="code">String</span>. This type of variable is
-								used to represent a <i>String</i> of character connected
-								together. We use it to represent any collection of characters,
-								including single characters, words, or sentences.
+								<code className="inline language-java">String</code>. This type
+								of variable is used to represent a <i>String</i> of character
+								connected together. We use it to represent any collection of
+								characters, including single characters, words, or sentences.
 								<br />
 								Also, it is a Java convention to declare variables using{" "}
 								<a href="https://en.wikipedia.org/wiki/Camel_case">

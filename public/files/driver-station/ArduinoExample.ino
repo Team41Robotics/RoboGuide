@@ -8,7 +8,7 @@ void setup() {
   LED_PWM = 18;
   LED_PIN = 24;
   LED2_PIN = 25;
-  POT_PIN =A4;
+  POT_PIN = A4;
   input = 0x0;
   Serial.begin(9600);
   pinMode(LED_PWM, OUTPUT);
