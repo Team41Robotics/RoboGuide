@@ -23,18 +23,6 @@ export default function (props) {
 			id="navbar"
 		>
 			<Link className="navbar-brand" to="/">
-				<img
-					src={logo}
-					className="d-inline-block align-top"
-					alt=""
-					loading="lazy"
-					style={{
-						width: "30px",
-						height: "30px",
-						marginRight: "10px",
-						marginLeft: "10px"
-					}}
-				/>
 				RoboGuide
 			</Link>
 			<button
