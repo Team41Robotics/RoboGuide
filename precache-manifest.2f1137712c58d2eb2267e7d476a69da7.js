@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4a095cacf508bd971cea58180478f00a",
+    "revision": "e8d062520646bbbea52b171d0bbcd280",
     "url": "/index.html"
   },
   {
-    "revision": "216e8f791856702b24d1",
+    "revision": "646b8071f036318be79b",
     "url": "/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "aea5923cabeec36bab4e",
-    "url": "/static/css/main.14040310.chunk.css"
+    "revision": "b4027578d5f34df3d91a",
+    "url": "/static/css/main.961d38e1.chunk.css"
   },
   {
-    "revision": "216e8f791856702b24d1",
-    "url": "/static/js/2.793d18dd.chunk.js"
+    "revision": "646b8071f036318be79b",
+    "url": "/static/js/2.5db4d6c9.chunk.js"
   },
   {
-    "revision": "6f5cd516e72ccce36acd07f8745d4216",
-    "url": "/static/js/2.793d18dd.chunk.js.LICENSE.txt"
+    "revision": "618d9e067b5f7c0ee048a43ae1109b7d",
+    "url": "/static/js/2.5db4d6c9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aea5923cabeec36bab4e",
-    "url": "/static/js/main.8416ab80.chunk.js"
+    "revision": "b4027578d5f34df3d91a",
+    "url": "/static/js/main.675c673a.chunk.js"
   },
   {
     "revision": "5f9eedae243c6bf05cfa",
@@ -30,18 +30,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8884170706946249da7026482083c9cf",
     "url": "/static/media/DriverStationUSB.88841707.png"
-  },
-  {
-    "revision": "f1f9060b6bc8ec371ab3e325d74f5e7f",
-    "url": "/static/media/functionEx1.f1f9060b.svg"
-  },
-  {
-    "revision": "3795300209e7d093bcaaaa9966038d53",
-    "url": "/static/media/functionEx2.37953002.svg"
-  },
-  {
-    "revision": "7afcbc360d112f12b770c04276fecd78",
-    "url": "/static/media/functionEx2Call.7afcbc36.svg"
   },
   {
     "revision": "7c4765afd4705952a795e3209699a670",
@@ -58,10 +46,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "38ee63894ab7556bdd4db8006fa82f31",
     "url": "/static/media/logo.38ee6389.png"
-  },
-  {
-    "revision": "6506525947ebbf4ca0a12d443a31511b",
-    "url": "/static/media/print.65065259.svg"
   },
   {
     "revision": "ae0ec440ede9f7f99e8847910954a93c",
