@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import Prism from "prismjs";
 import TrackedBlockPage from "./TrackedBlockPage";
 
 import javaLogo from "../img/banners/javaBanner.png";
 import mathFunctionImg from "../img/mathFunction.png";
 
 export default function(props) {
+	useEffect(() => {
+		Prism.fileHighlight();
+	});
+
 	return (
 		<>
 			<Helmet>
