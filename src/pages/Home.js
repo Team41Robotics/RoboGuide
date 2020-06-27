@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import {Helmet} from "react-helmet";
 
 import Card from "../components/Card.js";
 
@@ -8,9 +8,13 @@ import javaBanner from "../img/banners/javaBanner.svg";
 import robotCodeBanner from "../img/banners/robotCodeBanner.jpg";
 import hardwareBanner from "../img/banners/hardwareBanner.jpg";
 
+// import solderHand from "../img/solderingIronWithHand.svg";
+import solderHand from "/Users/james/Sites/RoboGuide/src/img/solderingIronWithHand_Test.svg";
+import electricalBanner from "../img/banners/electricalBanner.png";
+
 import "../css/Home.css";
 
-export default function(props) {
+export default function (props) {
 	return (
 		<>
 			<Helmet>
@@ -58,6 +62,27 @@ export default function(props) {
 							footerLink="/robot-code"
 						>
 							Learn about how to create and program the controls for the robot!
+						</Card>
+					</div>
+				</div>
+				<div className="row mx-3 p-3 rounded">
+					<div className="col-12 col-lg-3 d-flex flex-column align-items-center">
+						<h1>Electrical</h1>
+						<img
+							src={solderHand}
+							className="img-fluid"
+							alt="hand holding soldering iron"
+						/>
+					</div>
+					<div className="col-12 col-lg-9 card-deck">
+						<Card
+							bannerImg={electricalBanner}
+							title="Electrical Basics"
+							footerText="Go Now!"
+							footerLink="/electrical-basics"
+						>
+							Learn about the fundamentals of wiring and soldering, the
+							fundamentals of electric engineering!
 						</Card>
 					</div>
 				</div>
