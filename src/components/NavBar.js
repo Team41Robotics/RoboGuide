@@ -9,7 +9,8 @@ const navPages = [
 	{ title: "Java Guide", path: "/java/" },
 	{ title: "Robot Code", path: "/robot-code/" },
 	{ title: "Robot Hardware", path: "/robot-hardware/" },
-	{ title: "Driver Station", path: "/driver-station/" }
+	{ title: "Driver Station", path: "/driver-station/" },
+	{ title: "Electrical Basics", path: "/electrical-basics/" }
 ];
 
 export default function(props) {
