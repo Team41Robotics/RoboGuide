@@ -1,5 +1,16 @@
+@font-face {
+	font-family: Hacked;
+	src: url(https://hackedfont.com/HACKED.ttf);
+}
+
 #navbar {
 	background-color: #1d1e1a;
+}
+
+#navbar .navbar-brand {
+	font-size: xx-large;
+	font-family: Hacked;
+	color: #4bff8b;
 }
 
 #navbar .nav-item:active {
@@ -13,9 +24,9 @@
 }
 
 #navbar .nav-item a.nav-link:hover {
-	color: #b45822;
+	color: #a6ffda;
 }
 
 #navbar .nav-item.active a.nav-link {
-	color: #ffc107;
+	color: #4bff8b;
 }

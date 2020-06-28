@@ -1,6 +1,6 @@
 .section-nav {
 	padding-left: 0;
-	border-left: 1px solid #ffc107;
+	border-left: 1px solid #4bff8b;
 }
 .section-nav ul {
 	padding-left: 1.25rem;
@@ -15,7 +15,7 @@
 	transition: color 0.3s ease;
 }
 .toc-entry a.active {
-	color: #ffc107 !important;
+	color: #4bff8b !important;
 }
 .bd-toc {
 	position: sticky !important;

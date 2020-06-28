@@ -1,36 +1,26 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
-
-import logo from "../img/logo.png";
+import {Link, useLocation} from "react-router-dom";
 
 import "../css/NavBar.css";
 
 const navPages = [
-	{ title: "Java Guide", path: "/java/" },
-	{ title: "Robot Code", path: "/robot-code/" },
-	{ title: "Robot Hardware", path: "/robot-hardware/" },
-	{ title: "Driver Station", path: "/driver-station/" }
+	{title: "Java Guide", path: "/java/"},
+	{title: "Robot Code", path: "/robot-code/"},
+	{title: "Robot Hardware", path: "/robot-hardware/"},
+	{title: "Driver Station", path: "/driver-station/"},
+	{title: "Electrical Basics", path: "/electrical-basics/"}
 ];
 
-export default function(props) {
+export default function (props) {
 	const loc = useLocation();
 	const activePath = loc.pathname + (loc.pathname.endsWith("/") ? "" : "/");
 
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark mt-n3 mx-n3" id="navbar">
+		<nav
+			className="navbar navbar-expand-lg navbar-dark mt-n3 mx-n3"
+			id="navbar"
+		>
 			<Link className="navbar-brand" to="/">
-				<img
-					src={logo}
-					className="d-inline-block align-top"
-					alt=""
-					loading="lazy"
-					style={{
-						width: "30px",
-						height: "30px",
-						marginRight: "10px",
-						marginLeft: "10px"
-					}}
-				/>
 				RoboGuide
 			</Link>
 			<button

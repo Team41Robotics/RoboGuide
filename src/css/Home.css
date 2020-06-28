@@ -6,6 +6,9 @@
 	background-color: #1d1e1a;
 	padding-bottom: 1px !important;
 }
+#home-content .row:not(:last-child) {
+	margin-bottom: 25px;
+}
 
 #home-content .card {
 	background-color: #272822;

@@ -9,6 +9,7 @@ import JavaGuide from "./pages/JavaGuide";
 import RobotCode from "./pages/RobotCode";
 import RobotHardware from "./pages/RobotHardware";
 import DriverStation from "./pages/DriverStation";
+import ElectricalBasics from "./pages/ElectricalBasics";
 
 function App({ location }) {
 	return (
@@ -22,6 +23,7 @@ function App({ location }) {
 					<Route exact path="/robot-code" component={RobotCode} />
 					<Route exact path="/robot-hardware" component={RobotHardware} />
 					<Route exact path="/driver-station" component={DriverStation} />
+					<Route exact path="/electrical-basics" component={ElectricalBasics} />
 
 					<Route component={NotFound} />
 				</Switch>
