@@ -8,7 +8,7 @@ import javaBanner from "../img/banners/javaBanner.svg";
 import robotCodeBanner from "../img/banners/robotCodeBanner.jpg";
 import hardwareBanner from "../img/banners/hardwareBanner.jpg";
 
-import solderHand from "../img/solderingIronWithHand.svg";
+import solderHand from "../img/solderingIronWithHandGreen.svg";
 import electricalBanner from "../img/banners/electricalBanner.png";
 
 import "../css/Home.css";
