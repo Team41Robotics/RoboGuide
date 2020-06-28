@@ -7,6 +7,7 @@ import programmingImg from "../img/banners/robotCodeBanner.jpg";
 import driverStationUSB from "../img/DriverStationUSB.png";
 import pidVaryingP from "../img/PID_varyingP.jpg";
 import pidVaryingI from "../img/PID_varyingI.png";
+import fsmFlowChart from "../img/fsm_flow_chart.jpg";
 
 export default function(props) {
 	useEffect(() => {
@@ -371,7 +372,7 @@ export default function(props) {
 								</p>
 								<img
 									src={pidVaryingI}
-									alt="PID with varying P"
+									alt="PID with varying I"
 									className="d-block mx-auto my-1"
 									style={{ maxHeight: "400px" }}
 								/>
@@ -405,6 +406,68 @@ export default function(props) {
 								<pre
 									className="line-numbers"
 									data-src="/files/robot-code/PIDControllerWPILib.java"
+								></pre>
+							</>
+						)
+					},
+					{
+						id: "state-machines",
+						title: "State Machines",
+						children: [{ id: "state-machine-ex", title: "Example" }],
+						content: (
+							<>
+								<h1 className="text-center">State Machines</h1>
+								<p>
+									A{" "}
+									<a href="https://en.wikipedia.org/wiki/Finite-state_machine">
+										finite state machine
+									</a>
+									, often referred to simply as a state machine, is an abstract
+									machine which is good for describing how a robot can
+									autonomously carry out a process. In short, it involves
+									abstracting your robot's decisions to a flow chart like the
+									one below.
+								</p>
+								<img
+									src={fsmFlowChart}
+									alt="FSM Flow Chart"
+									className="d-block mx-auto my-1"
+									style={{ maxHeight: "400px" }}
+								/>
+								<br />
+								<h2 id="state-machine-ex">Example</h2>
+								<p>
+									As an example, let's say you want the robot to drive forward 5
+									meters, pick up a ball, and drive backwards 2 meters. If
+									you're coming from experience with a task-based language like
+									ROBOTC, you might be tempted to do something like this:
+								</p>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/TaskBased.java"
+								></pre>
+								<p>
+									However, in a TimedRobot, this would block all other code from
+									running. Instead, you might think of doing it like this:
+								</p>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/CaseBased.java"
+								></pre>
+								<p>
+									This is, in fact, a very simple state machine. However, there
+									are better ways to write it. Specifically, you'd want to use a{" "}
+									<code className="language-java inline">switch</code> statement
+									instead of a bunch of{" "}
+									<code className="language-java inline">if</code> and{" "}
+									<code className="language-java inline">else if</code>{" "}
+									statements. Additionally, it's cleaner to use an{" "}
+									<code className="language-java inline">enum</code> instead of
+									just integers. This state machine would be best written as:
+								</p>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/CaseBasedClean.java"
 								></pre>
 							</>
 						)
