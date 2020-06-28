@@ -1,27 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.978c191b.chunk.css",
-    "main.js": "/static/js/main.bf2a0481.chunk.js",
-    "main.js.map": "/static/js/main.bf2a0481.chunk.js.map",
+    "main.css": "/static/css/main.2027c29b.chunk.css",
+    "main.js": "/static/js/main.01643c40.chunk.js",
+    "main.js.map": "/static/js/main.01643c40.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7fdb07ff.js",
     "runtime-main.js.map": "/static/js/runtime-main.7fdb07ff.js.map",
     "static/css/2.af3c1da9.chunk.css": "/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.1f4ce570.chunk.js": "/static/js/2.1f4ce570.chunk.js",
-    "static/js/2.1f4ce570.chunk.js.map": "/static/js/2.1f4ce570.chunk.js.map",
+    "static/js/2.f995c79d.chunk.js": "/static/js/2.f995c79d.chunk.js",
+    "static/js/2.f995c79d.chunk.js.map": "/static/js/2.f995c79d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.020a9bac770e70327cb013308b744659.js": "/precache-manifest.020a9bac770e70327cb013308b744659.js",
+    "precache-manifest.e881a4ceea97d0b00ad72dcc498ddf44.js": "/precache-manifest.e881a4ceea97d0b00ad72dcc498ddf44.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.978c191b.chunk.css.map": "/static/css/main.978c191b.chunk.css.map",
-    "static/js/2.1f4ce570.chunk.js.LICENSE.txt": "/static/js/2.1f4ce570.chunk.js.LICENSE.txt",
+    "static/css/main.2027c29b.chunk.css.map": "/static/css/main.2027c29b.chunk.css.map",
+    "static/js/2.f995c79d.chunk.js.LICENSE.txt": "/static/js/2.f995c79d.chunk.js.LICENSE.txt",
     "static/media/DriverStationUSB.png": "/static/media/DriverStationUSB.88841707.png",
+    "static/media/electricalBanner.png": "/static/media/electricalBanner.bd0d7c9d.png",
     "static/media/hardwareBanner.jpg": "/static/media/hardwareBanner.7c4765af.jpg",
-    "static/media/javaBanner.svg": "/static/media/javaBanner.bc6fafac.svg",
+    "static/media/javaBanner.svg": "/static/media/javaBanner.6bae9eb1.svg",
     "static/media/joystick.jpg": "/static/media/joystick.559ef113.jpg",
-    "static/media/logo.png": "/static/media/logo.38ee6389.png",
+    "static/media/laptopGreen.svg": "/static/media/laptopGreen.90bfb14e.svg",
     "static/media/robotCodeBanner.jpg": "/static/media/robotCodeBanner.ae0ec440.jpg",
     "static/media/sadTeek.png": "/static/media/sadTeek.6304fbb7.png",
     "static/media/servo.jpg": "/static/media/servo.669be898.jpg",
+    "static/media/solderingIron.png": "/static/media/solderingIron.72064540.png",
+    "static/media/solderingIronWithHandGreen.svg": "/static/media/solderingIronWithHandGreen.dd3d6149.svg",
     "static/media/sparkMax.png": "/static/media/sparkMax.b7b7cbaa.png",
     "static/media/talonFX.png": "/static/media/talonFX.ee5a0797.png",
     "static/media/talonSRX.jpg": "/static/media/talonSRX.1a22e0c8.jpg"
@@ -29,8 +32,8 @@
   "entrypoints": [
     "static/js/runtime-main.7fdb07ff.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.1f4ce570.chunk.js",
-    "static/css/main.978c191b.chunk.css",
-    "static/js/main.bf2a0481.chunk.js"
+    "static/js/2.f995c79d.chunk.js",
+    "static/css/main.2027c29b.chunk.css",
+    "static/js/main.01643c40.chunk.js"
   ]
 }
