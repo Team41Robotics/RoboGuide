@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, {useEffect} from "react";
+import {Helmet} from "react-helmet";
 import Prism from "prismjs";
 import TrackedBlockPage from "./TrackedBlockPage";
 
 import javaLogo from "../img/banners/javaBanner.svg";
 import mathFunctionImg from "../img/mathFunction.png";
 
-export default function(props) {
+export default function (props) {
 	useEffect(() => {
 		Prism.fileHighlight();
 		Prism.highlightAll();
@@ -24,7 +24,7 @@ export default function(props) {
 						<h1>Intro to Java Programming</h1>
 						<img
 							src={javaLogo}
-							className="img-fluid rounded w-50 mb-5"
+							className="img-fluid rounded w-50 mb-5 bannerImg"
 							alt="Java logo"
 						/>
 					</>
@@ -36,7 +36,7 @@ export default function(props) {
 						content: (
 							<>
 								<h1 className="text-center">Beginner Resources</h1>
-								<ul style={{ fontSize: "larger" }}>
+								<ul style={{fontSize: "larger"}}>
 									<li>
 										If you want an overview of Java syntax, I have created a
 										guide below
@@ -166,8 +166,8 @@ export default function(props) {
 						id: "variables",
 						title: "Variables",
 						children: [
-							{ id: "variable-initialization", title: "Initialization" },
-							{ id: "variable-arrays", title: "Arrays" }
+							{id: "variable-initialization", title: "Initialization"},
+							{id: "variable-arrays", title: "Arrays"}
 						],
 						content: (
 							<>
@@ -259,12 +259,12 @@ export default function(props) {
 						id: "operators",
 						title: "Operators",
 						children: [
-							{ id: "operators-math", title: "Math" },
+							{id: "operators-math", title: "Math"},
 							{
 								id: "operators-variable-reassignment",
 								title: "Variable Reassignment"
 							},
-							{ id: "operators-logical", title: "Logical" }
+							{id: "operators-logical", title: "Logical"}
 						],
 						content: (
 							<>
@@ -297,8 +297,8 @@ export default function(props) {
 						id: "control-flow",
 						title: "Control Flow",
 						children: [
-							{ id: "control-flow-if-else", title: "If/Else" },
-							{ id: "control-flow-loops", title: "Loops" }
+							{id: "control-flow-if-else", title: "If/Else"},
+							{id: "control-flow-loops", title: "Loops"}
 						],
 						content: (
 							<>
@@ -323,7 +323,7 @@ export default function(props) {
 					{
 						id: "functions",
 						title: "Functions",
-						children: [{ id: "functions-scope", title: "Scope" }],
+						children: [{id: "functions-scope", title: "Scope"}],
 						content: (
 							<>
 								<h2 className="text-center">
@@ -343,7 +343,7 @@ export default function(props) {
 								<img
 									src={mathFunctionImg}
 									className="d-block mx-auto my-1 p-2 rounded monokai"
-									style={{ height: "50px" }}
+									style={{height: "50px"}}
 									alt="Math function"
 								/>
 								This same function could be written in Java as:

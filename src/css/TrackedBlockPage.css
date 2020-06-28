@@ -1,3 +1,7 @@
+.bannerImg {
+	max-height: 500px;
+}
+
 .section-nav {
 	padding-left: 0;
 	border-left: 1px solid #4bff8b;

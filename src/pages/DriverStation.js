@@ -17,14 +17,14 @@ export default function (props) {
 				<title>Driver Station | RoboGuide</title>
 			</Helmet>
 			<TrackedBlockPage
-				id="hardware"
+				id="driver-station"
 				header={
 					<>
 						<h1>Driver Station</h1>
 						<img
 							src={robotImg}
-							className="img-fluid rounded mb-5"
-							alt="Robot"
+							className="img-fluid rounded mb-5 bannerImg"
+							alt="Driverstation"
 						/>
 					</>
 				}

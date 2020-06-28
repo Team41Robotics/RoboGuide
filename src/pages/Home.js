@@ -59,7 +59,7 @@ export default function (props) {
 							bannerImg={driverstationBanner}
 							title="Driver Station Guide"
 							footerText="Go Now!"
-							footerLink="/robot-code"
+							footerLink="/driver-station"
 						>
 							Learn about how to create and program the controls for the robot!
 						</Card>
@@ -81,8 +81,8 @@ export default function (props) {
 							footerText="Go Now!"
 							footerLink="/electrical-basics"
 						>
-							Learn about the fundamentals of wiring and soldering, the
-							fundamentals of electric engineering!
+							Learn the basics of wiring and soldering, the fundamentals of
+							electric engineering!
 						</Card>
 					</div>
 				</div>

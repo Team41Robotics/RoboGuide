@@ -18,7 +18,7 @@ export default function (props) {
 						<h1>Electrical Basics</h1>
 						<img
 							src={electricalBanner}
-							className="img-fluid rounded w-50 mb-5"
+							className="img-fluid rounded w-50 mb-5 bannerImg"
 							alt="Java logo"
 						/>
 					</>

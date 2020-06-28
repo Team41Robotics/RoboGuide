@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, {useEffect} from "react";
+import {Helmet} from "react-helmet";
 import Prism from "prismjs";
 import TrackedBlockPage from "./TrackedBlockPage";
 
@@ -10,7 +10,7 @@ import servoImg from "../img/servo.jpg";
 import joystickImg from "../img/joystick.jpg";
 import robotImg from "../img/banners/hardwareBanner.jpg";
 
-export default function(props) {
+export default function (props) {
 	useEffect(() => {
 		Prism.highlightAll();
 	});
@@ -27,7 +27,7 @@ export default function(props) {
 						<h1>Robot Hardware</h1>
 						<img
 							src={robotImg}
-							className="img-fluid rounded mb-5"
+							className="img-fluid rounded mb-5 bannerImg"
 							alt="Robot"
 						/>
 					</>
