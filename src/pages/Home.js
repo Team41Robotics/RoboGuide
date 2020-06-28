@@ -7,6 +7,7 @@ import laptop from "../img/laptopGreen.svg";
 import javaBanner from "../img/banners/javaBanner.svg";
 import robotCodeBanner from "../img/banners/robotCodeBanner.jpg";
 import hardwareBanner from "../img/banners/hardwareBanner.jpg";
+import driverstationBanner from "../img/banners/driverstationBanner.svg";
 
 import solderHand from "../img/solderingIronWithHandGreen.svg";
 import electricalBanner from "../img/banners/electricalBanner.png";
@@ -55,7 +56,7 @@ export default function (props) {
 							Learn about the sensors and actuators that make the robot work!
 						</Card>
 						<Card
-							bannerImg={hardwareBanner}
+							bannerImg={driverstationBanner}
 							title="Driver Station Guide"
 							footerText="Go Now!"
 							footerLink="/robot-code"

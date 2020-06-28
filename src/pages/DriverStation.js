@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, {useEffect} from "react";
+import {Helmet} from "react-helmet";
 import Prism from "prismjs";
 import TrackedBlockPage from "./TrackedBlockPage";
 
-import robotImg from "../img/banners/hardwareBanner.jpg";
+import robotImg from "../img/banners/driverstationBanner.svg";
 
-export default function(props) {
+export default function (props) {
 	useEffect(() => {
 		Prism.fileHighlight();
 		Prism.highlightAll();
