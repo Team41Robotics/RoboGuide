@@ -1,7 +1,8 @@
 // Controller with just "P"
 @Override
 public void autonPeriodic() {
-	double error = getDistance(leftEnc);
+	double goal = 1.0;
+	double error = goal - getDistance(leftEnc);
 
 	// Set speed proportionally to error (distance to goal)
 	double kP = 0.2; // Proportion constant

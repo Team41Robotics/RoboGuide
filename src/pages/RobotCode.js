@@ -5,6 +5,8 @@ import TrackedBlockPage from "./TrackedBlockPage";
 
 import programmingImg from "../img/banners/robotCodeBanner.jpg";
 import driverStationUSB from "../img/DriverStationUSB.png";
+import pidVaryingP from "../img/PID_varyingP.jpg";
+import pidVaryingI from "../img/PID_varyingI.png";
 
 export default function(props) {
 	useEffect(() => {
@@ -217,15 +219,11 @@ export default function(props) {
 						)
 					},
 					{
-						id: "auton",
-						title: "Autonomous Code",
-						children: [
-							{ id: "encoders", title: "Encoders" },
-							{ id: "pid", title: "PID Controllers" }
-						],
+						id: "encoders",
+						title: "Encoders",
 						content: (
 							<>
-								<h1 className="text-center">Autonomous Code</h1>
+								<h1 className="text-center">Encoders</h1>
 								<p>
 									An important concept in FRC is that of autonomy. This refers
 									to a robot acting without any input from a human. So if you
@@ -234,7 +232,6 @@ export default function(props) {
 									of which can also be used to automate simple tasks that aid a
 									human player.
 								</p>
-								<h2 id="encoders">Encoders</h2>
 								<p>
 									Encoders are sensors that are mounted on either a motor or
 									another axle, and they are used to measure rotation. When used
@@ -257,6 +254,20 @@ export default function(props) {
 									className="line-numbers"
 									data-src="/files/robot-code/Encoders.java"
 								></pre>
+							</>
+						)
+					},
+					{
+						id: "pid",
+						title: "PID Controllers",
+						children: [
+							{ id: "pid-p", title: "Proportion" },
+							{ id: "pid-i", title: "Integral" },
+							{ id: "pid-d", title: "Derivative" },
+							{ id: "pid-frc", title: "Usage in FRC" }
+						],
+						content: (
+							<>
 								<h2 id="pid">PID Controllers</h2>
 								<p>
 									A concept that is very closely related to encoders in practice
@@ -277,6 +288,8 @@ export default function(props) {
 									className="line-numbers"
 									data-src="/files/robot-code/ThresholdController.java"
 								></pre>
+								<br />
+								<h2 id="pid-p">Proportion</h2>
 								<p>
 									The problem is that if your robot is moving fast, it cannot
 									immediately stop. There are real-world limitations such as the
@@ -293,8 +306,40 @@ export default function(props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/PController.java"
+									data-src="/files/robot-code/P-Controller.java"
 								></pre>
+								<p>
+									Finding the value for this{" "}
+									<code className="language-java inline">kP</code> can be
+									challenging. There is no universal solution for finding the
+									perfect value, although there are{" "}
+									<a href="https://arduinoplusplus.wordpress.com/2017/06/21/pid-control-experiment-tuning-the-controller/">
+										good practical methods
+									</a>
+									. Generally you start with a small value and increase it until
+									the robot starts oscillating. Oscillation refers to the robot
+									passing its goal and repeatedly overcorrecting. The graph
+									below illustrates this tuning process, where the y axis is the
+									position of the robot along some arbitrary axis and the x axis
+									is time.
+								</p>
+								<img
+									src={pidVaryingP}
+									alt="PID with varying P"
+									className="d-block mx-auto my-1"
+									style={{ maxHeight: "400px" }}
+								/>
+								<p>
+									The ideal value for{" "}
+									<code className="language-java inline">kP</code> is the one
+									that minimizes the time it takes for the robot to reach its
+									goal but doesn't cause oscillation. In the graph above, 0.5
+									seems to be a good value. If it was any lower, than it
+									wouldn't oscillate, but it would take longer to reach the
+									goal.
+								</p>
+								<br />
+								<h2 id="pid-i">Integral</h2>
 								<p>
 									There is an inherent problem with this approach, which is that
 									sometimes you need a minimum speed. For example, if your robot
@@ -305,6 +350,62 @@ export default function(props) {
 									the robot wouldn't move at all. That's where the "I" in PID
 									comes in: integration.
 								</p>
+								<p>
+									If your robot is stuck just a little too close to its goal for
+									the "P" coefficient to make the robot move, you can add up
+									your cumulative error. This way, if you end up stuck, the
+									robot will gain a value over time. Visually, this can look
+									like the robot is slowly fine-tuning its position once it's
+									close to the goal. Code for a PID controller with just P and I
+									might look like this:
+								</p>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/PI-Controller.java"
+								></pre>
+								<p>
+									Once again, the effect of this is best visualized with a
+									graph. The integral can help the robot reach the goal faster,
+									especially if the robot really starts to slow down towards the
+									goal because of the proportion.
+								</p>
+								<img
+									src={pidVaryingI}
+									alt="PID with varying P"
+									className="d-block mx-auto my-1"
+									style={{ maxHeight: "400px" }}
+								/>
+								<br />
+								<h2 id="pid-d">Derivative</h2>
+								<p>
+									Lastly, the derivative of the error, or the rate of change in
+									the error, can be used to predict the future behavior of the
+									robot. In practice, this means that the controller can prevent
+									overshoot. In the previous graphs, the position often
+									overshoots its goal and ends up oscillating. Honestly, the
+									derivative term is not always necessary, and a PI controller
+									generally works well. Regardless, it is a useful thing to
+									know.
+								</p>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/PID-Controller.java"
+								></pre>
+								<br />
+								<h2 id="pid-frc">Usage in FRC</h2>
+								<p>
+									Fortunately, WPILib has a{" "}
+									<a href="https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/controller/PIDController.html">
+										PID Controller class
+									</a>{" "}
+									which abstracts this process for you. The code above could be
+									rewritten much shorter using the tools that WPILib already
+									provides.
+								</p>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/PIDControllerWPILib.java"
+								></pre>
 							</>
 						)
 					}
