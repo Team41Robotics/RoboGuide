@@ -215,6 +215,34 @@ export default function(props) {
 								better projects.
 							</>
 						)
+					},
+					{
+						id: "auton",
+						title: "Autonomous Code",
+						children: [{ id: "encoders", title: "Encoders" }],
+						content: (
+							<>
+								<h1 className="text-center">Autonomous Code</h1>
+								<p>
+									An important concept in FRC is that of autonomy. This refers
+									to a robot acting without any input from a human. So if you
+									can't control your robot with a joystick, how can you control
+									it? There are several different concepts and techniques, many
+									of which can also be used to automate simple tasks that aid a
+									human player.
+								</p>
+								<h2 id="encoders">Encoders</h2>
+								<p>
+									Encoders are sensors that are mounted on either a motor or
+									another axle, and they are used to measure rotation. When used
+									on a robot's wheels, this means they can indicate how far the
+									robot has traveled with respect to wheel rotations. With some
+									simple unit conversions, this can be turned into a tangible
+									distance on the playing field.
+								</p>
+								<p>INSERT SOME EXAMPLE CODE</p>
+							</>
+						)
 					}
 				]}
 			/>
