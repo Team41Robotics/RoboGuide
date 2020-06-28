@@ -135,14 +135,14 @@ export default function(props) {
 								required to make the robot move or sense the environment
 								repeatedly. I'm sure you've been wondering how to actually make
 								a robot move. It is now time to do that! To do so, we are going
-								to use two different classes:
+								to use two different classes:{" "}
 								<a
 									href="https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/Joystick.html"
 									className="code"
 								>
 									Joystick
 								</a>{" "}
-								and
+								and{" "}
 								<a
 									href="https://www.revrobotics.com/content/sw/max/sw-docs/java/com/revrobotics/CANSparkMax.html"
 									className="code"
@@ -219,7 +219,10 @@ export default function(props) {
 					{
 						id: "auton",
 						title: "Autonomous Code",
-						children: [{ id: "encoders", title: "Encoders" }],
+						children: [
+							{ id: "encoders", title: "Encoders" },
+							{ id: "pid", title: "PID Controllers" }
+						],
 						content: (
 							<>
 								<h1 className="text-center">Autonomous Code</h1>
@@ -240,7 +243,68 @@ export default function(props) {
 									simple unit conversions, this can be turned into a tangible
 									distance on the playing field.
 								</p>
-								<p>INSERT SOME EXAMPLE CODE</p>
+								<p>
+									By the way, the idea of using wheel encoders to estimate your
+									position is known as wheel odometry, and there are lots of
+									good resources like{" "}
+									<a href="http://www.hmc.edu/lair/ARW/ARW-Lecture01-Odometry.pdf">
+										this PDF
+									</a>{" "}
+									on how exactly you can figure out the correct equations. Below
+									is an simple example.
+								</p>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/Encoders.java"
+								></pre>
+								<h2 id="pid">PID Controllers</h2>
+								<p>
+									A concept that is very closely related to encoders in practice
+									is a{" "}
+									<a href="https://en.wikipedia.org/wiki/PID_controller">
+										PID controller
+									</a>
+									, or a proportional-integral-derivative controller. Those are
+									a lot of words, but it's actually not that complicated. The
+									idea is that you can't instantaneously change your velocity.
+									For instance, if you wanted the robot to drive forward 1 meter
+									and then stop, you might be tempted to write code like this in
+									your{" "}
+									<code className="language-java inline">autonPeriodic()</code>{" "}
+									function.
+								</p>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/ThresholdController.java"
+								></pre>
+								<p>
+									The problem is that if your robot is moving fast, it cannot
+									immediately stop. There are real-world limitations such as the
+									friction between the robot's wheels and the ground. A better
+									approach is to drive fast when the robot is far away from its
+									goal, and slow down when you approach your goal. This is
+									analogous to driving a car on the road. You may be going "full
+									speed" on a road, but when you see a stop sign you slow down
+									and gently come to a stop, rather than continue going full
+									speed until you pass the stop sign and then slam on the
+									brakes. In a PID controller, your distance from the goal is
+									referred to as the error, and a simple controller using only
+									the proportional term might look like the following.
+								</p>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/PController.java"
+								></pre>
+								<p>
+									There is an inherent problem with this approach, which is that
+									sometimes you need a minimum speed. For example, if your robot
+									is only one centimeter away from its goal in the example
+									above, then the target speed would be 0.002, or 0.2% power to
+									the motor. In a real robot, this would be way too little power
+									to surpass the friction of the wheels against the ground, so
+									the robot wouldn't move at all. That's where the "I" in PID
+									comes in: integration.
+								</p>
 							</>
 						)
 					}
