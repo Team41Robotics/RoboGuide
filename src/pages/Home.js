@@ -24,12 +24,12 @@ export default function (props) {
 				<div id="home-title" className="text-center my-5">
 					What do you want to learn?
 				</div>
-				<div className="row mx-3 p-3 rounded">
+				<div className="row mx-0 mx-md-3 p-3 rounded">
 					<div className="col-12 col-lg-3 d-flex flex-column align-items-center">
 						<h1>Programming</h1>
 						<img src={laptop} className="img-fluid" alt="laptop" />
 					</div>
-					<div className="col-12 col-lg-9 card-deck">
+					<div className="col-12 col-lg-9 mx-auto px-0 px-md-3 card-deck">
 						<Card
 							bannerImg={javaBanner}
 							title="Java Guide"
@@ -65,7 +65,7 @@ export default function (props) {
 						</Card>
 					</div>
 				</div>
-				<div className="row mx-3 p-3 rounded">
+				<div className="row mx-0 mx-md-3 p-3 rounded">
 					<div className="col-12 col-lg-3 d-flex flex-column align-items-center">
 						<h1>Electrical</h1>
 						<img
@@ -74,7 +74,7 @@ export default function (props) {
 							alt="hand holding soldering iron"
 						/>
 					</div>
-					<div className="col-12 col-lg-9 card-deck">
+					<div className="col-12 col-lg-9 mx-auto px-0 px-md-3 card-deck">
 						<Card
 							bannerImg={electricalBanner}
 							title="Electrical Basics"
