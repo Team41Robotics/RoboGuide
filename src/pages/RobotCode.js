@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import {Helmet} from "react-helmet";
+import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import Prism from "prismjs";
 import TrackedBlockPage from "./TrackedBlockPage";
 
@@ -9,7 +9,7 @@ import pidVaryingP from "../img/PID_varyingP.jpg";
 import pidVaryingI from "../img/PID_varyingI.png";
 import fsmFlowChart from "../img/fsm_flow_chart.jpg";
 
-export default function (props) {
+export default function(props) {
 	useEffect(() => {
 		Prism.fileHighlight();
 		Prism.highlightAll();
@@ -94,9 +94,9 @@ export default function (props) {
 						id: "frc-programming-basics",
 						title: "FRC Programming Basics",
 						children: [
-							{id: "file-structure", title: "File Structure"},
-							{id: "basic-robot-code", title: "Basic Robot Code"},
-							{id: "advanced-robot-code", title: "Advanced Robot Code"}
+							{ id: "file-structure", title: "File Structure" },
+							{ id: "basic-robot-code", title: "Basic Robot Code" },
+							{ id: "advanced-robot-code", title: "Advanced Robot Code" }
 						],
 						content: (
 							<>
@@ -159,7 +159,7 @@ export default function (props) {
 								<img
 									src={driverStationUSB}
 									alt="Driver Station USB Menu"
-									className="d-block mx-auto my-1"
+									className="d-block mx-auto my-1 img-fluid"
 								/>
 								Your <code className="inline language-java">Joystick</code>{" "}
 								object should be created at the top of your program inside the
@@ -265,10 +265,10 @@ export default function (props) {
 						id: "pid",
 						title: "PID Controllers",
 						children: [
-							{id: "pid-p", title: "Proportional"},
-							{id: "pid-i", title: "Integral"},
-							{id: "pid-d", title: "Derivative"},
-							{id: "pid-frc", title: "Usage in FRC"}
+							{ id: "pid-p", title: "Proportional" },
+							{ id: "pid-i", title: "Integral" },
+							{ id: "pid-d", title: "Derivative" },
+							{ id: "pid-frc", title: "Usage in FRC" }
 						],
 						content: (
 							<>
@@ -330,8 +330,8 @@ export default function (props) {
 								<img
 									src={pidVaryingP}
 									alt="PID with varying P"
-									className="d-block mx-auto my-1"
-									style={{maxHeight: "400px"}}
+									className="d-block mx-auto my-1 img-fluid"
+									style={{ maxHeight: "400px" }}
 								/>
 								<p>
 									The ideal value for{" "}
@@ -378,8 +378,8 @@ export default function (props) {
 								<img
 									src={pidVaryingI}
 									alt="PID with varying I"
-									className="d-block mx-auto my-1"
-									style={{maxHeight: "400px"}}
+									className="d-block mx-auto my-1 img-fluid"
+									style={{ maxHeight: "400px" }}
 								/>
 								<br />
 								<a href="https://en.wikipedia.org/wiki/Derivative">
@@ -420,7 +420,7 @@ export default function (props) {
 					{
 						id: "state-machines",
 						title: "State Machines",
-						children: [{id: "state-machine-ex", title: "Example"}],
+						children: [{ id: "state-machine-ex", title: "Example" }],
 						content: (
 							<>
 								<h1 className="text-center">State Machines</h1>
@@ -438,8 +438,8 @@ export default function (props) {
 								<img
 									src={fsmFlowChart}
 									alt="FSM Flow Chart"
-									className="d-block mx-auto my-1"
-									style={{maxHeight: "400px"}}
+									className="d-block mx-auto my-1 img-fluid"
+									style={{ maxHeight: "400px" }}
 								/>
 								<br />
 								<h2 id="state-machine-ex">Example</h2>
