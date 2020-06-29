@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, {useEffect} from "react";
+import {Helmet} from "react-helmet";
 import Prism from "prismjs";
 import TrackedBlockPage from "./TrackedBlockPage";
 
@@ -9,7 +9,7 @@ import pidVaryingP from "../img/PID_varyingP.jpg";
 import pidVaryingI from "../img/PID_varyingI.png";
 import fsmFlowChart from "../img/fsm_flow_chart.jpg";
 
-export default function(props) {
+export default function (props) {
 	useEffect(() => {
 		Prism.fileHighlight();
 		Prism.highlightAll();
@@ -82,10 +82,11 @@ export default function(props) {
 								All done! Now you can finally get programming. To make your
 								first project, open VS Code, click the WPILib icon in the top
 								right, and click "Create New Project". If you want to start
-								fresh, choose template -> java -> Timed Robot. If you want to
-								get a feel for program layout, you can choose to see an example
-								project instead. (I recommend choosing the "Tank Drive" example.
-								We've used Tank Drive to control the robot the past few years.)
+								fresh, choose template -{">"} java -{">"} Timed Robot. If you
+								want to get a feel for program layout, you can choose to see an
+								example project instead. (I recommend choosing the "Tank Drive"
+								example. We've used Tank Drive to control the robot the past few
+								years.)
 							</>
 						)
 					},
@@ -93,9 +94,9 @@ export default function(props) {
 						id: "frc-programming-basics",
 						title: "FRC Programming Basics",
 						children: [
-							{ id: "file-structure", title: "File Structure" },
-							{ id: "basic-robot-code", title: "Basic Robot Code" },
-							{ id: "advanced-robot-code", title: "Advanced Robot Code" }
+							{id: "file-structure", title: "File Structure"},
+							{id: "basic-robot-code", title: "Basic Robot Code"},
+							{id: "advanced-robot-code", title: "Advanced Robot Code"}
 						],
 						content: (
 							<>
@@ -224,7 +225,9 @@ export default function(props) {
 						title: "Encoders",
 						content: (
 							<>
-								<h1 className="text-center">Encoders</h1>
+								<a href="https://en.wikipedia.org/wiki/Rotary_encoder#Absolute">
+									<h1 className="text-center">Encoders</h1>
+								</a>
 								<p>
 									An important concept in FRC is that of autonomy. This refers
 									to a robot acting without any input from a human. So if you
@@ -262,26 +265,26 @@ export default function(props) {
 						id: "pid",
 						title: "PID Controllers",
 						children: [
-							{ id: "pid-p", title: "Proportion" },
-							{ id: "pid-i", title: "Integral" },
-							{ id: "pid-d", title: "Derivative" },
-							{ id: "pid-frc", title: "Usage in FRC" }
+							{id: "pid-p", title: "Proportional"},
+							{id: "pid-i", title: "Integral"},
+							{id: "pid-d", title: "Derivative"},
+							{id: "pid-frc", title: "Usage in FRC"}
 						],
 						content: (
 							<>
-								<h2 id="pid">PID Controllers</h2>
+								<a href="https://en.wikipedia.org/wiki/PID_controller">
+									<h1 id="pid" className="text-center">
+										PID Controllers
+									</h1>
+								</a>
 								<p>
 									A concept that is very closely related to encoders in practice
-									is a{" "}
-									<a href="https://en.wikipedia.org/wiki/PID_controller">
-										PID controller
-									</a>
-									, or a proportional-integral-derivative controller. Those are
-									a lot of words, but it's actually not that complicated. The
-									idea is that you can't instantaneously change your velocity.
-									For instance, if you wanted the robot to drive forward 1 meter
-									and then stop, you might be tempted to write code like this in
-									your{" "}
+									is a PID controller, or a proportional-integral-derivative
+									controller. Those are a lot of words, but it's actually not
+									that complicated. The idea is that you can't instantaneously
+									change your velocity. For instance, if you wanted the robot to
+									drive forward 1 meter and then stop, you might be tempted to
+									write code like this in your{" "}
 									<code className="language-java inline">autonPeriodic()</code>{" "}
 									function.
 								</p>
@@ -290,7 +293,7 @@ export default function(props) {
 									data-src="/files/robot-code/ThresholdController.java"
 								></pre>
 								<br />
-								<h2 id="pid-p">Proportion</h2>
+								<h2 id="pid-p">Proportional</h2>
 								<p>
 									The problem is that if your robot is moving fast, it cannot
 									immediately stop. There are real-world limitations such as the
@@ -328,7 +331,7 @@ export default function(props) {
 									src={pidVaryingP}
 									alt="PID with varying P"
 									className="d-block mx-auto my-1"
-									style={{ maxHeight: "400px" }}
+									style={{maxHeight: "400px"}}
 								/>
 								<p>
 									The ideal value for{" "}
@@ -340,7 +343,9 @@ export default function(props) {
 									goal.
 								</p>
 								<br />
-								<h2 id="pid-i">Integral</h2>
+								<a href="https://en.wikipedia.org/wiki/Integral">
+									<h2 id="pid-i">Integral</h2>
+								</a>
 								<p>
 									There is an inherent problem with this approach, which is that
 									sometimes you need a minimum speed. For example, if your robot
@@ -374,10 +379,12 @@ export default function(props) {
 									src={pidVaryingI}
 									alt="PID with varying I"
 									className="d-block mx-auto my-1"
-									style={{ maxHeight: "400px" }}
+									style={{maxHeight: "400px"}}
 								/>
 								<br />
-								<h2 id="pid-d">Derivative</h2>
+								<a href="https://en.wikipedia.org/wiki/Derivative">
+									<h2 id="pid-d">Derivative</h2>
+								</a>
 								<p>
 									Lastly, the derivative of the error, or the rate of change in
 									the error, can be used to predict the future behavior of the
@@ -413,7 +420,7 @@ export default function(props) {
 					{
 						id: "state-machines",
 						title: "State Machines",
-						children: [{ id: "state-machine-ex", title: "Example" }],
+						children: [{id: "state-machine-ex", title: "Example"}],
 						content: (
 							<>
 								<h1 className="text-center">State Machines</h1>
@@ -432,7 +439,7 @@ export default function(props) {
 									src={fsmFlowChart}
 									alt="FSM Flow Chart"
 									className="d-block mx-auto my-1"
-									style={{ maxHeight: "400px" }}
+									style={{maxHeight: "400px"}}
 								/>
 								<br />
 								<h2 id="state-machine-ex">Example</h2>
