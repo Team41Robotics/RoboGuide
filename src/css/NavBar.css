@@ -31,7 +31,7 @@
 	color: #4bff8b;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 992px) {
 	a.navbar-brand {
 		margin-right: 0;
 	}
