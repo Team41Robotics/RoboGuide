@@ -21,10 +21,22 @@ export default function (props) {
 				<title>Home | RoboGuide</title>
 			</Helmet>
 			<div id="home-content">
-				<div id="home-title" className="text-center my-5">
+				<div id="home-title" className="text-center mt-5 mb-3">
 					What do you want to learn?
 				</div>
-				<div className="row mx-0 mx-md-3 p-3 rounded">
+				<div id="home-row-nav" className="mb-3 text-center">
+					<button className="btn">
+						<a href="#programming" target="_self">
+							Programming
+						</a>
+					</button>
+					<button className="btn">
+						<a href="#electrical" target="_self">
+							Electrical
+						</a>
+					</button>
+				</div>
+				<div id="programming" className="row mx-0 mx-md-3 p-3 rounded">
 					<div className="col-12 col-lg-3 d-flex flex-column align-items-center">
 						<h1>Programming</h1>
 						<img src={laptop} className="img-fluid" alt="laptop" />
@@ -65,7 +77,7 @@ export default function (props) {
 						</Card>
 					</div>
 				</div>
-				<div className="row mx-0 mx-md-3 p-3 rounded">
+				<div id="electrical" className="row mx-0 mx-md-3 p-3 rounded">
 					<div className="col-12 col-lg-3 d-flex flex-column align-items-center">
 						<h1>Electrical</h1>
 						<img

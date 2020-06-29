@@ -30,6 +30,19 @@
 	box-shadow: 0 0 5px 6px #383933;
 }
 
+#home-row-nav button {
+	background-color: #4bff8b;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#home-row-nav button:not(:last-child) {
+	margin-right: 5px;
+}
+#home-row-nav a {
+	color: #333 !important;
+	text-decoration: none;
+}
+
 @media (min-width: 576px) {
 	#home-content .row {
 		padding-bottom: 6px !important;
