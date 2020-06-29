@@ -4,13 +4,13 @@
 }
 
 #navbar {
-	background-color: #1d1e1a;
+	background-color: var(--container-background);
 }
 
 #navbar .navbar-brand {
 	font-size: xx-large;
 	font-family: Hacked;
-	color: #4bff8b;
+	color: var(--accent);
 }
 
 #navbar .nav-item:active {
@@ -19,16 +19,16 @@
 }
 
 #navbar .nav-item a.nav-link {
-	color: white;
+	color: var(--main-text);
 	transition: color 0.25s ease;
 }
 
 #navbar .nav-item a.nav-link:hover {
-	color: #a6ffda;
+	color: var(--accent-fade);
 }
 
 #navbar .nav-item.active a.nav-link {
-	color: #4bff8b;
+	color: var(--accent);
 }
 
 @media (max-width: 992px) {

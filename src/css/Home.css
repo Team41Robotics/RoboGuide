@@ -3,7 +3,7 @@
 }
 
 #home-content .row {
-	background-color: #1d1e1a;
+	background-color: var(--container-background);
 	padding-bottom: 1px !important;
 }
 #home-content .row:not(:last-child) {
@@ -11,7 +11,7 @@
 }
 
 #home-content .card {
-	background-color: #272822;
+	background-color: var(--container-background);
 	margin-left: 5px;
 	margin-right: 5px;
 	border-radius: 8px;
@@ -26,12 +26,15 @@
 }
 
 #home-content .card:hover {
-	background-color: #383933;
-	box-shadow: 0 0 5px 6px #383933;
+	box-shadow: 0 0 5px 1px #383933;
+}
+
+#home-content .card-footer {
+	background-color: rgba(0, 0, 0, 0.075);
 }
 
 #home-row-nav button {
-	background-color: #4bff8b;
+	background-color: var(--accent);
 	font-weight: bold;
 	margin-bottom: 5px;
 }
@@ -39,10 +42,11 @@
 	margin-right: 5px;
 }
 #home-row-nav a {
-	color: #333 !important;
+	color: var(--accent-button-text) !important;
 	text-decoration: none;
 }
 
+/* Bootstrap small breakpoint */
 @media (min-width: 576px) {
 	#home-content .row {
 		padding-bottom: 6px !important;

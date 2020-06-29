@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export default function Card(props) {
 	const footerText = props.footerText;
@@ -27,7 +27,7 @@ export default function Card(props) {
 				{children && <p className="card-text">{children}</p>}
 			</div>
 			{footerText && (
-				<div className={"card-footer h" + footerSize}>
+				<div className={"card-footer mb-0 h" + footerSize}>
 					{footerLink ? <Link to={footerLink}>{footerText}</Link> : footerText}
 				</div>
 			)}

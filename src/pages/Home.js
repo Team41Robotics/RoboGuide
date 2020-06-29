@@ -3,13 +3,13 @@ import {Helmet} from "react-helmet";
 
 import Card from "../components/Card.js";
 
-import laptop from "../img/laptopGreen.svg";
+import laptop from "../img/laptop.svg";
 import javaBanner from "../img/banners/javaBanner.svg";
 import robotCodeBanner from "../img/banners/robotCodeBanner.jpg";
 import hardwareBanner from "../img/banners/hardwareBanner.jpg";
 import driverstationBanner from "../img/banners/driverstationBanner.svg";
 
-import solderHand from "../img/solderingIronWithHandGreen.svg";
+import solderHand from "../img/solderingIronWithHand.svg";
 import electricalBanner from "../img/banners/electricalBanner.png";
 
 import "../css/Home.css";

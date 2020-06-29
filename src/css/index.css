@@ -1,17 +1,39 @@
+/* The default is dark mode */
+:root {
+	color-scheme: light dark;
+
+	/* If you change the accent color, make sure to change it in the svg's that use it too! */
+	--accent: #4bff8b;
+	--accent-fade: #a6ffda;
+	--page-background: #272822;
+	--container-background: rgba(0, 0, 0, 0.15);
+	--main-text: #fff;
+	--toc-text: #bbb;
+	--accent-button-text: #333;
+
+	/* Prism colors */
+	--code-main: #f8f8f2;
+	--code-inline-bg: #ffffff15;
+	--code-class-name: #ff6e6e;
+	--code-keyword: #66d9ef;
+	--code-string: #a6e22e;
+	--code-number: #ae81ff;
+}
+
 html {
 	scroll-behavior: smooth;
 }
 
 body {
-	background-color: #272822;
+	background-color: var(--page-background);
 	padding: 1rem !important;
 	margin: 0;
-	color: #fff !important;
+	color: var(--main-text) !important;
 }
 
 a,
 a:hover {
-	color: #4bff8b;
+	color: var(--accent);
 }
 
 span.code {
@@ -21,11 +43,27 @@ span.code {
 	color: rgb(248, 19, 19);
 }
 
-:not(pre) > code.inline {
-	color: rgb(255, 204, 204);
-	padding: 2px 8px 2px 8px !important;
+.monokai {
+	background-color: #333;
 }
 
-.monokai {
-	background-color: #272822;
+@media screen and (prefers-color-scheme: light) {
+	:root {
+		/* If you change the accent color, make sure to change it in the svg's that use it too! */
+		--accent: #7a32ff;
+		--accent-fade: #af84ff;
+		--page-background: white;
+		--container-background: rgba(0, 0, 0, 0.05);
+		--main-text: #222;
+		--toc-text: #555;
+		--accent-button-text: white;
+
+		/* Prism colors */
+		--code-main: #272727;
+		--code-inline-bg: #00000012;
+		--code-class-name: #e04444;
+		--code-keyword: #2483d1;
+		--code-string: #4ab11a;
+		--code-number: #8644ff;
+	}
 }

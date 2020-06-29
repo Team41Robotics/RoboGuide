@@ -2,9 +2,13 @@
 	max-height: 500px;
 }
 
+.jumbotron {
+	background-color: var(--container-background) !important;
+}
+
 .section-nav {
 	padding-left: 0;
-	border-left: 1px solid #4bff8b;
+	border-left: 1px solid var(--accent);
 }
 .section-nav ul {
 	padding-left: 1.25rem;
@@ -15,11 +19,11 @@
 .toc-entry a {
 	display: block;
 	padding: 0.125rem 1.5rem;
-	color: #99979c !important;
+	color: var(--toc-text) !important;
 	transition: color 0.3s ease;
 }
 .toc-entry a.active {
-	color: #4bff8b !important;
+	color: var(--accent) !important;
 }
 .bd-toc {
 	position: sticky !important;
