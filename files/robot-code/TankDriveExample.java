@@ -12,7 +12,7 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void robotInit() {
-		controller = new Joystick(Controller Port ###);
+		controller = new Joystick(JOYSTICK_PORT_NUMBER);
 
 		sparkLB = new CANSparkMax(LB_PORT_NUMBER, MotorType.kBrushless);
 		sparkLF = new CANSparkMax(LF_PORT_NUMBER, MotorType.kBrushless);
