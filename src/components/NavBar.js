@@ -1,17 +1,17 @@
 import React from "react";
-import {Link, useLocation} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import "../css/NavBar.css";
 
 const navPages = [
-	{title: "Java Guide", path: "/java/"},
-	{title: "Robot Code", path: "/robot-code/"},
-	{title: "Robot Hardware", path: "/robot-hardware/"},
-	{title: "Driver Station", path: "/driver-station/"},
-	{title: "Electrical Basics", path: "/electrical-basics/"}
+	{ title: "Java Guide", path: "/java/" },
+	{ title: "Robot Code", path: "/robot-code/" },
+	{ title: "Robot Hardware", path: "/robot-hardware/" },
+	{ title: "Driver Station", path: "/driver-station/" },
+	{ title: "Electrical Basics", path: "/electrical-basics/" }
 ];
 
-export default function (props) {
+export default function(props) {
 	const loc = useLocation();
 	const activePath = loc.pathname + (loc.pathname.endsWith("/") ? "" : "/");
 
@@ -20,9 +20,6 @@ export default function (props) {
 			className="navbar navbar-expand-lg navbar-dark mt-n3 mx-n3"
 			id="navbar"
 		>
-			<Link className="navbar-brand" to="/">
-				RoboGuide
-			</Link>
 			<button
 				className="navbar-toggler"
 				type="button"
@@ -34,6 +31,9 @@ export default function (props) {
 			>
 				<span className="navbar-toggler-icon"></span>
 			</button>
+			<Link className="navbar-brand" to="/">
+				RoboGuide
+			</Link>
 			<div className="collapse navbar-collapse" id="navbarText">
 				<ul className="navbar-nav mr-auto">
 					{navPages.map(page => (

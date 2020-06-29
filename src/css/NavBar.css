@@ -30,3 +30,9 @@
 #navbar .nav-item.active a.nav-link {
 	color: #4bff8b;
 }
+
+@media (max-width: 960px) {
+	a.navbar-brand {
+		margin-right: 0;
+	}
+}
