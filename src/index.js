@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
+import {createStore} from "redux";
+import {Provider} from "react-redux";
+import rootReducer from "./redux/reducers.js";
 import App from "./App";
 import ScrollToTop from "./components/ScrollToTop";
 import * as serviceWorker from "./serviceWorker";
@@ -25,11 +28,15 @@ import "jquery";
 import "popper.js";
 import "bootstrap";
 
+const store = createStore(rootReducer);
+
 ReactDOM.render(
-	<Router basename="/">
-		<ScrollToTop />
-		<App />
-	</Router>,
+	<Provider store={store}>
+		<Router basename="/">
+			<ScrollToTop />
+			<App />
+		</Router>
+	</Provider>,
 	document.getElementById("root")
 );
 

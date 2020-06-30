@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
 import {Link, useLocation} from "react-router-dom";
 import $ from "jquery";
 import ToggleSwitch from "./ToggleSwitch";
+import {updateDarkMode} from "../redux/actions";
 
 import "../css/NavBar.css";
 
@@ -14,15 +16,12 @@ const navPages = [
 ];
 
 export default function(props) {
+	const dispatch = useDispatch();
 	const loc = useLocation();
 	const activePath = loc.pathname + (loc.pathname.endsWith("/") ? "" : "/");
 
-	const [darkMode, setDarkMode] = useState(
-		window.matchMedia &&
-			window.matchMedia("(prefers-color-scheme: dark)").matches
-			? true
-			: false
-	);
+	const darkMode = useSelector(state => state.darkMode);
+	const setDarkMode = val => updateDarkMode(dispatch, val);
 
 	useEffect(() => {
 		if (darkMode) $("body").addClass("dark");
