@@ -30,7 +30,13 @@ export default function(props) {
 	}, [darkMode]);
 
 	return (
-		<nav className="navbar navbar-expand-lg mt-n3 mx-n3" id="navbar">
+		<nav
+			className={
+				"navbar navbar-expand-lg mt-n3 mx-n3 " +
+				(darkMode ? "navbar-dark" : "navbar-light")
+			}
+			id="navbar"
+		>
 			<button
 				className="navbar-toggler"
 				type="button"
