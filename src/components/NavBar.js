@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {Link, useLocation} from "react-router-dom";
+import $ from "jquery";
+import ToggleSwitch from "./ToggleSwitch";
 
 import "../css/NavBar.css";
 
@@ -11,9 +13,21 @@ const navPages = [
 	{title: "Electrical Basics", path: "/electrical-basics/"}
 ];
 
-export default function (props) {
+export default function(props) {
 	const loc = useLocation();
 	const activePath = loc.pathname + (loc.pathname.endsWith("/") ? "" : "/");
+
+	const [darkMode, setDarkMode] = useState(
+		window.matchMedia &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches
+			? true
+			: false
+	);
+
+	useEffect(() => {
+		if (darkMode) $("body").addClass("dark");
+		else $("body").removeClass("dark");
+	}, [darkMode]);
 
 	return (
 		<nav className="navbar navbar-expand-lg mt-n3 mx-n3" id="navbar">
@@ -45,6 +59,11 @@ export default function (props) {
 							</Link>
 						</li>
 					))}
+				</ul>
+				<ul className="navbar-nav ml-auto">
+					<li>
+						<ToggleSwitch value={darkMode} setValue={setDarkMode} />
+					</li>
 				</ul>
 			</div>
 		</nav>

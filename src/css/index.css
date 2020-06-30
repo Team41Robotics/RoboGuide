@@ -1,5 +1,5 @@
 /* The default is dark mode */
-:root {
+body {
 	color-scheme: light dark;
 
 	/* If you change the accent color, make sure to change it in the svg's that use it too! */
@@ -48,7 +48,7 @@ span.code {
 }
 
 @media screen and (prefers-color-scheme: light) {
-	:root {
+	body:not(.dark) {
 		/* If you change the accent color, make sure to change it in the svg's that use it too! */
 		--accent: #7a32ff;
 		--accent-fade: #af84ff;
