@@ -7,21 +7,23 @@ export default function Card(props) {
 	const footerText = props.footerText;
 	const footerSize = props.footerSize;
 	const footerLink = props.footerLink;
-	const bannerImg = props.bannerImg;
+	var bannerImg = props.bannerImg;
+	const bannerImgSrc = props.bannerImgSrc;
 	const title = props.title;
 	const children = props.children;
 
-	let bannerImgAlt;
-	if (bannerImg) {
-		let bannerImgWords = bannerImg.split("/");
+	if (!bannerImg && bannerImgSrc) {
+		let bannerImgAlt;
+		let bannerImgWords = bannerImgSrc.split("/");
 		bannerImgAlt = bannerImgWords[bannerImgWords.length - 1].split(".")[0];
+		bannerImg = (
+			<img src={bannerImgSrc} alt={bannerImgAlt} className="card-img-top" />
+		);
 	}
 
 	return (
 		<div className="card">
-			{bannerImg && (
-				<img src={bannerImg} alt={bannerImgAlt} className="card-img-top" />
-			)}
+			{bannerImg}
 			<div className="card-body">
 				{title && <h4 className="card-title">{title}</h4>}
 				{children && <p className="card-text">{children}</p>}
@@ -36,7 +38,7 @@ export default function Card(props) {
 }
 
 Card.propTypes = {
-	bannerImg: PropTypes.string,
+	bannerImgSrc: PropTypes.string,
 	title: PropTypes.string,
 	footerText: PropTypes.string,
 	footerLink: PropTypes.string,

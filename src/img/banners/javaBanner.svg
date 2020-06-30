@@ -1,9 +1,9 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 528">
+<svg id="javaBanner-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 528">
 <defs>
 	<style>
-		.cls-1{fill:#fff;}
-		.cls-2{fill:#4bff8b;}
-		.cls-3{fill:#e7f1ea;}
+		#javaBanner-svg .cls-1{fill:#fff;}
+		#javaBanner-svg .cls-2{fill:var(--accent);}
+		#javaBanner-svg .cls-3{fill:#e7f1ea;}
 		@media screen and (prefers-color-scheme: light) {
 			.cls-2{fill:#7a32ff;}
 			.cls-3{fill:#4a4a4a;}

@@ -1,4 +1,5 @@
-.bannerImg {
+.bannerImg,
+.bannerImg svg {
 	max-height: 500px;
 }
 

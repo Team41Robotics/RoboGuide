@@ -1,6 +1,8 @@
 import React, {useEffect} from "react";
 import {Helmet} from "react-helmet";
 import Prism from "prismjs";
+
+import DynamicIcon from "../components/DynamicIcon.js";
 import TrackedBlockPage from "./TrackedBlockPage";
 
 import javaLogo from "../img/banners/javaBanner.svg";
@@ -22,10 +24,13 @@ export default function (props) {
 				header={
 					<>
 						<h1>Intro to Java Programming</h1>
-						<img
+						<DynamicIcon
 							src={javaLogo}
-							className="img-fluid rounded w-50 mb-5 bannerImg"
-							alt="Java logo"
+							lightStyles={{
+								" #javaBanner-svg .cls-2": {fill: "#7a32ff"},
+								" #javaBanner-svg .cls-3": {fill: "#4a4a4a"}
+							}}
+							classes="bannerImg"
 						/>
 					</>
 				}

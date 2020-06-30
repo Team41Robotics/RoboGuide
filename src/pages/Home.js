@@ -15,7 +15,7 @@ import electricalBanner from "../img/banners/electricalBanner.png";
 
 import "../css/Home.css";
 
-export default function(props) {
+export default function (props) {
 	return (
 		<>
 			<Helmet>
@@ -40,11 +40,19 @@ export default function(props) {
 				<div id="programming" className="row mx-0 mx-md-3 p-3 rounded">
 					<div className="col-12 col-lg-3 d-flex flex-column align-items-center">
 						<h1>Programming</h1>
-						<img src={laptop} className="img-fluid" alt="laptop" />
+						<DynamicIcon src={laptop} />
 					</div>
 					<div className="col-12 col-lg-9 mx-auto px-0 px-md-3 card-deck">
 						<Card
-							bannerImg={javaBanner}
+							bannerImg={
+								<DynamicIcon
+									src={javaBanner}
+									lightStyles={{
+										" #javaBanner-svg .cls-2": {fill: "#7a32ff"},
+										" #javaBanner-svg .cls-3": {fill: "#4a4a4a"}
+									}}
+								/>
+							}
 							title="Java Guide"
 							footerText="Go Now!"
 							footerLink="/java"
@@ -53,7 +61,7 @@ export default function(props) {
 							program their robots!
 						</Card>
 						<Card
-							bannerImg={robotCodeBanner}
+							bannerImgSrc={robotCodeBanner}
 							title="Robot Code Guide"
 							footerText="Go Now!"
 							footerLink="/robot-code"
@@ -61,7 +69,7 @@ export default function(props) {
 							Learn about how to code an FRC robot! (Requires Java experience)
 						</Card>
 						<Card
-							bannerImg={hardwareBanner}
+							bannerImgSrc={hardwareBanner}
 							title="Hardware Guide"
 							footerText="Go Now!"
 							footerLink="/robot-hardware"
@@ -69,7 +77,7 @@ export default function(props) {
 							Learn about the sensors and actuators that make the robot work!
 						</Card>
 						<Card
-							bannerImg={driverstationBanner}
+							bannerImgSrc={driverstationBanner}
 							title="Driver Station Guide"
 							footerText="Go Now!"
 							footerLink="/driver-station"
@@ -81,22 +89,16 @@ export default function(props) {
 				<div id="electrical" className="row mx-0 mx-md-3 p-3 rounded">
 					<div className="col-12 col-lg-3 d-flex flex-column align-items-center">
 						<h1>Electrical</h1>
-						{/* <img
-							src={solderHand}
-							className="img-fluid"
-							alt="hand holding soldering iron"
-						/> */}
 						<DynamicIcon
 							src={solderHand}
 							lightStyles={{
-								" .cls-2": {fill: "#7a32ff"},
-								" .cls-5": {fill: "#111"}
+								" #solderHand-svg .cls-5": {fill: "#111"}
 							}}
 						/>
 					</div>
 					<div className="col-12 col-lg-9 mx-auto px-0 px-md-3 card-deck">
 						<Card
-							bannerImg={electricalBanner}
+							bannerImgSrc={electricalBanner}
 							title="Electrical Basics"
 							footerText="Go Now!"
 							footerLink="/electrical-basics"
