@@ -20,7 +20,7 @@
 
 #navbar .nav-item a.nav-link {
 	color: var(--main-text);
-	/* transition: color 0.25s ease; */
+	transition: color 0.25s;
 }
 
 #navbar .nav-item a.nav-link:hover {

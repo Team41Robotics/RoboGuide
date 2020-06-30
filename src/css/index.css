@@ -49,6 +49,7 @@ body {
 	padding: 1rem !important;
 	margin: 0;
 	color: var(--main-text) !important;
+	transition: 0.6s;
 }
 
 a,
