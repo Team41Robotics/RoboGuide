@@ -1,11 +1,11 @@
-import React, {useEffect} from "react";
-import {Helmet} from "react-helmet";
+import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import Prism from "prismjs";
 import TrackedBlockPage from "./TrackedBlockPage";
 
-import robotImg from "../img/banners/driverstationBanner.svg";
+import InteractiveDriverStation from "../components/InteractiveDriverStation";
 
-export default function (props) {
+export default function(props) {
 	useEffect(() => {
 		Prism.fileHighlight();
 		Prism.highlightAll();
@@ -21,11 +21,7 @@ export default function (props) {
 				header={
 					<>
 						<h1>Driver Station</h1>
-						<img
-							src={robotImg}
-							className="img-fluid rounded mb-5 bannerImg"
-							alt="Driverstation"
-						/>
+						<InteractiveDriverStation />
 					</>
 				}
 				blocks={[
