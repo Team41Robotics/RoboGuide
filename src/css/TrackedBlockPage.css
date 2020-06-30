@@ -3,7 +3,7 @@
 }
 
 .jumbotron {
-	background-color: var(--container-background) !important;
+	background-color: var(--block-background) !important;
 }
 
 .section-nav {

@@ -7,17 +7,37 @@ body {
 	--accent-fade: #a6ffda;
 	--page-background: #272822;
 	--container-background: rgba(0, 0, 0, 0.15);
+	--block-background: rgba(255, 255, 255, 0.1);
 	--main-text: #fff;
 	--toc-text: #bbb;
 	--accent-button-text: #333;
 
 	/* Prism colors */
 	--code-main: #f8f8f2;
-	--code-inline-bg: #ffffff15;
+	--code-inline-bg: rgba(0, 0, 0, 0.25);
 	--code-class-name: #ff6e6e;
 	--code-keyword: #66d9ef;
 	--code-string: #a6e22e;
 	--code-number: #ae81ff;
+}
+body:not(.dark) {
+	/* If you change the accent color, make sure to change it in the svg's that use it too! */
+	--accent: #7a32ff;
+	--accent-fade: #af84ff;
+	--page-background: white;
+	--container-background: rgba(0, 0, 0, 0.05);
+	--block-background: var(--container-background);
+	--main-text: #222;
+	--toc-text: #555;
+	--accent-button-text: white;
+
+	/* Prism colors */
+	--code-main: #272727;
+	--code-inline-bg: rgba(0, 0, 0, 0.06);
+	--code-class-name: #e04444;
+	--code-keyword: #2483d1;
+	--code-string: #4ab11a;
+	--code-number: #8644ff;
 }
 
 html {
@@ -45,25 +65,4 @@ span.code {
 
 .monokai {
 	background-color: #333;
-}
-
-@media screen and (prefers-color-scheme: light) {
-	body:not(.dark) {
-		/* If you change the accent color, make sure to change it in the svg's that use it too! */
-		--accent: #7a32ff;
-		--accent-fade: #af84ff;
-		--page-background: white;
-		--container-background: rgba(0, 0, 0, 0.05);
-		--main-text: #222;
-		--toc-text: #555;
-		--accent-button-text: white;
-
-		/* Prism colors */
-		--code-main: #272727;
-		--code-inline-bg: #00000012;
-		--code-class-name: #e04444;
-		--code-keyword: #2483d1;
-		--code-string: #4ab11a;
-		--code-number: #8644ff;
-	}
 }

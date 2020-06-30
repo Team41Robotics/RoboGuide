@@ -15,7 +15,7 @@ const navPages = [
 	{title: "Electrical Basics", path: "/electrical-basics/"}
 ];
 
-export default function(props) {
+export default function (props) {
 	const dispatch = useDispatch();
 	const loc = useLocation();
 	const activePath = loc.pathname + (loc.pathname.endsWith("/") ? "" : "/");
@@ -27,6 +27,11 @@ export default function(props) {
 		if (darkMode) $("body").addClass("dark");
 		else $("body").removeClass("dark");
 	}, [darkMode]);
+	useEffect(() => {
+		window.matchMedia("(prefers-color-scheme: dark)").addListener(event => {
+			setDarkMode(event.matches);
+		});
+	});
 
 	return (
 		<nav

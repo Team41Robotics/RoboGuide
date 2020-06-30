@@ -2,6 +2,7 @@ import React from "react";
 import {Helmet} from "react-helmet";
 
 import Card from "../components/Card.js";
+import Icon from "../components/Icon.js";
 
 import laptop from "../img/laptop.svg";
 import javaBanner from "../img/banners/javaBanner.svg";
@@ -80,11 +81,12 @@ export default function (props) {
 				<div id="electrical" className="row mx-0 mx-md-3 p-3 rounded">
 					<div className="col-12 col-lg-3 d-flex flex-column align-items-center">
 						<h1>Electrical</h1>
-						<img
+						{/* <img
 							src={solderHand}
 							className="img-fluid"
 							alt="hand holding soldering iron"
-						/>
+						/> */}
+						<Icon name="solderingIronWithHand" size={100} fill="#23098a" />
 					</div>
 					<div className="col-12 col-lg-9 mx-auto px-0 px-md-3 card-deck">
 						<Card
