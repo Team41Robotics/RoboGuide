@@ -11,5 +11,5 @@ export default function(props) {
 	const darkMode = useSelector(state => state.darkMode);
 	const styles = !darkMode ? css(lightStyles) : css(darkStyles);
 
-	return <ReactSVG src={src} {...styles} />;
+	return <ReactSVG src={src} {...styles} className="w-100" />;
 }
