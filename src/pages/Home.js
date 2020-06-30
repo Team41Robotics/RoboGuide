@@ -2,7 +2,7 @@ import React from "react";
 import {Helmet} from "react-helmet";
 
 import Card from "../components/Card.js";
-import Icon from "../components/Icon.js";
+import DynamicIcon from "../components/DynamicIcon.js";
 
 import laptop from "../img/laptop.svg";
 import javaBanner from "../img/banners/javaBanner.svg";
@@ -15,7 +15,7 @@ import electricalBanner from "../img/banners/electricalBanner.png";
 
 import "../css/Home.css";
 
-export default function (props) {
+export default function(props) {
 	return (
 		<>
 			<Helmet>
@@ -86,7 +86,13 @@ export default function (props) {
 							className="img-fluid"
 							alt="hand holding soldering iron"
 						/> */}
-						<Icon name="solderingIronWithHand" size={100} fill="#23098a" />
+						<DynamicIcon
+							src={solderHand}
+							lightStyles={{
+								" .cls-2": {fill: "#7a32ff"},
+								" .cls-5": {fill: "#111"}
+							}}
+						/>
 					</div>
 					<div className="col-12 col-lg-9 mx-auto px-0 px-md-3 card-deck">
 						<Card
