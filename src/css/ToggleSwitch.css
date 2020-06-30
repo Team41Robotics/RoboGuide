@@ -3,6 +3,7 @@
 	display: inline-block;
 	width: 60px;
 	height: 34px;
+	margin-bottom: 0;
 }
 
 .toggle-switch input {
@@ -36,11 +37,11 @@
 }
 
 input:checked + .toggle-slider {
-	background-color: var(--accent);
+	background-color: #60b97f;
 }
 
 input:focus + .toggle-slider {
-	box-shadow: 0 0 1px var(--accent);
+	box-shadow: 0 0 1px #60b97f;
 }
 
 input:checked + .toggle-slider:before {

@@ -67,8 +67,12 @@ export default function(props) {
 					))}
 				</ul>
 				<ul className="navbar-nav ml-auto">
-					<li>
+					<li
+						className="nav-item"
+						style={{display: "flex", alignItems: "center"}}
+					>
 						<ToggleSwitch value={darkMode} setValue={setDarkMode} />
+						<span style={{marginLeft: "0.5rem"}}>Dark Mode</span>
 					</li>
 				</ul>
 			</div>
