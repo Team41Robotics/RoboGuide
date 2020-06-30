@@ -36,11 +36,11 @@
 }
 
 input:checked + .toggle-slider {
-	background-color: #4bff8b;
+	background-color: var(--accent);
 }
 
 input:focus + .toggle-slider {
-	box-shadow: 0 0 1px #4bff8b;
+	box-shadow: 0 0 1px var(--accent);
 }
 
 input:checked + .toggle-slider:before {
