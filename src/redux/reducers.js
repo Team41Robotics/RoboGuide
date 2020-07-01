@@ -7,9 +7,8 @@ var localStorage = window.localStorage;
 // The == "true" is neccessary since localStorage returns a string
 var oldDeviceDefault = localStorage.getItem("deviceDarkMode") == "true";
 var currentDeviceDefault =
-	window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
-		? true
-		: false;
+	window.matchMedia &&
+	window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 if (oldDeviceDefault == null) {
 	// If this first time loading the site

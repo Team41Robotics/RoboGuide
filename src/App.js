@@ -1,5 +1,6 @@
-import React from "react";
-import { Switch, Route, withRouter } from "react-router-dom";
+import React, {useLayoutEffect} from "react";
+import $ from "jquery";
+import {Switch, Route, withRouter} from "react-router-dom";
 import "./css/App.css";
 
 import NavBar from "./components/NavBar";
@@ -11,7 +12,15 @@ import RobotHardware from "./pages/RobotHardware";
 import DriverStation from "./pages/DriverStation";
 import ElectricalBasics from "./pages/ElectricalBasics";
 
-function App({ location }) {
+function App({location}) {
+	useLayoutEffect(() => {
+		setTimeout(() => {
+			[$("body"), $("a"), $(".btn")].map(el => {
+				el.css("transition", "0.6s");
+			});
+		}, 200);
+	});
+
 	return (
 		<div className="App">
 			<NavBar />
