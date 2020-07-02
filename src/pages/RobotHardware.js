@@ -8,6 +8,8 @@ import talonFX from "../img/talonFX.png";
 import sparkMax from "../img/sparkMax.png";
 import servoImg from "../img/servo.jpg";
 import joystickImg from "../img/joystick.jpg";
+import pneumaticsDiagram from "../img/pneumaticsDiagram.png";
+import pcm from "../img/pcm.jpg";
 import robotImg from "../img/banners/hardwareBanner.jpg";
 
 export default function (props) {
@@ -614,6 +616,102 @@ export default function (props) {
 												</ul>
 											</li>
 										</ul>
+									</div>
+								</div>
+							</>
+						)
+					},
+					{
+						id: "pneumatics",
+						title: "Pneumatics",
+						children: [{id: "pcm", title: "PCM"}],
+						content: (
+							<>
+								<h2 className="text-center">
+									<a href="https://en.wikipedia.org/wiki/Pneumatics">
+										Pneumatics
+									</a>
+								</h2>
+								<div className="row">
+									<div className="col-12 col-md-3  mb-2 mb-md-0 pr-md-0 text-center">
+										<img
+											src={pneumaticsDiagram}
+											alt="Pneumatics diagram"
+											className="img-fluid"
+										/>
+									</div>
+									<div
+										className="col-12 col-md-9 pl-0 text-break"
+										style={{fontSize: "larger"}}
+									>
+										<ul>
+											<li>
+												Pneumatics is the use of air and pressure in making
+												certain components on the robot function
+											</li>
+											<li>
+												While it isn’t always a part of our team’s designs, it’s
+												still important to learn!
+											</li>
+											<li>
+												Pneumatics requires different materials than used on a
+												standard electrical board
+											</li>
+											<li>
+												You can think of it as electrical wiring, but with air.
+												Air is taken from the environemnt, compressed, and
+												stored in a tank for use. This high pressure allows it
+												to perform tasks such as engaging a piston.
+											</li>
+										</ul>
+									</div>
+								</div>
+								<h3 className="mt-3">Components:</h3>
+								<div className="subrow p-3 rounded" id="pcm">
+									<h3 className="text-center">
+										<a href="http://www.ctr-electronics.com/pcm.html">PCM</a>
+									</h3>
+									<div className="row">
+										<div className="col-12 col-md-3  mb-2 mb-md-0 pr-md-0 text-center">
+											<img
+												src={pcm}
+												alt="Pneumatics control module"
+												className="img-fluid"
+											/>
+										</div>
+										<div className="col-12 col-md-9 pl-0 text-break">
+											<ul>
+												<li>
+													The Pneumatics Control Module, or PCM for short, is a
+													small device that regulates the voltage being sent to
+													components of the robot including the compressor and
+													any solenoids.
+												</li>
+												<li>
+													Specs:{" "}
+													<a href="http://www.ctr-electronics.com/pcm.html#product_tabs_tech_specs">
+														http://www.ctr-electronics.com/pcm.html#product_tabs_tech_specs
+													</a>
+												</li>
+												<li>
+													Firmware:{" "}
+													<a href="http://www.ctr-electronics.com/pcm.html#product_tabs_technical_resources">
+														http://www.ctr-electronics.com/pcm.html#product_tabs_technical_resources
+													</a>
+												</li>
+												<li>
+													Setup: Phoenix Tuner
+													<ul>
+														<li>Wireless: Yes</li>
+													</ul>
+												</li>
+												<li>
+													Important Note: The port number you configure in
+													Phoenix Tuner is what you will pass to your pneumatics
+													devices in the code when they ask for the PCM port.
+												</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</>
