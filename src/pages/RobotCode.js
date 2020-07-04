@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, {useEffect} from "react";
+import {Helmet} from "react-helmet";
 import Prism from "prismjs";
 import TrackedBlockPage from "./TrackedBlockPage";
 
@@ -94,9 +94,9 @@ export default function(props) {
 						id: "frc-programming-basics",
 						title: "FRC Programming Basics",
 						children: [
-							{ id: "file-structure", title: "File Structure" },
-							{ id: "basic-robot-code", title: "Basic Robot Code" },
-							{ id: "advanced-robot-code", title: "Advanced Robot Code" }
+							{id: "file-structure", title: "File Structure"},
+							{id: "basic-robot-code", title: "Basic Robot Code"},
+							{id: "advanced-robot-code", title: "Advanced Robot Code"}
 						],
 						content: (
 							<>
@@ -265,10 +265,11 @@ export default function(props) {
 						id: "pid",
 						title: "PID Controllers",
 						children: [
-							{ id: "pid-p", title: "Proportional" },
-							{ id: "pid-i", title: "Integral" },
-							{ id: "pid-d", title: "Derivative" },
-							{ id: "pid-frc", title: "Usage in FRC" }
+							{id: "pid-p", title: "Proportional"},
+							{id: "pid-i", title: "Integral"},
+							{id: "pid-d", title: "Derivative"},
+							{id: "pid-frc", title: "Usage in FRC"},
+							{id: "pid-speed", title: "Desired Speed"}
 						],
 						content: (
 							<>
@@ -331,7 +332,7 @@ export default function(props) {
 									src={pidVaryingP}
 									alt="PID with varying P"
 									className="d-block mx-auto my-1 img-fluid"
-									style={{ maxHeight: "400px" }}
+									style={{maxHeight: "400px"}}
 								/>
 								<p>
 									The ideal value for{" "}
@@ -379,7 +380,7 @@ export default function(props) {
 									src={pidVaryingI}
 									alt="PID with varying I"
 									className="d-block mx-auto my-1 img-fluid"
-									style={{ maxHeight: "400px" }}
+									style={{maxHeight: "400px"}}
 								/>
 								<br />
 								<a href="https://en.wikipedia.org/wiki/Derivative">
@@ -414,13 +415,45 @@ export default function(props) {
 									className="line-numbers"
 									data-src="/files/robot-code/PIDControllerWPILib.java"
 								></pre>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/CaseBasedClean.java"
+								></pre>
+								<h2 id="pid-speed">Desired Speed</h2>
+								<p>
+									So far I've shown how to use PID controllers to autonomously
+									go from one location to another. While this is useful, it is
+									much more efficiently achieved by using a PID controller to
+									set the speed of the motors, not the power on a percentage
+									scale. In other words, it's arbitrary to set the motor speeds
+									to 1.0, because 1.0 could cause the robot to go faster when
+									the battery is fully charged than when the battery has been
+									depleted.
+								</p>
+								<p>
+									Therefore, a better experience for the teleoperated controls
+									is to map joystick values to a measurable speed, like in the
+									code below:
+								</p>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/PIDVelocityTeleop.java"
+								></pre>
+								<p>
+									This logic can be abstracted to a function so that you can
+									also use it in auton.
+								</p>
+								<pre
+									className="line-numbers"
+									data-src="/files/robot-code/PIDVelocity.java"
+								></pre>
 							</>
 						)
 					},
 					{
 						id: "state-machines",
 						title: "State Machines",
-						children: [{ id: "state-machine-ex", title: "Example" }],
+						children: [{id: "state-machine-ex", title: "Example"}],
 						content: (
 							<>
 								<h1 className="text-center">State Machines</h1>
@@ -439,7 +472,7 @@ export default function(props) {
 									src={fsmFlowChart}
 									alt="FSM Flow Chart"
 									className="d-block mx-auto my-1 img-fluid"
-									style={{ maxHeight: "400px" }}
+									style={{maxHeight: "400px"}}
 								/>
 								<br />
 								<h2 id="state-machine-ex">Example</h2>
