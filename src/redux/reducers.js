@@ -5,7 +5,7 @@ var darkMode;
 
 var localStorage = window.localStorage;
 // The == "true" is neccessary since localStorage returns a string
-var oldDeviceDefault = localStorage.getItem("deviceDarkMode") == "true";
+var oldDeviceDefault = localStorage.getItem("deviceDarkMode") === "true";
 var currentDeviceDefault =
 	window.matchMedia &&
 	window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -22,7 +22,7 @@ if (oldDeviceDefault == null) {
 		localStorage.setItem("userDarkMode", currentDeviceDefault);
 		darkMode = currentDeviceDefault;
 	} else {
-		darkMode = localStorage.getItem("userDarkMode") == "true";
+		darkMode = localStorage.getItem("userDarkMode") === "true";
 	}
 }
 

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Link, useLocation} from "react-router-dom";
 import $ from "jquery";
@@ -87,32 +87,32 @@ export default function (props) {
 							style={{cursor: "pointer"}}
 						>
 							<path
-								fill-rule="evenodd"
+								fillRule="evenodd"
 								d="M14 3.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM11.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM7 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM4.5 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm9.5 3.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM11.5 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
 							/>
 							<path
-								fill-rule="evenodd"
+								fillRule="evenodd"
 								d="M9.5 4H0V3h9.5v1zM16 4h-2.5V3H16v1zM9.5 14H0v-1h9.5v1zm6.5 0h-2.5v-1H16v1zM6.5 9H16V8H6.5v1zM0 9h2.5V8H0v1z"
 							/>
 						</svg>
 
 						{/* <!-- Modal --> */}
 						<div
-							class="modal fade"
+							className="modal fade"
 							id="settingsModal"
-							tabindex="-1"
+							tabIndex="-1"
 							role="dialog"
 							aria-labelledby="settingsModalLabel"
 							aria-hidden="true"
 						>
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="settingsModalLabel">
+							<div className="modal-dialog">
+								<div className="modal-content">
+									<div className="modal-header">
+										<h5 className="modal-title" id="settingsModalLabel">
 											Settings & About
 										</h5>
 									</div>
-									<div class="modal-body">
+									<div className="modal-body">
 										<div className="mb-1">Dark Mode</div>
 										<ToggleSwitch value={darkMode} setValue={setDarkMode} />
 										<br />
@@ -125,8 +125,8 @@ export default function (props) {
 											team 41.
 										</p>
 									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn" data-dismiss="modal">
+									<div className="modal-footer">
+										<button type="button" className="btn" data-dismiss="modal">
 											Close
 										</button>
 									</div>

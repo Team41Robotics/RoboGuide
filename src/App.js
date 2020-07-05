@@ -15,6 +15,7 @@ import ElectricalBasics from "./pages/ElectricalBasics";
 function App({location}) {
 	useLayoutEffect(() => {
 		setTimeout(() => {
+			// eslint-disable-next-line
 			[$("body"), $("a"), $(".btn"), $(".modal-content")].map(el => {
 				el.css("transition", "var(--transition-length)");
 			});

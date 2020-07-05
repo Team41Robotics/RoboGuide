@@ -31,8 +31,7 @@
 	width: 26px;
 	left: 4px;
 	bottom: 4px;
-	background-color: white;
-	border: 1px solid #888;
+	background-color: var(--page-background);
 	-webkit-transition: var(--transition-length);
 	transition: var(--transition-length);
 }

@@ -7,6 +7,7 @@ body {
 	--accent-fade: #a6ffda;
 	--page-background: #272822;
 	--container-background: rgba(0, 0, 0, 0.15);
+	--subrow-background: rgba(0, 0, 0, 0.15);
 	--block-background: rgba(255, 255, 255, 0.1);
 	--main-text: #fff;
 	--toc-text: #bbb;
@@ -27,6 +28,7 @@ body:not(.dark) {
 	--accent-fade: #af84ff;
 	--page-background: white;
 	--container-background: rgba(0, 0, 0, 0.05);
+	--subrow-background: white;
 	--block-background: var(--container-background);
 	--main-text: #222;
 	--toc-text: #555;
