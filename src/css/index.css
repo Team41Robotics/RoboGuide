@@ -11,6 +11,7 @@ body {
 	--main-text: #fff;
 	--toc-text: #bbb;
 	--accent-button-text: #333;
+	--transition-length: 0.5s;
 
 	/* Prism colors */
 	--code-main: #f8f8f2;
@@ -52,6 +53,11 @@ body {
 }
 .btn {
 	transition: 0s;
+	background-color: var(--accent);
+	color: var(--accent-button-text);
+}
+.btn:hover {
+	color: var(--accent-button-text);
 }
 
 a,

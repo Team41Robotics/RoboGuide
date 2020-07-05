@@ -1,0 +1,12 @@
+.modal-content {
+	background-color: var(--page-background) !important;
+	color: var(--main-text);
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+	border: none !important;
+	text-align: center;
+	justify-content: center !important;
+}

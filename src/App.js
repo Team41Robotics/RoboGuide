@@ -15,8 +15,8 @@ import ElectricalBasics from "./pages/ElectricalBasics";
 function App({location}) {
 	useLayoutEffect(() => {
 		setTimeout(() => {
-			[$("body"), $("a"), $(".btn")].map(el => {
-				el.css("transition", "0.6s");
+			[$("body"), $("a"), $(".btn"), $(".modal-content")].map(el => {
+				el.css("transition", "var(--transition-length)");
 			});
 		}, 200);
 	});

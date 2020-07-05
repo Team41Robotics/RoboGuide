@@ -34,7 +34,6 @@
 }
 
 #home-row-nav button {
-	background-color: var(--accent);
 	font-weight: bold;
 	margin-bottom: 5px;
 }
