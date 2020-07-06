@@ -1,0 +1,11 @@
+button.btn.b2t-btn {
+	position: fixed;
+	bottom: 0.5rem;
+	left: 2.5%;
+	width: 95%;
+	height: 3rem;
+	backgroundcolor: var(--accent);
+	color: var(--page-background);
+	fontsize: larger;
+	transition: all 0.2s ease;
+}

@@ -1,6 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
+import {useScrollPosition} from "@n8tb1t/use-scroll-position";
 
-export default function (props) {
+import "../css/BackToTopButton.css";
+
+export default function(props) {
+	const [display, setDisplay] = useState(false);
+	const [visible, setVisible] = useState(false);
+
+	useScrollPosition(({prevPos, currPos}) => {
+		const scrollY = -currPos.y;
+		console.log(scrollY);
+		if (scrollY > 200) {
+			if (!visible) {
+				setDisplay(true);
+				setTimeout(() => setVisible(true), 100);
+			}
+		} else {
+			if (visible) {
+				setVisible(false);
+				setTimeout(() => setDisplay(false), 300);
+			}
+		}
+	});
+
 	const backToTop = event => {
 		event.preventDefault();
 		window.scrollTo(0, 0);
@@ -8,16 +30,10 @@ export default function (props) {
 
 	return (
 		<button
-			className="btn d-lg-none"
+			className="btn d-lg-none b2t-btn"
 			style={{
-				position: "fixed",
-				bottom: "0.5rem",
-				left: "2.5%",
-				width: "95%",
-				height: "3rem",
-				backgroundColor: "var(--accent)",
-				color: "var(--page-background)",
-				fontSize: "larger"
+				display: display ? "initial" : "none",
+				opacity: visible ? 1 : 0
 			}}
 			onClick={backToTop}
 		>
