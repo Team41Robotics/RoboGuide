@@ -33,6 +33,14 @@ export default function (props) {
 			setDarkMode(event.matches);
 		});
 	});
+	useEffect(() => {
+		var navbar = $(".navbar-collapse");
+		// "a:not([data-toggle])" - to avoid issues caused
+		// when you have dropdown inside navbar
+		navbar.on("click", "a:not([data-toggle])", null, function () {
+			navbar.collapse("hide");
+		});
+	});
 
 	return (
 		<nav
