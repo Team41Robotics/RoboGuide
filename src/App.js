@@ -16,9 +16,11 @@ function App({location}) {
 	useLayoutEffect(() => {
 		setTimeout(() => {
 			// eslint-disable-next-line
-			[$("body"), $("a"), $(".btn"), $(".modal-content")].map(el => {
-				el.css("transition", "var(--transition-length)");
-			});
+			[$("body"), $("a"), $(".btn"), $(".modal-content"), $("li.nav-item")].map(
+				el => {
+					el.css("transition", "var(--transition-length)");
+				}
+			);
 		}, 200);
 	});
 
