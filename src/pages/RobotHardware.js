@@ -10,6 +10,10 @@ import servoImg from "../img/servo.jpg";
 import joystickImg from "../img/joystick.jpg";
 import pneumaticsDiagram from "../img/pneumaticsDiagram.png";
 import pcm from "../img/pcm.jpg";
+import compressor from "../img/compressor.jpg";
+import airTank from "../img/airTank.jpg";
+import regulatorPlusGauge from "../img/regulatorPlusGauge.png";
+import pressureSwitch from "../img/pressureSwitch.png";
 import robotImg from "../img/banners/hardwareBanner.jpg";
 
 export default function (props) {
@@ -624,7 +628,13 @@ export default function (props) {
 					{
 						id: "pneumatics",
 						title: "Pneumatics",
-						children: [{id: "pcm", title: "PCM"}],
+						children: [
+							{id: "pcm", title: "PCM"},
+							{id: "compressor", title: "Compressor"},
+							{id: "air-tank", title: "Air Tank"},
+							{id: "regulator-gauge", title: "Regulator & Gauge"},
+							{id: "pressure-switch", title: "Pressure Switch"}
+						],
 						content: (
 							<>
 								<h2 className="text-center">
@@ -672,7 +682,7 @@ export default function (props) {
 										<a href="http://www.ctr-electronics.com/pcm.html">PCM</a>
 									</h3>
 									<div className="row">
-										<div className="col-12 col-md-3  mb-2 mb-md-0 pr-md-0 text-center">
+										<div className="col-12 col-md-3 mb-2 mb-md-0 pr-md-0 text-center">
 											<img
 												src={pcm}
 												alt="Pneumatics control module"
@@ -682,7 +692,7 @@ export default function (props) {
 										<div className="col-12 col-md-9 pl-0 text-break">
 											<ul>
 												<li>
-													The Pneumatics Control Module, or PCM for short, is a
+													The pneumatics control module, or PCM for short, is a
 													small device that regulates the voltage being sent to
 													components of the robot including the compressor and
 													any solenoids.
@@ -711,6 +721,166 @@ export default function (props) {
 													devices in the code when they ask for the PCM port.
 												</li>
 											</ul>
+										</div>
+									</div>
+								</div>
+								<div className="subrow p-3 rounded" id="compressor">
+									<h3 className="text-center">
+										<a href="https://en.wikipedia.org/wiki/Compressor">
+											Compressor
+										</a>
+									</h3>
+									<div className="row">
+										<div className="col-12 col-md-3 mb-2 mb-md-0 pr-md-0 text-center">
+											<img
+												src={compressor}
+												alt="Compressor"
+												className="img-fluid"
+											/>
+										</div>
+										<div className="col-12 col-md-9 pl-0 pl-md-3 text-break">
+											<ul>
+												<li>
+													The compressor is a device that intakes air and
+													outputs it at a greater pressure (compresses it). It
+													also alters the amount of air we pump into our
+													components and connects to the air tank and pressure
+													gauge.
+												</li>
+												<li>
+													Documentation:{" "}
+													<a href="https://first.wpi.edu/FRC/roborio/beta/docs/java/edu/wpi/first/wpilibj/Compressor.html">
+														https://first.wpi.edu/FRC/roborio/beta/docs/java/edu/wpi/first/wpilibj/Compressor.html
+													</a>
+												</li>
+												<br />
+												<li>
+													Example from code: The compressor in the{" "}
+													<a href="https://github.com/Team41Robotics/2020-Robot-Code/blob/master/02_FinalRobot/src/main/java/frc/robot/Robot.java">
+														Robot class
+													</a>{" "}
+													from 2020
+												</li>
+												<li>
+													How to instantiate:{" "}
+													<code className="inline language-java">
+														Compressor exampleCompressor = new
+														Compressor(PCM_PORT)
+													</code>
+												</li>
+												<ul>
+													<li>
+														The value for{" "}
+														<code className="inline language-java">
+															PCM_PORT
+														</code>{" "}
+														can be found in Phoenix Tuner
+													</li>
+												</ul>
+												<li>
+													How to import:{" "}
+													<code className="inline language-java">
+														import edu.wpi.first.wpilibj.Compressor;
+													</code>
+												</li>
+												<li>
+													Example uses:
+													<ul>
+														<li>
+															Start the compressor:{" "}
+															<code className="inline language-java">
+																exampleCompressor.start()
+															</code>
+														</li>
+														<li>
+															Stop the compressor:{" "}
+															<code className="inline language-java">
+																exampleCompressor.stop()
+															</code>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div className="subrow p-3 rounded" id="air-tank">
+									<h3 className="text-center">
+										<a href="https://en.wikipedia.org/wiki/Pressure_vessel">
+											Air Tank
+										</a>
+									</h3>
+									<div className="row">
+										<div className="col-12 col-md-3 mb-2 mb-md-0 pr-md-0 text-center">
+											<img src={airTank} alt="Air tank" className="img-fluid" />
+										</div>
+										<div
+											className="col-12 col-md-9 pl-0 pl-md-3 text-break"
+											style={{fontSize: "larger"}}
+										>
+											The air tank is a small resevoir for compressed air. It's
+											connected to the regulator and compressor.
+										</div>
+									</div>
+								</div>
+								<div className="subrow p-3 rounded" id="regulator-gauge">
+									<h3 className="text-center">
+										<a href="https://en.wikipedia.org/wiki/Pressure_regulator">
+											Regulator & Gauge
+										</a>
+									</h3>
+									<div className="row">
+										<div className="col-12 col-md-3 mb-2 mb-md-0 pr-md-0 text-center">
+											<img
+												src={regulatorPlusGauge}
+												alt="Pneumatics regulator and gauge"
+												className="img-fluid"
+											/>
+										</div>
+										<div
+											className="col-12 col-md-9 pl-0 pl-md-3 text-break"
+											style={{fontSize: "larger"}}
+										>
+											The regulator and gauge maintain the air pressure (similar
+											to a VRM), must be assembled and connect to the air tank
+											and solenoid.
+											<br />
+											<br />
+											Important Note: Always use PTFE tape wrapped around the
+											threading! This is important to make sure the components
+											don’t fall loose
+										</div>
+									</div>
+								</div>
+								<div className="subrow p-3 rounded" id="pressure-switch">
+									<h3 className="text-center">
+										<a href="https://en.wikipedia.org/wiki/Pressure_switch">
+											Pressure Switch
+										</a>
+									</h3>
+									<div className="row">
+										<div className="col-12 col-md-3 mb-2 mb-md-0 pr-md-0 text-center">
+											<img
+												src={pressureSwitch}
+												alt="Pneumatics pressure switch"
+												className="img-fluid"
+											/>
+										</div>
+										<div
+											className="col-12 col-md-9 pl-0 pl-md-3 text-break"
+											style={{fontSize: "larger"}}
+										>
+											The pressure switch is essentially the on/off switch for
+											pneumatics. This must also be assembled. To let pressure
+											build, turn the switch perpendicular to the tubing. To
+											release pressure, turn back to parallel. Also, make sure
+											to release the pressure in the tank before you leave the
+											robot alone for an extended period of time.
+											<br />
+											<br />
+											Important Note: Always use PTFE tape wrapped around the
+											threading! This is important to make sure the components
+											don’t fall loose
 										</div>
 									</div>
 								</div>

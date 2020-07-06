@@ -106,6 +106,14 @@ export default function (props) {
 							Learn the basics of wiring and soldering, the fundamentals of
 							electric engineering!
 						</Card>
+						<Card
+							bannerImgSrc={hardwareBanner}
+							title="Hardware Guide"
+							footerText="Go Now!"
+							footerLink="/robot-hardware"
+						>
+							Learn about the sensors and actuators that make the robot work!
+						</Card>
 					</div>
 				</div>
 			</div>

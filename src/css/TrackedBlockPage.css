@@ -44,3 +44,6 @@
 .subrow {
 	background-color: var(--subrow-background);
 }
+.subrow:not(:last-of-type) {
+	margin-bottom: 10px;
+}

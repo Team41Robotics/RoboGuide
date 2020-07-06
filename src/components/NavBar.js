@@ -137,8 +137,8 @@ export default function (props) {
 												<p>
 													This site is maintained by James Narayanan and Peter
 													Linder. Content contributions made by James Narayanan,
-													Peter Linder, and Mason DiGiorgio. Created for use by
-													FRC team 41.
+													Peter Linder, Mason DiGiorgio, and Eliana Sussner.
+													Created for use by FRC team 41.
 												</p>
 											</div>
 											<div className="modal-footer">
