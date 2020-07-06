@@ -30,7 +30,7 @@ export default function (props) {
 								" #javaBanner-svg .cls-2": {fill: "#7a32ff"},
 								" #javaBanner-svg .cls-3": {fill: "#4a4a4a"}
 							}}
-							classes="bannerImg"
+							classes="bannerImg mb-3"
 						/>
 					</>
 				}

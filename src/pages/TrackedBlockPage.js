@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
-import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import React, {useState, useEffect, useLayoutEffect} from "react";
+import {useScrollPosition} from "@n8tb1t/use-scroll-position";
 import $ from "jquery";
+
 import TrackedBlock from "../components/TrackedBlock";
 
 import "../css/TrackedBlockPage.css";
 
 function getLeftShift(scrollY, id) {
 	// Slide content-col over to make room for toc
-	if (window.innerWidth >= 1200) {
+	if (window.innerWidth >= 992) {
 		const contentCol = $("#content-col-" + id);
 		const colCenter =
 			parseFloat(contentCol.css("margin-left"), 10) +
@@ -19,7 +20,7 @@ function getLeftShift(scrollY, id) {
 	}
 }
 
-export default function(props) {
+export default function (props) {
 	const blocks = props.blocks;
 	const id = props.id;
 	const header = props.header;
@@ -34,7 +35,7 @@ export default function(props) {
 	const findScrollHeight = block => {
 		const top = $("#" + block.id).offset().top;
 		let scrollHeights = [];
-		scrollHeights.push({ id: block.id, top: top });
+		scrollHeights.push({id: block.id, top: top});
 		if (block.children) {
 			block.children.forEach(subblock => {
 				scrollHeights = scrollHeights.concat(...findScrollHeight(subblock));
@@ -73,7 +74,7 @@ export default function(props) {
 		setLeft(getLeftShift(0, id));
 	}, [id]);
 
-	useScrollPosition(({ prevPos, currPos }) => {
+	useScrollPosition(({prevPos, currPos}) => {
 		const scrollY = -currPos.y;
 		setLastScrollY(scrollY);
 		// Make smooth fade in on scroll
@@ -93,7 +94,7 @@ export default function(props) {
 	});
 
 	useEffect(() => {
-		const handleResize = function() {
+		const handleResize = function () {
 			setLeft(getLeftShift(lastScrollY, id));
 		};
 		window.addEventListener("resize", handleResize);
@@ -107,7 +108,7 @@ export default function(props) {
 				<div
 					className="col-12 col-md-10 col-lg-8 mx-auto"
 					id={"content-col-" + id}
-					style={{ left: left }}
+					style={{left: left}}
 				>
 					{blocks.map(block => (
 						<TrackedBlock key={block.id} id={block.id}>
@@ -116,7 +117,7 @@ export default function(props) {
 					))}
 				</div>
 				<div
-					className="d-none d-xl-block col-xl-2 bd-toc"
+					className="d-none d-lg-block col-lg-2 bd-toc"
 					id={"toc-" + id}
 					style={tocStyle}
 				>

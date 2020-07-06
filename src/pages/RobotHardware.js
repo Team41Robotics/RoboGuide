@@ -29,7 +29,7 @@ export default function (props) {
 						<h1>Robot Hardware</h1>
 						<img
 							src={robotImg}
-							className="img-fluid rounded mb-5 bannerImg"
+							className="img-fluid rounded mb-3 mb-md-5 bannerImg"
 							alt="Robot"
 						/>
 					</>

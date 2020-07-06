@@ -9,7 +9,7 @@ import pidVaryingP from "../img/PID_varyingP.jpg";
 import pidVaryingI from "../img/PID_varyingI.png";
 import fsmFlowChart from "../img/fsm_flow_chart.jpg";
 
-export default function(props) {
+export default function (props) {
 	useEffect(() => {
 		Prism.fileHighlight();
 		Prism.highlightAll();
@@ -27,7 +27,7 @@ export default function(props) {
 						<h1>Robot Code</h1>
 						<img
 							src={programmingImg}
-							className="img-fluid rounded mb-5"
+							className="img-fluid rounded mb-3 mb-md-5 bannerImg"
 							alt="Robot Code"
 						/>
 					</>

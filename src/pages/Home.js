@@ -22,7 +22,7 @@ export default function (props) {
 				<title>Home | RoboGuide</title>
 			</Helmet>
 			<div id="home-content">
-				<div id="home-title" className="text-center mt-5 mb-3">
+				<div id="home-title" className="text-center my-3">
 					What do you want to learn?
 				</div>
 				<div id="home-row-nav" className="mb-3 text-center">

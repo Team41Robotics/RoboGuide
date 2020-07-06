@@ -6,6 +6,9 @@
 .jumbotron {
 	background-color: var(--block-background) !important;
 }
+.jumbotron:last-child {
+	margin-bottom: 0px;
+}
 
 .section-nav {
 	padding-left: 0;

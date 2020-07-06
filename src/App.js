@@ -3,6 +3,7 @@ import $ from "jquery";
 import {Switch, Route, withRouter} from "react-router-dom";
 import "./css/App.css";
 
+import BackToTopButton from "./components/BackToTopButton";
 import NavBar from "./components/NavBar";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
@@ -40,6 +41,7 @@ function App({location}) {
 					<Route component={NotFound} />
 				</Switch>
 			</div>
+			<BackToTopButton />
 		</div>
 	);
 }

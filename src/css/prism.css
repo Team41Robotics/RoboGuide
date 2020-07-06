@@ -1,7 +1,11 @@
 :not(pre) > code.inline {
 	color: var(--code-main);
 	background-color: var(--code-inline-bg) !important;
-	padding: 2px 8px 2px 8px !important;
+	padding: 2px 0 !important;
+	box-shadow: 8px 0 2px var(--code-inline-bg), -8px 0 2px var(--code-inline-bg);
+	margin-left: 8px;
+	margin-right: 8px;
+	word-break: break-word;
 }
 
 pre[class*="language-"].line-numbers {
@@ -92,7 +96,7 @@ pre[class*="language-"] {
 /* Inline code */
 :not(pre) > code[class*="language-"] {
 	padding: 0.1em;
-	border-radius: 0.3em;
+	/* border-radius: 0.3em; */
 	white-space: normal;
 }
 
