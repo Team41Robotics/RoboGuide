@@ -120,6 +120,7 @@ export default function (props) {
 									role="dialog"
 									aria-labelledby="settingsModalLabel"
 									aria-hidden="true"
+									style={{cursor: "auto"}}
 								>
 									<div className="modal-dialog">
 										<div className="modal-content">
