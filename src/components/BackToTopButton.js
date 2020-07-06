@@ -1,15 +1,15 @@
 import React, {useState} from "react";
+import $ from "jquery";
 import {useScrollPosition} from "@n8tb1t/use-scroll-position";
 
 import "../css/BackToTopButton.css";
 
-export default function(props) {
+export default function (props) {
 	const [display, setDisplay] = useState(false);
 	const [visible, setVisible] = useState(false);
 
 	useScrollPosition(({prevPos, currPos}) => {
 		const scrollY = -currPos.y;
-		console.log(scrollY);
 		if (scrollY > 200) {
 			if (!visible) {
 				setDisplay(true);
@@ -25,7 +25,11 @@ export default function(props) {
 
 	const backToTop = event => {
 		event.preventDefault();
-		window.scrollTo(0, 0);
+		// If the scroll-behavior isn't set to auto, there's a weird delay on browsers where it's supported
+		$("html").css("scroll-behavior", "auto");
+		$("html, body").animate({scrollTop: 0}, 500, () => {
+			$("html").css("scroll-behavior", "smooth");
+		});
 	};
 
 	return (
