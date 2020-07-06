@@ -8,7 +8,9 @@ const StyledSVG = styled(DriverStationSVG)`
 	display: block;
 	margin: auto;
 	margin-bottom: 15px;
-	height: 25em;
+	height: auto;
+	max-width: 100%;
+	max-height: 500px;
 
 	.cls-14.ds-btn {
 		cursor: pointer;
@@ -48,7 +50,7 @@ const StyledSVG = styled(DriverStationSVG)`
 	}
 `;
 
-export default function(props) {
+export default function (props) {
 	const sliderMax = 312.88;
 	const sliderMin = 173.15;
 	const getSliderPercentage = y => (sliderMax - y) / (sliderMax - sliderMin);
@@ -121,7 +123,7 @@ export default function(props) {
 		);
 	};
 
-	const startDrag = function(event) {
+	const startDrag = function (event) {
 		const sliderNum = getSliderNum(this);
 		setSlidersActive({...slidersActive, [sliderNum]: true});
 		const y = parseFloat(
@@ -129,7 +131,7 @@ export default function(props) {
 		);
 		setSliderOffsetY(getMousePosition(event).y - y);
 	};
-	const drag = function(event) {
+	const drag = function (event) {
 		const sliderNum = slidersActive[0] ? 0 : slidersActive[1] ? 1 : null;
 		if (sliderNum !== null) {
 			if (!slidersActive[sliderNum]) return;
@@ -145,7 +147,7 @@ export default function(props) {
 			);
 		}
 	};
-	const endDrag = function() {
+	const endDrag = function () {
 		if (slidersActive[0] || slidersActive[1])
 			setSlidersActive({0: false, 1: false});
 	};
@@ -156,11 +158,7 @@ export default function(props) {
 		return className.substring(className.indexOf(" ")).match(/\w*\d\b/)[0];
 	};
 	const getClassSelector = el =>
-		"." +
-		$(el)
-			.attr("class")
-			.replace(/\s/g, ".")
-			.replace(".active", "");
+		"." + $(el).attr("class").replace(/\s/g, ".").replace(".active", "");
 	const getBottomFromPadding = el =>
 		!$(el).hasClass("ds-toggle-bottom-padding")
 			? [el, true]
@@ -170,14 +168,14 @@ export default function(props) {
 	const eventListeners = {
 		// Red buttons
 		".cls-14.ds-btn.btn-red": {
-			mousedown: function() {
+			mousedown: function () {
 				$(this).addClass("active");
 				setControllerState({
 					...controllerState,
 					[getControllerKey(this)]: true
 				});
 			},
-			"mouseup mouseleave": function() {
+			"mouseup mouseleave": function () {
 				$(this).removeClass("active");
 				setControllerState({
 					...controllerState,
@@ -187,7 +185,7 @@ export default function(props) {
 		},
 		// Blue buttons
 		".cls-14.ds-btn.btn-blue": {
-			click: function() {
+			click: function () {
 				$(this).toggleClass("active");
 				setControllerState({
 					...controllerState,
@@ -206,7 +204,7 @@ export default function(props) {
 		},
 		// Left toggles
 		".cls-8.ds-toggle-left.ds-toggle-top, .cls-8.ds-toggle-left.ds-toggle-bottom-padding": {
-			mousedown: function() {
+			mousedown: function () {
 				const [el, isTop] = getBottomFromPadding(this);
 				$(el).addClass("active");
 				setControllerState({
@@ -214,7 +212,7 @@ export default function(props) {
 					[getControllerKey(this) + (isTop ? "_up" : "_down")]: true
 				});
 			},
-			"mouseup mouseleave": function() {
+			"mouseup mouseleave": function () {
 				const [el, isTop] = getBottomFromPadding(this);
 				$(el).removeClass("active");
 				setControllerState({
@@ -225,7 +223,7 @@ export default function(props) {
 		},
 		// Right toggles
 		".cls-8.ds-toggle-right.ds-toggle-top, .cls-8.ds-toggle-right.ds-toggle-bottom-padding": {
-			click: function() {
+			click: function () {
 				const [el, isTop] = getBottomFromPadding(this);
 				$(el).addClass("active");
 				if (isTop)
@@ -245,7 +243,7 @@ export default function(props) {
 	useEffect(() => {
 		// Add padding to bottom of toggles
 		if (!addedTogglePadding) {
-			$(".cls-8.ds-toggle-bottom").each(function() {
+			$(".cls-8.ds-toggle-bottom").each(function () {
 				let padding = $(this).clone();
 				$(padding).attr("y", 105.33);
 				$(padding).attr("height", 35);
@@ -255,9 +253,7 @@ export default function(props) {
 				);
 				$(padding).removeClass("ds-toggle-bottom");
 				$(padding).addClass("ds-toggle-bottom-padding");
-				$(this)
-					.parent()
-					.append(padding);
+				$(this).parent().append(padding);
 			});
 			setAddedTogglePadding(true);
 		}
