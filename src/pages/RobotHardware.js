@@ -3,6 +3,7 @@ import {Helmet} from "react-helmet";
 import Prism from "prismjs";
 import TrackedBlockPage from "./TrackedBlockPage";
 
+import hardwareBanner from "../img/banners/hardwareBanner.jpg";
 import talonSRX from "../img/talonSRX.jpg";
 import talonFX from "../img/talonFX.png";
 import sparkMax from "../img/sparkMax.png";
@@ -10,11 +11,13 @@ import servoImg from "../img/servo.jpg";
 import joystickImg from "../img/joystick.jpg";
 import pneumaticsDiagram from "../img/pneumaticsDiagram.png";
 import pcm from "../img/pcm.jpg";
+import pcmWiring from "../img/pcmWiring.jpg";
 import compressor from "../img/compressor.jpg";
 import airTank from "../img/airTank.jpg";
 import regulatorPlusGauge from "../img/regulatorPlusGauge.png";
 import pressureSwitch from "../img/pressureSwitch.png";
-import robotImg from "../img/banners/hardwareBanner.jpg";
+import solenoid from "../img/solenoid.jpg";
+import piston from "../img/piston.png";
 
 export default function (props) {
 	useEffect(() => {
@@ -32,7 +35,7 @@ export default function (props) {
 					<>
 						<h1>Robot Hardware</h1>
 						<img
-							src={robotImg}
+							src={hardwareBanner}
 							className="img-fluid rounded mb-3 mb-md-5 bannerImg"
 							alt="Robot"
 						/>
@@ -542,7 +545,7 @@ export default function (props) {
 											<li>
 												How to import:{" "}
 												<code className="inline language-java">
-													import edu.wpi.first.wpilibj.Joystick;
+													import edu.wpi.first.wpilibj.Joystick
 												</code>
 											</li>
 											<li>
@@ -633,7 +636,9 @@ export default function (props) {
 							{id: "compressor", title: "Compressor"},
 							{id: "air-tank", title: "Air Tank"},
 							{id: "regulator-gauge", title: "Regulator & Gauge"},
-							{id: "pressure-switch", title: "Pressure Switch"}
+							{id: "pressure-switch", title: "Pressure Switch"},
+							{id: "solenoid", title: "Solenoid"},
+							{id: "piston", title: "Piston"}
 						],
 						content: (
 							<>
@@ -673,6 +678,12 @@ export default function (props) {
 												stored in a tank for use. This high pressure allows it
 												to perform tasks such as engaging a piston.
 											</li>
+											<li>
+												You can view the frc pneumatics manual{" "}
+												<a href="https://firstfrc.blob.core.windows.net/frc2017/pneumatics-manual.pdf">
+													here
+												</a>
+											</li>
 										</ul>
 									</div>
 								</div>
@@ -688,14 +699,19 @@ export default function (props) {
 												alt="Pneumatics control module"
 												className="img-fluid"
 											/>
+											<img
+												src={pcmWiring}
+												alt="Pneumatics control module wiring"
+												className="img-fluid"
+											/>
 										</div>
 										<div className="col-12 col-md-9 pl-0 text-break">
 											<ul>
 												<li>
 													The pneumatics control module, or PCM for short, is a
 													small device that regulates the voltage being sent to
-													components of the robot including the compressor and
-													any solenoids.
+													components of the robot including the compressor, any
+													solenoids, and the pressure switch.
 												</li>
 												<li>
 													Specs:{" "}
@@ -713,6 +729,23 @@ export default function (props) {
 													Setup: Phoenix Tuner
 													<ul>
 														<li>Wireless: Yes</li>
+													</ul>
+												</li>
+												<li>
+													Wiring Info:
+													<ul>
+														<li>
+															Can control 8 single solenoid valves or 4 double
+															solenoid valves
+														</li>
+														<li>
+															Supports both 12V and 24V solenoids, but only one
+															voltage can be used at a time.
+														</li>
+														<li>
+															Receives power from PDP via 2 Vin connectors and
+															data via 4 CAN connectors
+														</li>
 													</ul>
 												</li>
 												<li>
@@ -780,7 +813,7 @@ export default function (props) {
 												<li>
 													How to import:{" "}
 													<code className="inline language-java">
-														import edu.wpi.first.wpilibj.Compressor;
+														import edu.wpi.first.wpilibj.Compressor
 													</code>
 												</li>
 												<li>
@@ -815,11 +848,17 @@ export default function (props) {
 											<img src={airTank} alt="Air tank" className="img-fluid" />
 										</div>
 										<div
-											className="col-12 col-md-9 pl-0 pl-md-3 text-break"
+											className="col-12 col-md-9 pl-md-3 text-break"
 											style={{fontSize: "larger"}}
 										>
 											The air tank is a small resevoir for compressed air. It's
 											connected to the regulator and compressor.
+											<br />
+											Specs:
+											<ul>
+												<li>Max pressure: 125 psi</li>
+												<li>Temperature Range: 35°F to 100°F</li>
+											</ul>
 										</div>
 									</div>
 								</div>
@@ -838,7 +877,7 @@ export default function (props) {
 											/>
 										</div>
 										<div
-											className="col-12 col-md-9 pl-0 pl-md-3 text-break"
+											className="col-12 col-md-9 pl-md-3 text-break"
 											style={{fontSize: "larger"}}
 										>
 											The regulator and gauge maintain the air pressure (similar
@@ -867,7 +906,7 @@ export default function (props) {
 											/>
 										</div>
 										<div
-											className="col-12 col-md-9 pl-0 pl-md-3 text-break"
+											className="col-12 col-md-9 pl-md-3 text-break"
 											style={{fontSize: "larger"}}
 										>
 											The pressure switch is essentially the on/off switch for
@@ -881,6 +920,142 @@ export default function (props) {
 											Important Note: Always use PTFE tape wrapped around the
 											threading! This is important to make sure the components
 											don’t fall loose
+										</div>
+									</div>
+								</div>
+								<div className="subrow p-3 rounded" id="solenoid">
+									<h3 className="text-center">
+										<a href="https://en.wikipedia.org/wiki/Solenoid">
+											Solenoid
+										</a>
+									</h3>
+									<div className="row">
+										<div className="col-12 col-md-3 mb-2 mb-md-0 pr-md-0 text-center">
+											<img
+												src={solenoid}
+												alt="Pneumatic solenoid valve"
+												className="img-fluid"
+											/>
+										</div>
+										<div className="col-12 col-md-9 pl-0 pl-md-3 text-break">
+											<ul>
+												<li>
+													Solenoids are used to control the flow of air through
+													the pneumatic system. They are similar to how talons
+													work in a general electric board in that they control
+													actuators like how talons control motors. The
+													DoubleSolenoid class can be used to control solenoids
+													that operate using two data channels corresponding to
+													two separate positions. This is the class that we
+													normally use.
+												</li>
+												<li>
+													Documentation:{" "}
+													<a href="https://first.wpi.edu/FRC/roborio/beta/docs/java/edu/wpi/first/wpilibj/DoubleSolenoid.html">
+														https://first.wpi.edu/FRC/roborio/beta/docs/java/edu/wpi/first/wpilibj/DoubleSolenoid.html
+													</a>
+												</li>
+												<br />
+												<li>
+													Example from code: The compressor in the{" "}
+													<a href="https://github.com/Team41Robotics/2020-Robot-Code/blob/master/02_FinalRobot/src/main/java/frc/robot/Climbing.java">
+														Climbing class
+													</a>{" "}
+													from 2020
+												</li>
+												<li>
+													How to instantiate:{" "}
+													<code className="inline language-java">
+														DoubleSolenoid exampleSol = new
+														DoubleSolenoid(PCM_PORT, SOL_FORWARD_PORT,
+														SOL_REVERSE_PORT)
+													</code>
+												</li>
+												<ul>
+													<li>
+														The value for{" "}
+														<code className="inline language-java">
+															PCM_PORT
+														</code>{" "}
+														can be found in Phoenix Tuner
+													</li>
+													<li>
+														For the other two ports, FIRST gave this note:
+														<blockquote cite="https://wpilib.screenstepslive.com/s/3120/m/7912/l/132407-operating-pneumatic-cylinders-solenoids">
+															"The port numbers on the Solenoid class range from
+															1-8 as printed on the Solenoid Breakout Board. The
+															NI 9472 indicator lights are numbered 0-7 for the
+															8 ports, which is different numbering than used by
+															the class or the Solenoid Breakout Board silk
+															screen."
+														</blockquote>
+													</li>
+												</ul>
+												<li>
+													How to import:{" "}
+													<code className="inline language-java">
+														import edu.wpi.first.wpilibj.DoubleSolenoid
+													</code>
+												</li>
+												<li>
+													Example uses:
+													<ul>
+														<li>
+															Set the solenoid to the forward position:{" "}
+															<code className="inline language-java">
+																exampleSol.set(Value.kForward)
+															</code>
+														</li>
+														<li>
+															Set the solenoid to the reverse position:{" "}
+															<code className="inline language-java">
+																exampleSol.set(Value.kReverse)
+															</code>
+														</li>
+													</ul>
+												</li>
+												<li>
+													Other Notes:
+													<ul>
+														<li>
+															You also have to import the{" "}
+															<a href="https://first.wpi.edu/FRC/roborio/beta/docs/java/edu/wpi/first/wpilibj/DoubleSolenoid.Value.html">
+																Value
+															</a>{" "}
+															class:{" "}
+															<code className="inline language-java">
+																import
+																edu.wpi.first.wpilibj.DoubleSolenoid.Value
+															</code>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div className="subrow p-3 rounded" id="piston">
+									<h3 className="text-center">
+										<a href="https://en.wikipedia.org/wiki/Piston">
+											Piston/Actuator
+										</a>
+									</h3>
+									<div className="row">
+										<div className="col-12 col-md-3 mb-2 mb-md-0 pr-md-0 text-center">
+											<img
+												src={piston}
+												alt="Pneumatic piston"
+												className="img-fluid"
+											/>
+										</div>
+										<div
+											className="col-12 col-md-9 pl-md-3 text-break"
+											style={{fontSize: "larger"}}
+										>
+											A piston is a device that directs in the direction we want
+											it, pushing or a pulling a rod coming out of it. It was
+											used in the past for mechanisms such as the catapult from
+											2016. It is controlled by a pneumatic solenoid valve.
 										</div>
 									</div>
 								</div>
