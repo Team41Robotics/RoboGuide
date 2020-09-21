@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7466412efebf61e2f0dba5454d462385",
+    "revision": "41792236d70fce1285dc59267297f206",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "93afc3613487cb6d69aa",
+    "revision": "f6832e0654a993ec50e3",
     "url": "/static/css/main.d706023d.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.1a80d467.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "93afc3613487cb6d69aa",
-    "url": "/static/js/main.610f4705.chunk.js"
+    "revision": "f6832e0654a993ec50e3",
+    "url": "/static/js/main.48f0330a.chunk.js"
   },
   {
     "revision": "5f9eedae243c6bf05cfa",
@@ -116,8 +116,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/solderingIron.72064540.png"
   },
   {
-    "revision": "9c42297c82afd6fb0af0882fcc2cb881",
-    "url": "/static/media/solderingIronWithHand.9c42297c.svg"
+    "revision": "9914798b405b0ca0a010036f669a35c4",
+    "url": "/static/media/solderingIronWithHand.9914798b.svg"
   },
   {
     "revision": "b7b7cbaaddd3eacaf1ba5133c35fa333",
