@@ -32,13 +32,13 @@ function App({location}) {
 			<NavBar />
 			<div className="Page">
 				<Switch location={location}>
-					<Route exact path="/" component={Home} />
+					<Route exact path="/RoboGuide/" component={Home} />
 
-					<Route exact path="/java" component={JavaGuide} />
-					<Route exact path="/robot-code" component={RobotCode} />
-					<Route exact path="/robot-hardware" component={RobotHardware} />
-					<Route exact path="/driver-station" component={DriverStation} />
-					<Route exact path="/electrical-basics" component={ElectricalBasics} />
+					<Route exact path="/RoboGuide/java" component={JavaGuide} />
+					<Route exact path="/RoboGuide/robot-code" component={RobotCode} />
+					<Route exact path="/RoboGuide/robot-hardware" component={RobotHardware} />
+					<Route exact path="/RoboGuide/driver-station" component={DriverStation} />
+					<Route exact path="/RoboGuide/electrical-basics" component={ElectricalBasics} />
 
 					<Route component={NotFound} />
 				</Switch>
