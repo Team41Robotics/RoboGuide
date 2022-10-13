@@ -32,7 +32,7 @@ const store = createStore(rootReducer);
 
 ReactDOM.render(
 	<Provider store={store}>
-		<Router basename="/">
+		<Router basename="/RoboGuide/">
 			<ScrollToTop />
 			<App />
 		</Router>
