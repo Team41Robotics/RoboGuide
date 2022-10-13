@@ -1,6 +1,5 @@
 {
   "name": "roboguide",
-  "homepage": "https://team41robotics.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
