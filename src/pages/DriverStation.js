@@ -190,7 +190,7 @@ export default function(props) {
 								</code>
 								. Next, we add each button's value into the joystick state. What
 								the flow usually look like is{" "}
-								<code>clear state --> set state --> send state --> repeat</code>
+								<code>clear state --&gt; set state --&gt; send state --&gt; repeat</code>
 								. Since the code loops through, we can just set each button's
 								value as a variable and update that variable throughout the
 								program. Since we have alot of buttons, we use a few arrays to
