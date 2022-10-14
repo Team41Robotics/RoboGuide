@@ -91,7 +91,7 @@ export default function (props) {
 								look at this simple Bird class:
 								<pre
 									className="line-numbers"
-									data-src="/files/java/Bird.java"
+									data-src="/RoboGuide/files/java/Bird.java"
 								></pre>
 								In Java, a class is an object that can be manipulated. In this
 								case, the Bird object has attrributes that store its color,
@@ -130,7 +130,7 @@ export default function (props) {
 								be helpful.
 								<pre
 									className="line-numbers"
-									data-src="/files/java/Comments.java"
+									data-src="/RoboGuide/files/java/Comments.java"
 								></pre>
 							</>
 						)
@@ -250,12 +250,12 @@ export default function (props) {
 								<h4 id="variable-initialization">Initialization</h4>
 								<pre
 									className="line-numbers"
-									data-src="/files/java/Initialization.java"
+									data-src="/RoboGuide/files/java/Initialization.java"
 								></pre>
 								<h4 id="variable-arrays">Arrays</h4>
 								<pre
 									className="line-numbers"
-									data-src="/files/java/Arrays.java"
+									data-src="/RoboGuide/files/java/Arrays.java"
 								></pre>
 							</>
 						)
@@ -281,19 +281,19 @@ export default function (props) {
 								<h4 id="operators-math">Mathematical Operators</h4>
 								<pre
 									className="line-numbers"
-									data-src="/files/java/MathOperators.java"
+									data-src="/RoboGuide/files/java/MathOperators.java"
 								></pre>
 								<h4 id="operators-variable-reassignment">
 									Variable Reassignment
 								</h4>
 								<pre
 									className="line-numbers"
-									data-src="/files/java/Reassignment.java"
+									data-src="/RoboGuide/files/java/Reassignment.java"
 								></pre>
 								<h4 id="operators-logical">Logical/Relational Operators</h4>
 								<pre
 									className="line-numbers"
-									data-src="/files/java/LogicalRelationalOperators.java"
+									data-src="/RoboGuide/files/java/LogicalRelationalOperators.java"
 								></pre>
 							</>
 						)
@@ -315,12 +315,12 @@ export default function (props) {
 								<h4 id="control-flow-if-else">If/Else Statements</h4>
 								<pre
 									className="line-numbers"
-									data-src="/files/java/IfElse.java"
+									data-src="/RoboGuide/files/java/IfElse.java"
 								></pre>
 								<h4 id="control-flow-loops">Loops</h4>
 								<pre
 									className="line-numbers"
-									data-src="/files/java/Loops.java"
+									data-src="/RoboGuide/files/java/Loops.java"
 								></pre>
 							</>
 						)
@@ -354,7 +354,7 @@ export default function (props) {
 								This same function could be written in Java as:
 								<pre
 									className="line-numbers"
-									data-src="/files/java/SquareFunction.java"
+									data-src="/RoboGuide/files/java/SquareFunction.java"
 								></pre>
 								A function in java has a few main components that make it up:
 								<ul>
@@ -388,7 +388,7 @@ export default function (props) {
 								in Java:
 								<pre
 									className="line-numbers"
-									data-src="/files/java/TicTacToe.java"
+									data-src="/RoboGuide/files/java/TicTacToe.java"
 								></pre>
 								This function checks if the TicTacToe board is full by iterating
 								through each row and column. This is useful because now I can
@@ -429,7 +429,7 @@ export default function (props) {
 								variables and methods associated with it.
 								<pre
 									className="line-numbers"
-									data-src="/files/java/ClassExample.java"
+									data-src="/RoboGuide/files/java/ClassExample.java"
 								></pre>
 							</>
 						)

@@ -179,7 +179,7 @@ export default function (props) {
 								look like:
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/TankDriveExample.java"
+									data-src="/RoboGuide/files/robot-code/TankDriveExample.java"
 								></pre>
 								Now you've created your first robot program! From here you can
 								do so much more!
@@ -256,7 +256,7 @@ export default function (props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/Encoders.java"
+									data-src="/RoboGuide/files/robot-code/Encoders.java"
 								></pre>
 							</>
 						)
@@ -291,7 +291,7 @@ export default function (props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/ThresholdController.java"
+									data-src="/RoboGuide/files/robot-code/ThresholdController.java"
 								></pre>
 								<br />
 								<h2 id="pid-p">Proportional</h2>
@@ -311,7 +311,7 @@ export default function (props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/P-Controller.java"
+									data-src="/RoboGuide/files/robot-code/P-Controller.java"
 								></pre>
 								<p>
 									Finding the value for this{" "}
@@ -368,7 +368,7 @@ export default function (props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/PI-Controller.java"
+									data-src="/RoboGuide/files/robot-code/PI-Controller.java"
 								></pre>
 								<p>
 									Once again, the effect of this is best visualized with a
@@ -398,7 +398,7 @@ export default function (props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/PID-Controller.java"
+									data-src="/RoboGuide/files/robot-code/PID-Controller.java"
 								></pre>
 								<br />
 								<h2 id="pid-frc">Usage in FRC</h2>
@@ -413,11 +413,11 @@ export default function (props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/PIDControllerWPILib.java"
+									data-src="/RoboGuide/files/robot-code/PIDControllerWPILib.java"
 								></pre>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/CaseBasedClean.java"
+									data-src="/RoboGuide/files/robot-code/CaseBasedClean.java"
 								></pre>
 								<h2 id="pid-speed">Desired Speed</h2>
 								<p>
@@ -437,7 +437,7 @@ export default function (props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/PIDVelocityTeleop.java"
+									data-src="/RoboGuide/files/robot-code/PIDVelocityTeleop.java"
 								></pre>
 								<p>
 									This logic can be abstracted to a function so that you can
@@ -445,7 +445,7 @@ export default function (props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/PIDVelocity.java"
+									data-src="/RoboGuide/files/robot-code/PIDVelocity.java"
 								></pre>
 							</>
 						)
@@ -484,7 +484,7 @@ export default function (props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/TaskBased.java"
+									data-src="/RoboGuide/files/robot-code/TaskBased.java"
 								></pre>
 								<p>
 									However, in a TimedRobot, this would block all other code from
@@ -492,7 +492,7 @@ export default function (props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/CaseBased.java"
+									data-src="/RoboGuide/files/robot-code/CaseBased.java"
 								></pre>
 								<p>
 									This is, in fact, a very simple state machine. However, there
@@ -507,7 +507,7 @@ export default function (props) {
 								</p>
 								<pre
 									className="line-numbers"
-									data-src="/files/robot-code/CaseBasedClean.java"
+									data-src="/RoboGuide/files/robot-code/CaseBasedClean.java"
 								></pre>
 							</>
 						)

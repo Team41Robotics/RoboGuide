@@ -162,7 +162,7 @@ export default function(props) {
 								program using all of these features might look like this:
 								<pre
 									className="line-numbers language-arduino"
-									data-src={ process.env.PUBLIC_URL + "/files/driver-station/ArduinoExample.ino"}
+									data-src="/RoboGuide/files/driver-station/ArduinoExample.ino"
 								></pre>
 								<br />
 								Just like in Java, sometimes we can import libraries into
@@ -221,7 +221,7 @@ export default function(props) {
 								something like this:
 								<pre
 									className="line-numbers language-arduino"
-									data-src="/files/driver-station/JoystickExample.ino"
+									data-src="/RoboGuide/files/driver-station/JoystickExample.ino"
 								></pre>
 								That's it for the basics of programming the Arduinos on the
 								driver station. Howerver, there is still more to learn.
@@ -405,7 +405,7 @@ export default function(props) {
 								everything I talked about would look something like this:
 								<pre
 									className="line-numbers"
-									data-src="/files/driver-station/tkinter_ex.py"
+									data-src="/RoboGuide/files/driver-station/tkinter_ex.py"
 								></pre>
 								<br />
 								The second main module we use in the driver station code is
@@ -428,7 +428,7 @@ export default function(props) {
 								byte. A sample program for pyserial may look like this:
 								<pre
 									className="line-numbers"
-									data-src="/files/driver-station/pyserial_ex.py"
+									data-src="/RoboGuide/files/driver-station/pyserial_ex.py"
 								></pre>
 							</>
 						)
