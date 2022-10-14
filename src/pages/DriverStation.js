@@ -162,7 +162,7 @@ export default function(props) {
 								program using all of these features might look like this:
 								<pre
 									className="line-numbers language-arduino"
-									data-src="/files/driver-station/ArduinoExample.ino"
+									data-src={ process.env.PUBLIC_URL + "/files/driver-station/ArduinoExample.ino"}
 								></pre>
 								<br />
 								Just like in Java, sometimes we can import libraries into
