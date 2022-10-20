@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/roboguide.team41robo.com/RoboGuide/static/css/main.6222d119.css",
-    "main.js": "/roboguide.team41robo.com/RoboGuide/static/js/main.9557ff67.js",
+    "main.js": "/roboguide.team41robo.com/RoboGuide/static/js/main.b6a58e97.js",
     "static/media/electricalBanner.png": "/roboguide.team41robo.com/RoboGuide/static/media/electricalBanner.dd9b423926834706809a.png",
     "static/media/piston.png": "/roboguide.team41robo.com/RoboGuide/static/media/piston.20f3e6385f16841ac6de.png",
     "static/media/pneumaticsDiagram.png": "/roboguide.team41robo.com/RoboGuide/static/media/pneumaticsDiagram.fabb8c41104a452ecf0d.png",
@@ -12,8 +12,8 @@
     "static/media/sparkMax.png": "/roboguide.team41robo.com/RoboGuide/static/media/sparkMax.bfbddc91ce08b263910b.png",
     "static/media/pcm.jpg": "/roboguide.team41robo.com/RoboGuide/static/media/pcm.0ed51a5a849f106b7136.jpg",
     "static/media/solderingIron.png": "/roboguide.team41robo.com/RoboGuide/static/media/solderingIron.9d24f4b48cce76486687.png",
-    "static/media/solderingIronWithHand.svg": "/roboguide.team41robo.com/RoboGuide/static/media/solderingIronWithHand.aafa7822957080a69acdf3f6aefd4279.svg",
     "static/media/robotCodeBanner.jpg": "/roboguide.team41robo.com/RoboGuide/static/media/robotCodeBanner.845afc17e8cab4887547.jpg",
+    "static/media/solderingIronWithHand.svg": "/roboguide.team41robo.com/RoboGuide/static/media/solderingIronWithHand.f6b9d26cf4237c7079289a9b2e7c4345.svg",
     "static/media/talonSRX.jpg": "/roboguide.team41robo.com/RoboGuide/static/media/talonSRX.b3d5efa7d0428a77f497.jpg",
     "static/media/sadTeek.png": "/roboguide.team41robo.com/RoboGuide/static/media/sadTeek.98ea32d03eda7c9fff47.png",
     "static/media/joystick.jpg": "/roboguide.team41robo.com/RoboGuide/static/media/joystick.372baa4d533635889c44.jpg",
@@ -30,10 +30,10 @@
     "static/media/pcmWiring.jpg": "/roboguide.team41robo.com/RoboGuide/static/media/pcmWiring.b9c7d899cd8e08310f12.jpg",
     "index.html": "/roboguide.team41robo.com/RoboGuide/index.html",
     "main.6222d119.css.map": "/roboguide.team41robo.com/RoboGuide/static/css/main.6222d119.css.map",
-    "main.9557ff67.js.map": "/roboguide.team41robo.com/RoboGuide/static/js/main.9557ff67.js.map"
+    "main.b6a58e97.js.map": "/roboguide.team41robo.com/RoboGuide/static/js/main.b6a58e97.js.map"
   },
   "entrypoints": [
     "static/css/main.6222d119.css",
-    "static/js/main.9557ff67.js"
+    "static/js/main.b6a58e97.js"
   ]
 }
