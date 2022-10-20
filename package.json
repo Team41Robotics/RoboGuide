@@ -2,7 +2,7 @@
   "name": "roboguide",
   "version": "0.1.0",
   "private": true,
-   "homepage": "roboguide.team41robo.com/RoboGuide/",
+   "homepage": "https://team41robotics.github.io/RoboGuide/",
 
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
