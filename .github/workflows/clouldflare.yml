@@ -22,5 +22,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: eb2a2cebe5a9526e769c6fd63fea0d0a
           projectName: roboguide
-          directory: /src
+          directory: build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
